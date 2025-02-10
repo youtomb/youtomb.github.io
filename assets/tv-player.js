@@ -8817,7 +8817,17 @@ console.log("PROXY_URL:", PROXY_URL);
         }
       
         console.log("Using MediaSource API");
-        this.o = new MediaSource();
+
+        if (window.MediaSource) {
+            this.o = new MediaSource(); 
+            console.log("MediaSource is supported");
+        } else if (window.WebKitMediaSource) {
+            this.o = new WebKitMediaSource(); // 
+            console.log("WebKitMediaSource is supported (Safari fallback)");
+        } else {
+            console.error("MediaSource is not supported by this browser.");
+        }
+        
         console.log("Created MediaSource object:", this.o);
       
         var videoElement = document.querySelector(".html5-main-video");

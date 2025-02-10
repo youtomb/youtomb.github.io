@@ -4,8 +4,274 @@ const path = require('path');
 const fs = require('fs');
 const router = express.Router();
 
+
+const videoTemplates = [];
+
 class FeedsApiVideos {
+
+    static async convertToIntermediateForm(responseData) {
+        const videos = [];
+    
+        const items = responseData.contents?.sectionListRenderer?.contents[0]?.shelfRenderer?.content?.horizontalListRenderer?.items;
+    
+        if (items) {
+    
+            items.forEach(item => {
+
+                const video = item.tileRenderer;
+    
+                if (video) {
+                    const videoData = {
+                        id: video.onSelectCommand.watchEndpoint.videoId, 
+                        title: video.metadata.tileMetadataRenderer.title?.simpleText || "Unknown Title", 
+                        etag: video.etag || "Unknown ETag", 
+                        published: video.publishedTimeText?.simpleText || "Unknown Published Time", 
+                        updated: video.updatedTimeText?.simpleText || "Unknown Updated Time", 
+                        category: video.category || "Unknown Category", 
+                        categoryLabel: video.categoryLabel || "Unknown Category Label", 
+                    };
+    
+                    videos.push(videoData);
+                }
+            });
+        }
+    
+        return videos; 
+    }
+    
+    static async handleSearchRequest(req) {
+        
+        const query = req.query.q; 
+    
+        if (!query) {
+            throw new Error('Missing query in the request body.');
+        }
+    
+        const apiKey = 'AIzaSyDCU8hByM-4DrUqRUYnGn-3llEO78bcxq8';
+        const apiUrl = 'https://www.googleapis.com/youtubei/v1/search';
+    
+        const postData = {
+            query,
+            context: {
+                client: {
+                    clientName: 'TVHTML5',
+                    clientVersion: '7.20240701.16.00',
+                    hl: 'en',
+                    gl: 'US',
+                }
+            }
+        };
+    
+        try {
+            const response = await axios.post(apiUrl, postData, {
+                headers: { 'Content-Type': 'application/json' },
+                params: { key: apiKey }
+            });
+    
+            console.log("Raw response data:", JSON.stringify(response.data, null, 2));
+    
+            const logsDir = path.join(__dirname, 'logs');
+            if (!fs.existsSync(logsDir)) {
+                fs.mkdirSync(logsDir);
+            }
+ 
+            const timestamp = Date.now();
+            const logFile = path.join(logsDir, `search_response_${timestamp}.json`);
+    
+            fs.writeFileSync(logFile, JSON.stringify(response.data, null, 2));
+
+            const intermediateForm = await FeedsApiVideos.convertToIntermediateForm(response.data);
+
+            const logFileIn = path.join(logsDir, `search_intermediate_response_${timestamp}.json`);
+    
+            fs.writeFileSync(logFileIn, JSON.stringify(intermediateForm, null, 2));
+
+
+            return intermediateForm;
+
+        } catch (error) {
+            console.error("Error fetching data from YouTube API:", error.message);
+            throw new Error('Failed to fetch data from YouTube API. Details: ' + error.message);
+        }
+    }
+    
+    static async generateVideoList(videosData) {
+
+        for (const videoData of videosData) {
+            const videoTemplate = await this.generateVideoTemplate(videoData);
+            videoTemplates.push(videoTemplate);
+        }
+    
+        const formattedVideoList = `[${videoTemplates.join('},\n')}]`;
+
+        return formattedVideoList;
+    }    
+
+    static async generateVideoTemplate(parsedVideoData) {
+
+        // Check if parsedVideoData is invalid and return empty string
+        if (parsedVideoData == "null" || parsedVideoData == ' ' || parsedVideoData == null ) {
+            return "";
+        }
+    
+        // Pre-check: set defaults for undefined values
+        const etag = parsedVideoData.etag || "default-etag";
+        const id = parsedVideoData.id || "tag:youtube.com,2008:video:default";
+        const published = parsedVideoData.published || "2013-05-10T00:00:01.000Z";
+        const updated = parsedVideoData.updated || "2013-05-27T11:28:20.000Z";
+        const category = parsedVideoData.category || "Entertainment";
+        const categoryLabel = parsedVideoData.categoryLabel || "Entertainment";
+        const title = parsedVideoData.title || "Default Video Title";
+        const videoSrc = parsedVideoData.videoSrc || "http://www.youtube.com/v/defaultVideoID";
+        const link = parsedVideoData.link || "http://www.youtube.com/watch?v=defaultVideoID";
+        const authorName = parsedVideoData.authorName || "Default Author";
+        const authorUri = parsedVideoData.authorUri || "http://gdata.youtube.com/feeds/api/users/defaultUser";
+        const commentsLink = parsedVideoData.commentsLink || "http://gdata.youtube.com/feeds/api/videos/defaultVideoID/comments?v=2";
+        const commentCount = parsedVideoData.commentCount || 8602;
+        const mediaCategory = parsedVideoData.mediaCategory || "Entertainment";
+        const mediaCategoryLabel = parsedVideoData.mediaCategoryLabel || "Entertainment";
+        const mediaUrl = parsedVideoData.mediaUrl || "http://www.youtube.com/v/defaultVideoID";
+        const duration = parsedVideoData.duration || 91;
+        const playerUrl = parsedVideoData.playerUrl || "http://www.youtube.com/watch?v=defaultVideoID";
+        const thumbnail = parsedVideoData.thumbnail || "http://i.ytimg.com/vi/defaultVideoID/default.jpg";
+        const aspectRatio = parsedVideoData.aspectRatio || "widescreen";
+        const videoId = parsedVideoData.id || "defaultVideoID";
+        const favoriteCount = parsedVideoData.favoriteCount || "0";
+        const viewCount = parsedVideoData.viewCount || "5470783";
+        const numDislikes = parsedVideoData.numDislikes || "1439";
+        const numLikes = parsedVideoData.numLikes || "15678";
+    
+        const videoTemplate = {
+            "gd$etag": etag,
+            "id": {
+                "$t": id
+            },
+            "published": {
+                "$t": published
+            },
+            "updated": {
+                "$t": updated
+            },
+            "category": [
+                {
+                    "scheme": "http://schemas.google.com/g/2005#kind",
+                    "term": "http://gdata.youtube.com/schemas/2007#video"
+                },
+                {
+                    "scheme": "http://gdata.youtube.com/schemas/2007/categories.cat",
+                    "term": category,
+                    "label": categoryLabel
+                }
+            ],
+            "title": {
+                "$t": title
+            },
+            "content": {
+                "type": "application/x-shockwave-flash",
+                "src": videoSrc
+            },
+            "link": [
+                {
+                    "rel": "alternate",
+                    "type": "text/html",
+                    "href": link
+                },
+                {
+                    "rel": "self",
+                    "type": "application/atom+xml",
+                    "href": link
+                }
+            ],
+            "author": [
+                {
+                    "name": {
+                        "$t": authorName
+                    },
+                    "uri": {
+                        "$t": authorUri
+                    }
+                }
+            ],
+            "yt$accessControl": [
+                {
+                    "action": "comment",
+                    "permission": "allowed"
+                },
+                {
+                    "action": "rate",
+                    "permission": "allowed"
+                }
+            ],
+            "gd$comments": {
+                "gd$feedLink": {
+                    "rel": "http://gdata.youtube.com/schemas/2007#comments",
+                    "href": commentsLink,
+                    "countHint": commentCount
+                }
+            },
+            "yt$hd": {},
+            "media$group": {
+                "media$category": [
+                    {
+                        "$t": mediaCategory,
+                        "label": mediaCategoryLabel
+                    }
+                ],
+                "media$content": [
+                    {
+                        "url": mediaUrl,
+                        "type": "application/x-shockwave-flash",
+                        "medium": "video",
+                        "isDefault": "true",
+                        "expression": "full",
+                        "duration": duration,
+                        "yt$format": 5
+                    }
+                ]
+            },
+            "media$player": {
+                "url": playerUrl
+            },
+            "media$thumbnail": [
+                {
+                    "url": thumbnail,
+                    "height": 90,
+                    "width": 120
+                }
+            ],
+            "yt$aspectRatio": {
+                "$t": aspectRatio
+            },
+            "yt$duration": {
+                "seconds": duration
+            },
+            "yt$videoid": {
+                "$t": videoId
+            },
+            "yt$statistics": {
+                "favoriteCount": favoriteCount,
+                "viewCount": viewCount
+            },
+            "yt$rating": {
+                "numDislikes": numDislikes,
+                "numLikes": numLikes
+            }
+        };
+        
+        // Return the JSON object as a string
+        return JSON.stringify(videoTemplate, null, 2);  // 'null, 2' for pretty-printing
+    }
+    
+    
     static async getVideos(req, res) {
+
+        var searchRequstData = await FeedsApiVideos.handleSearchRequest(req, res);
+
+        console.log("searxh data" + searchRequstData);
+
+        videoTemplates.length = 0;
+
+        await  FeedsApiVideos.generateVideoList(searchRequstData)
 
         const jsonData = `{
         "version": "1.0",
@@ -94,520 +360,9 @@ class FeedsApiVideos {
             "$t": 7
             },
             "entry": [
-            {
-                "gd$etag": "da",
-                "id": {
-                "$t": "tag:youtube.com,2008:video:ufsrgE0BYf0"
-                },
-                "published": {
-                "$t": "2013-05-10T00:00:01.000Z"
-                },
-                "updated": {
-                "$t": "2013-05-27T11:28:20.000Z"
-                },
-                "category": [
-                {
-                    "scheme": "http://schemas.google.com/g/2005#kind",
-                    "term": "http://gdata.youtube.com/schemas/2007#video"
-                },
-                {
-                    "scheme": "http://gdata.youtube.com/schemas/2007/categories.cat",
-                    "term": "Entertainment",
-                    "label": "Entertainment"
-                }
-                ],
-                "title": {
-                "$t": "Gravity - Official Teaser Trailer [HD]"
-                },
-                "content": {
-                "type": "application/x-shockwave-flash",
-                "src": "http://www.youtube.com/v/ufsrgE0BYf0?version=3&f=standard&app=youtube_gdata"
-                },
-                "link": [
-                {
-                    "rel": "alternate",
-                    "type": "text/html",
-                    "href": "http://www.youtube.com/watch?v=ufsrgE0BYf0&feature=youtube_gdata"
-                },
-                {
-                    "rel": "http://gdata.youtube.com/schemas/2007#video.responses",
-                    "type": "application/atom+xml",
-                    "href": "http://gdata.youtube.com/feeds/api/videos/ufsrgE0BYf0/responses?v=2"
-                },
-                {
-                    "rel": "http://gdata.youtube.com/schemas/2007#video.related",
-                    "type": "application/atom+xml",
-                    "href": "http://gdata.youtube.com/feeds/api/videos/ufsrgE0BYf0/related?v=2"
-                },
-                {
-                    "rel": "http://gdata.youtube.com/schemas/2007#mobile",
-                    "type": "text/html",
-                    "href": "http://m.youtube.com/details?v=ufsrgE0BYf0"
-                },
-                {
-                    "rel": "http://gdata.youtube.com/schemas/2007#uploader",
-                    "type": "application/atom+xml",
-                    "href": "http://gdata.youtube.com/feeds/api/users/jmJDM5pRKbUlVIzDYYWb6g?v=2"
-                },
-                {
-                    "rel": "self",
-                    "type": "application/atom+xml",
-                    "href": "http://gdata.youtube.com/feeds/api/videos/ufsrgE0BYf0?v=2"
-                }
-                ],
-                "author": [
-                {
-                    "name": {
-                    "$t": "WarnerBrosPictures"
-                    },
-                    "uri": {
-                    "$t": "http://gdata.youtube.com/feeds/api/users/WarnerBrosPictures"
-                    },
-                    "yt$userId": {
-                    "$t": "jmJDM5pRKbUlVIzDYYWb6g"
-                    }
-                }
-                ],
-                "yt$accessControl": [
-                {
-                    "action": "comment",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "commentVote",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "videoRespond",
-                    "permission": "moderated"
-                },
-                {
-                    "action": "rate",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "embed",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "list",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "autoPlay",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "syndicate",
-                    "permission": "allowed"
-                }
-                ],
-                "gd$comments": {
-                "gd$feedLink": {
-                    "rel": "http://gdata.youtube.com/schemas/2007#comments",
-                    "href": "http://gdata.youtube.com/feeds/api/videos/ufsrgE0BYf0/comments?v=2",
-                    "countHint": 8602
-                }
-                },
-                "yt$hd": {},
-                "media$group": {
-                "media$category": [
-                    {
-                    "$t": "Entertainment",
-                    "label": "Entertainment",
-                    "scheme": "http://gdata.youtube.com/schemas/2007/categories.cat"
-                    }
-                ],
-                "media$content": [
-                    {
-                    "url": "http://www.youtube.com/v/ufsrgE0BYf0?version=3&f=standard&app=youtube_gdata",
-                    "type": "application/x-shockwave-flash",
-                    "medium": "video",
-                    "isDefault": "true",
-                    "expression": "full",
-                    "duration": 91,
-                    "yt$format": 5
-                    },
-                    {
-                    "url": "rtsp://v2.cache1.c.youtube.com/CiQLENy73wIaGwn9YQFNgCv7uRMYDSANFEgGUghzdGFuZGFyZAw=/0/0/0/video.3gp",
-                    "type": "video/3gpp",
-                    "medium": "video",
-                    "expression": "full",
-                    "duration": 91,
-                    "yt$format": 1
-                    },
-                    {
-                    "url": "rtsp://v2.cache1.c.youtube.com/CiQLENy73wIaGwn9YQFNgCv7uRMYESARFEgGUghzdGFuZGFyZAw=/0/0/0/video.3gp",
-                    "type": "video/3gpp",
-                    "medium": "video",
-                    "expression": "full",
-                    "duration": 91,
-                    "yt$format": 6
-                    }
-                ],
-                "media$credit": [
-                    {
-                    "$t": "warnerbrospictures",
-                    "role": "uploader",
-                    "scheme": "urn:youtube",
-                    "yt$display": "WarnerBrosPictures",
-                    "yt$type": "partner"
-                    }
-                ],
-                "media$description": {
-                    "$t": "",
-                    "type": "plain"
-                },
-                "media$keywords": {},
-                "media$license": {
-                    "$t": "youtube",
-                    "type": "text/html",
-                    "href": "http://www.youtube.com/t/terms"
-                },
-                "media$player": {
-                    "url": "http://www.youtube.com/watch?v=ufsrgE0BYf0&feature=youtube_gdata_player"
-                },
-                "media$thumbnail": [
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/default.jpg",
-                    "height": 90,
-                    "width": 120,
-                    "time": "00:00:45.500",
-                    "yt$name": "default"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/mqdefault.jpg",
-                    "height": 180,
-                    "width": 320,
-                    "yt$name": "mqdefault"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/hqdefault.jpg",
-                    "height": 360,
-                    "width": 480,
-                    "yt$name": "hqdefault"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/sddefault.jpg",
-                    "height": 480,
-                    "width": 640,
-                    "yt$name": "sddefault"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/1.jpg",
-                    "height": 90,
-                    "width": 120,
-                    "time": "00:00:22.750",
-                    "yt$name": "start"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/2.jpg",
-                    "height": 90,
-                    "width": 120,
-                    "time": "00:00:45.500",
-                    "yt$name": "middle"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/3.jpg",
-                    "height": 90,
-                    "width": 120,
-                    "time": "00:01:08.250",
-                    "yt$name": "end"
-                    }
-                ],
-                "media$title": {
-                    "$t": "Gravity - Official Teaser Trailer [HD]",
-                    "type": "plain"
-                },
-                "yt$aspectRatio": {
-                    "$t": "widescreen"
-                },
-                "yt$duration": {
-                    "seconds": "91"
-                },
-                "yt$uploaded": {
-                    "$t": "2013-05-10T00:00:01.000Z"
-                },
-                "yt$uploaderId": {
-                    "$t": "UCjmJDM5pRKbUlVIzDYYWb6g"
-                },
-                "yt$videoid": {
-                    "$t": "ufsrgE0BYf0"
-                }
-                },
-                "gd$rating": {
-                "average": 4.6637263,
-                "max": 5,
-                "min": 1,
-                "numRaters": 17117,
-                "rel": "http://schemas.google.com/g/2005#overall"
-                },
-                "yt$statistics": {
-                "favoriteCount": "0",
-                "viewCount": "5470783"
-                },
-                "yt$rating": {
-                "numDislikes": "1439",
-                "numLikes": "15678"
-                }       
-            },
-            {
-                "gd$etag": "da",
-                "id": {
-                "$t": "tag:youtube.com,2008:video:ufsrgE0BYf0"
-                },
-                "published": {
-                "$t": "2013-05-10T00:00:01.000Z"
-                },
-                "updated": {
-                "$t": "2013-05-27T11:28:20.000Z"
-                },
-                "category": [
-                {
-                    "scheme": "http://schemas.google.com/g/2005#kind",
-                    "term": "http://gdata.youtube.com/schemas/2007#video"
-                },
-                {
-                    "scheme": "http://gdata.youtube.com/schemas/2007/categories.cat",
-                    "term": "Entertainment",
-                    "label": "Entertainment"
-                }
-                ],
-                "title": {
-                "$t": "School House Rock Shot Heard Round the World America Rock"
-                },
-                "content": {
-                "type": "application/x-shockwave-flash",
-                "src": "http://www.youtube.com/v/ufsrgE0BYf0?version=3&f=standard&app=youtube_gdata"
-                },
-                "link": [
-                {
-                    "rel": "alternate",
-                    "type": "text/html",
-                    "href": "http://www.youtube.com/watch?v=ufsrgE0BYf0&feature=youtube_gdata"
-                },
-                {
-                    "rel": "http://gdata.youtube.com/schemas/2007#video.responses",
-                    "type": "application/atom+xml",
-                    "href": "http://gdata.youtube.com/feeds/api/videos/ufsrgE0BYf0/responses?v=2"
-                },
-                {
-                    "rel": "http://gdata.youtube.com/schemas/2007#video.related",
-                    "type": "application/atom+xml",
-                    "href": "http://gdata.youtube.com/feeds/api/videos/ufsrgE0BYf0/related?v=2"
-                },
-                {
-                    "rel": "http://gdata.youtube.com/schemas/2007#mobile",
-                    "type": "text/html",
-                    "href": "http://m.youtube.com/details?v=ufsrgE0BYf0"
-                },
-                {
-                    "rel": "http://gdata.youtube.com/schemas/2007#uploader",
-                    "type": "application/atom+xml",
-                    "href": "http://gdata.youtube.com/feeds/api/users/jmJDM5pRKbUlVIzDYYWb6g?v=2"
-                },
-                {
-                    "rel": "self",
-                    "type": "application/atom+xml",
-                    "href": "http://gdata.youtube.com/feeds/api/videos/ufsrgE0BYf0?v=2"
-                }
-                ],
-                "author": [
-                {
-                    "name": {
-                    "$t": "Dr. Gerard Jabbow"
-                    },
-                    "uri": {
-                    "$t": "http://gdata.youtube.com/feeds/api/users/Dr. Gerard Jabbow"
-                    },
-                    "yt$userId": {
-                    "$t": "adwqrwwqad"
-                    }
-                }
-                ],
-                "yt$accessControl": [
-                {
-                    "action": "comment",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "commentVote",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "videoRespond",
-                    "permission": "moderated"
-                },
-                {
-                    "action": "rate",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "embed",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "list",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "autoPlay",
-                    "permission": "allowed"
-                },
-                {
-                    "action": "syndicate",
-                    "permission": "allowed"
-                }
-                ],
-                "gd$comments": {
-                "gd$feedLink": {
-                    "rel": "http://gdata.youtube.com/schemas/2007#comments",
-                    "href": "http://gdata.youtube.com/feeds/api/videos/ufsrgEs0BYf0/comments?v=2",
-                    "countHint": 8602
-                }
-                },
-                "yt$hd": {},
-                "media$group": {
-                "media$category": [
-                    {
-                    "$t": "Entertainment",
-                    "label": "Entertainment",
-                    "scheme": "http://gdata.youtube.com/schemas/2007/categories.cat"
-                    }
-                ],
-                "media$content": [
-                    {
-                    "url": "http://www.youtube.com/v/ufsrgE0BYf0?version=3&f=standard&app=youtube_gdata",
-                    "type": "application/x-shockwave-flash",
-                    "medium": "video",
-                    "isDefault": "true",
-                    "expression": "full",
-                    "duration": 91,
-                    "yt$format": 5
-                    },
-                    {
-                    "url": "rtsp://v2.cache1.c.youtube.com/CiQLENy73wIaGwn9YQFNgCv7uRMYDSANFEgGUghzdGFuZGFyZAw=/0/0/0/video.3gp",
-                    "type": "video/3gpp",
-                    "medium": "video",
-                    "expression": "full",
-                    "duration": 91,
-                    "yt$format": 1
-                    },
-                    {
-                    "url": "rtsp://v2.cache1.c.youtube.com/CiQLENy73wIaGwn9YQFNgCv7uRMYESARFEgGUghzdGFuZGFyZAw=/0/0/0/video.3gp",
-                    "type": "video/3gpp",
-                    "medium": "video",
-                    "expression": "full",
-                    "duration": 91,
-                    "yt$format": 6
-                    }
-                ],
-                "media$credit": [
-                    {
-                    "$t": "warnerbrospictures",
-                    "role": "uploader",
-                    "scheme": "urn:youtube",
-                    "yt$display": "WarnerBrosPictures",
-                    "yt$type": "partner"
-                    }
-                ],
-                "media$description": {
-                    "$t": "",
-                    "type": "plain"
-                },
-                "media$keywords": {},
-                "media$license": {
-                    "$t": "youtube",
-                    "type": "text/html",
-                    "href": "http://www.youtube.com/t/terms"
-                },
-                "media$player": {
-                    "url": "http://www.youtube.com/watch?v=ufsrgE0BYf0&feature=youtube_gdata_player"
-                },
-                "media$thumbnail": [
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/default.jpg",
-                    "height": 90,
-                    "width": 120,
-                    "time": "00:00:45.500",
-                    "yt$name": "default"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/mqdefault.jpg",
-                    "height": 180,
-                    "width": 320,
-                    "yt$name": "mqdefault"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/hqdefault.jpg",
-                    "height": 360,
-                    "width": 480,
-                    "yt$name": "hqdefault"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/sddefault.jpg",
-                    "height": 480,
-                    "width": 640,
-                    "yt$name": "sddefault"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/1.jpg",
-                    "height": 90,
-                    "width": 120,
-                    "time": "00:00:22.750",
-                    "yt$name": "start"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/2.jpg",
-                    "height": 90,
-                    "width": 120,
-                    "time": "00:00:45.500",
-                    "yt$name": "middle"
-                    },
-                    {
-                    "url": "http://i.ytimg.com/vi/ufsrgE0BYf0/3.jpg",
-                    "height": 90,
-                    "width": 120,
-                    "time": "00:01:08.250",
-                    "yt$name": "end"
-                    }
-                ],
-                "media$title": {
-                    "$t": "School House Rock Shot Heard Round the World America Rock",
-                    "type": "plain"
-                },
-                "yt$aspectRatio": {
-                    "$t": "widescreen"
-                },
-                "yt$duration": {
-                    "seconds": "91"
-                },
-                "yt$uploaded": {
-                    "$t": "2013-05-10T00:00:01.000Z"
-                },
-                "yt$uploaderId": {
-                    "$t": "UCjmJDM5pRKbUlVIzDYYWb6g"
-                },
-                "yt$videoid": {
-                    "$t": "uLN9qrJ8ESs"
-                }
-                },
-                "gd$rating": {
-                "average": 4.6637263,
-                "max": 5,
-                "min": 1,
-                "numRaters": 17117,
-                "rel": "http://schemas.google.com/g/2005#overall"
-                },
-                "yt$statistics": {
-                "favoriteCount": "0",
-                "viewCount": "5470783"
-                },
-                "yt$rating": {
-                "numDislikes": "1439",
-                "numLikes": "15678"
-                }       
-            }
+           
+                 ${videoTemplates}
+
             ]
         }
         }`;
