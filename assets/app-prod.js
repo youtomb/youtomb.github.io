@@ -10311,13 +10311,13 @@
                 return a;
             }
            
-            for (var f = 0; f < a.length; ++f) {
-                var charCode = a.charCodeAt(f); 
-                console.log(`Char code at position ${f}:`, charCode);
-                e = 31 * e + charCode;
-                e %= 4294967296;
-                console.log(`Updated e after position ${f}:`, e); 
-            }
+			for (var f = 0; f < a.length; ++f) {
+				var charCode = a.charCodeAt(f);
+				console.log("Char code at position " + f + ":", charCode);
+				e = (31 * e + charCode) >>> 0; // Ensure unsigned 32-bit integer
+				console.log("Updated e after position " + f + ":", e);
+			}
+
         
             var imgUrl = "//i" + (e % 4 + 1) + ".ytimg.com/" + b + "/" + a + "/" + c + ".jpg";
             console.log("Generated Image URL:", imgUrl); 
@@ -22271,14 +22271,16 @@
         console.log("URI before parameters:", f.toString());
     
         // Add parameters to the URI if 'a' is provided
-        if (a) {
-            for (var g in a) {
-                if (!a.hasOwnProperty || a.hasOwnProperty(g)) {
-                    f.setParameterValues(g, a[g]);
-                    console.log(`Parameter added: ${g} = ${a[g]}`);
-                }
-            }
+   // Add parameters to the URI if 'a' is provided
+if (a) {
+    for (var g in a) {
+        if (a.hasOwnProperty(g)) {  // Corrected this part
+            f.setParameterValues(g, a[g]);
+            console.log("Parameter added: " + g + " = " + a[g]);  // Replaced template literal with concatenation
         }
+    }
+}
+
     
         // Handle callback 'b'
         if (b) {
