@@ -14,6 +14,7 @@
   font-weight: normal;
   src: url('../assets/youtube-icons.ttf') format('truetype')
 }
+  
 
 body,
 html {
@@ -26,6 +27,12 @@ html {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none
+}
+
+input {
+  font: inherit;
+  margin: 0;
+  padding: 0
 }
 
 body {
@@ -60,7 +67,7 @@ ul {
 
 .logo-container {
   background-size: 100%;
-  background: url(../assets/logo.png) no-repeat;
+  background: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/logo.png) no-repeat;
   float: right;
   height: 41px;
   position: absolute;
@@ -70,7 +77,8 @@ ul {
 }
 
 .search-mode .logo-container,
-.watch-state.no-mode .logo-container {
+.watch-state.no-mode .logo-container,
+.no-app-background.logo-container {
   opacity: 0
 }
 
@@ -112,61 +120,15 @@ ul {
   top: 20em
 }
 
-@-moz-keyframes rotateThis {
-  from {
-      -moz-transform: scale(.7) rotate(0deg)
-  }
-  to {
-      -moz-transform: scale(.7) rotate(360deg)
-  }
-}
-
-@-ms-keyframes rotateThis {
-  from {
-      -ms-transform: scale(.7) rotate(0deg)
-  }
-  to {
-      -ms-transform: scale(.7) rotate(360deg)
-  }
-}
-
-@-o-keyframes rotateThis {
-  from {
-      -o-transform: scale(.7) rotate(0deg)
-  }
-  to {
-      -o-transform: scale(.7) rotate(360deg)
-  }
-}
-
-@-webkit-keyframes rotateThis {
-  from {
-      -webkit-transform: scale(.7) rotate(0deg)
-  }
-  to {
-      -webkit-transform: scale(.7) rotate(360deg)
-  }
-}
-
-@keyframes rotateThis {
-  from {
-      transform: scale(.7) rotate(0deg)
-  }
-  to {
-      transform: scale(.7) rotate(360deg)
-  }
-}
-
 .carousel-loading-indicator {
-  -moz-animation: rotateThis linear 2s 0s infinite normal none;
-  -ms-animation: rotateThis linear 2s 0s infinite normal none;
-  -o-animation: rotateThis linear 2s 0s infinite normal none;
-  -webkit-animation: rotateThis linear 2s 0s infinite normal none;
-  animation: rotateThis linear 2s 0s infinite normal none;
-  background: url(../assets/carousel-loading-indicator.png) no-repeat center center;
-  height: 200px;
-  width: 200px;
-  margin: 0 auto
+  background: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/carousel-loading-indicator.gif);
+  background-size: 100%;
+  border-radius: 1em;
+  height: 11.5em;
+  margin: 0 auto;
+  opacity: .7;
+  overflow: hidden;
+  width: 11.5em
 }
 
 .fallback-loading-indicator {
@@ -191,14 +153,6 @@ ul {
   width: .1em
 }
 
-.post-play-mode #browse-scrollbar {
-  display: none
-}
-
-#browse-scrollbar {
-  margin-left: 7.5em
-}
-
 .watch-state.browse-mode .feed-icon h2 {
   text-shadow: #000 .05em .05em
 }
@@ -211,11 +165,21 @@ ul {
 #super-scroller {
   left: 2em;
   position: absolute;
-  top: 0
+  top: -1.4em;
+  pointer-events: none
 }
 
-.search-mode #super-scroller,
-.search-mode #browse-scrollbar {
+#scroller-background {
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.8) 6em, rgba(0, 0, 0, 0.0) 32em);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8) 6em, rgba(0, 0, 0, 0.0) 32em);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 6em, rgba(0, 0, 0, 0.0) 32em);
+  height: 100%;
+  width: 33em
+}
+
+.search-mode #scroller-background,
+.watch-state #scroller-background,
+.search-mode #super-scroller {
   display: none
 }
 
@@ -226,13 +190,14 @@ ul {
 
 #super-scroller .icon {
   background: no-repeat center;
-  background-size: 40%;
+  background-size: 50%;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   height: 3em;
-  opacity: 0.4;
+  opacity: .4;
   padding-top: 0.9em;
+  pointer-events: auto;
   text-align: center;
   text-shadow: #000 0.08em 0.08em;
   vertical-align: middle;
@@ -249,7 +214,7 @@ ul {
   max-width: 20em;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-shadow: #000 .04em .04em;
+  text-shadow: #000 .06em .06em;
   text-transform: uppercase;
   vertical-align: middle;
   white-space: pre
@@ -268,14 +233,23 @@ ul {
 
 #super-scroller.enabled h2 {
   display: inline;
-  opacity: 0.5
+  opacity: .5
+}
+
+#super-scroller div:nth-child(3) {
+  height: 6em;
+  line-height: 6em
 }
 
 #super-scroller div:nth-child(3) .icon {
-  cursor: default
+  background-size: 75%;
+  cursor: default;
+  font-size: 2em;
+  opacity: 1;
+  padding: 0;
+  width: 2.5em
 }
 
-#super-scroller div:nth-child(3) .icon,
 #super-scroller .feed-icon .icon:hover {
   opacity: 1
 }
@@ -300,7 +274,7 @@ ul {
 
 #debug-watermark {
   background-color: rgba(235, 49, 3, 0.7);
-  color: rgb(14, 2, 2);
+  color: #0e0202;
   display: none;
   font-size: 100%;
   left: 0;
@@ -420,10 +394,6 @@ ul {
 
 .icon-cc:before {
   content: "\00e013"
-}
-
-.icon-home:before {
-  content: "\00e014"
 }
 
 .icon-news:before {
@@ -672,7 +642,7 @@ ul {
 }
 
 #browse-row {
-  left: 9.5em;
+  left: 9.2em;
   position: absolute;
   top: 17%;
   width: 100%
@@ -749,7 +719,7 @@ ul {
 .action-tile,
 .post-play-tile,
 .video-tile {
-  background-color: rgba(0, 0, 0, .6);
+  background-color: #000;
   color: #f1f1f1;
   height: 100%;
   list-style: none;
@@ -791,7 +761,7 @@ ul {
 }
 
 .feed-row .item:hover {
-  background-color: rgba(90, 90, 90, .4);
+  background-color: #5a5a5a;
   cursor: pointer
 }
 
@@ -810,22 +780,12 @@ ul {
   background-color: rgba(255, 255, 255, 0.4)
 }
 
-.action-tile.obscured,
-.post-play-tile.obscured,
-.video-tile.obscured {
-  opacity: .4
-}
-
 .feed-row .post-play-tile:nth-child(3) .post-play-title {
   display: none
 }
 
 .countdown-active .video-tile .video-thumb {
-  opacity: 0.5
-}
-
-.search-mode .video-tile.obscured {
-  opacity: 1
+  opacity: .5
 }
 
 .item .overlay {
@@ -883,12 +843,17 @@ ul {
 }
 
 .video-tile .bottom {
-  height: 50%
+  height: 50%;
+  opacity: .75
+}
+
+.video-tile.active .bottom {
+  opacity: 1
 }
 
 .video-tile .bottom .title {
   font-size: 1.8em;
-  height: 18%;
+  height: 17%;
   letter-spacing: -.03em;
   line-height: 1.1em;
   overflow: hidden;
@@ -905,25 +870,18 @@ ul {
   background-color: #252525;
   background-position: center;
   background-size: 100%;
-  height: 100%
+  height: 100%;
+  opacity: .5
 }
 
 .video-tile .video-thumb.preloaded {
   background: no-repeat center;
   background-size: auto;
-  background-image: url('/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-playbutton.png')
+  background-image: url('/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-playbutton.png')
 }
 
 .action-tile .content {
   white-space: normal
-}
-
-.action-tile .description {
-  font-size: 1.7em;
-  padding: 0 5%;
-  top: 25%;
-  white-space: normal;
-  width: 90%
 }
 
 .video-tile .duration {
@@ -940,6 +898,10 @@ ul {
 .post-play-tile.active .video-tile .bottom,
 .video-tile.active .bottom {
   color: #222
+}
+
+.video-tile.active .video-thumb {
+  opacity: 1
 }
 
 .action-tile.active .content {
@@ -979,6 +941,22 @@ ul {
   white-space: normal
 }
 
+.action-tile .icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 7em;
+  margin-top: -0.5em
+}
+
+.action-tile .icon.enabled {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-settings-checked.png)
+}
+
+.action-tile .icon.disabled {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-settings-unchecked.png)
+}
+
 .action-tile .sign-out-user-icon,
 .action-tile .sign-in-user-icon {
   background-size: cover;
@@ -988,7 +966,7 @@ ul {
 }
 
 .action-tile .sign-in-user-icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-default-avatar.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-default-avatar.png)
 }
 
 .action-tile .sign-out-username {
@@ -996,13 +974,14 @@ ul {
   text-align: center
 }
 
+.action-tile .description,
 .action-tile .remote-pair-text,
 .action-tile .remote-reset-help,
 .action-tile .sign-out-help-text,
 .action-tile .sign-in-help-text {
   bottom: 0.6em;
   box-sizing: border-box;
-  font-size: 2.5em;
+  font-size: 1.5em;
   padding: 0 0.7em;
   position: absolute;
   text-align: center;
@@ -1010,21 +989,19 @@ ul {
   width: 100%
 }
 
-.action-tile .remote-pair-text,
-.action-tile .remote-reset-help,
-.action-tile .sign-in-help-text {
-  font-size: 1.5em
+.action-tile .sign-out-help-text {
+  font-size: 2.5em
 }
 
 .action-tile .remote-pair-icon {
-  background: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/phone-icons.png) no-repeat center;
+  background: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/phone-icons.png) no-repeat center;
   background-size: contain;
   height: 11em;
   margin-top: 3.5em
 }
 
 .action-tile .remote-reset-phone {
-  background: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/phone-portrait.png) no-repeat center;
+  background: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/phone-portrait.png) no-repeat center;
   background-size: contain;
   height: 14em;
   margin-top: .6em;
@@ -1047,13 +1024,9 @@ ul {
   height: 2.7em
 }
 
-.action-tile .device-retention-permission {
+.action-tile .status {
   font-size: 2em;
   text-align: center
-}
-
-.action-tile .device-retention-permission .action {
-  padding-top: 2em
 }
 
 .row-playing {
@@ -1073,17 +1046,21 @@ ul {
 }
 
 .action-tile .search-icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-search-tile.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-search-tile.png)
 }
 
 .action-tile .clear-search-icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-search-tile-clear.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-search-tile-clear.png)
 }
 
 .action-tile .search-tile-subtitle {
   font-size: 1.4em;
   margin-top: 2em;
   text-align: center
+}
+
+.action-tile .warning {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-warning.png)
 }
 
 #dialog.remote-reset-dialog>.title {
@@ -1210,14 +1187,14 @@ ul {
   background-size: 1em;
   background-position: left center;
   background-repeat: no-repeat;
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/phone_icon.png);
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/phone_icon.png);
   overflow: hidden;
   text-overflow: ellipsis;
   width: 11.5em
 }
 
 .remote-reset-dialog ul.devices li.connected {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/phone_icon_connected.png);
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/phone_icon_connected.png);
   color: #f1f1f1
 }
 
@@ -1289,76 +1266,99 @@ ul {
 
 #search-text-box {
   background-color: #f1f1f1;
-  background: transparent url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/bg-search-input.png) repeat-x;
-  border: none;
-  display: block;
+  background: transparent url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/bg-search-input.png) repeat-x;
   font-size: 1.7em;
   height: 1.5em;
+  line-height: 1.5em;
   margin: .5em auto;
-  padding: 0 .6em .15em .6em;
   position: relative;
-  text-transform: uppercase;
   width: 60%
 }
 
-#search-text-box input {
-  position: relative
+#search-input {
+  color: #111;
+  background: none;
+  border: none;
+  height: 1.5em;
+  left: 0.6em;
+  position: absolute;
+  text-transform: uppercase;
+  width: 95%
 }
 
-#search-text-box .suggestion {
+#search-input:disabled {
+  color: #111
+}
+
+#search-suggestion {
   color: #999;
-  display: inline-block;
-  margin-top: 0.2em;
-  vertical-align: top;
+  height: 1.5em;
+  position: absolute;
   white-space: pre;
   width: 100%
 }
 
-#search-text-box .suggestion-text {
+#search-suggestion .suggestion-text {
   display: inline-block;
+  height: 1.5em;
+  line-height: 1.5em;
   max-width: 90%;
   overflow: hidden;
+  padding-left: 0.6em;
   text-overflow: ellipsis;
   white-space: nowrap
 }
 
-#search-text-box .suggestion-trigger {
-  background: transparent url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/suggestion_trigger_hover.png) no-repeat;
+#search-suggestion .suggestion-trigger {
+  background: transparent url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/suggestion_trigger_hover.png) no-repeat;
   background-size: contain;
   cursor: pointer;
   display: inline-block;
   height: 1em;
-  left: 0.1em;
+  left: 0.15em;
   position: relative;
-  top: 0.15em;
+  top: 0.3em;
   vertical-align: top;
   width: 1em
 }
 
-#search-text-box.active .suggestion-trigger,
-#search-text-box .suggestion-trigger:hover {
-  background: transparent url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/suggestion_trigger.png) no-repeat;
+#search-suggestion.active .suggestion-trigger,
+#search-suggestion .suggestion-trigger:hover {
+  background: transparent url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/suggestion_trigger.png) no-repeat;
   background-size: contain
 }
 
-#search-text-box .empty,
-#search-text-box .query {
+#search-query {
   color: #111;
-  left: 0.6em;
-  max-width: 90%;
+  height: 100%;
   overflow: hidden;
-  position: absolute;
+  padding: 0 0 0 .6em;
   text-overflow: ellipsis;
-  top: 0.2em;
-  white-space: pre
+  text-transform: uppercase;
+  white-space: pre;
+  width: 95%
 }
 
-#search-text-box .empty {
-  color: #999
+#search-input+#search-query {
+  position: absolute
+}
+
+#search-query-cursor {
+  border: 1px solid #666;
+  display: inline-block;
+  height: 1em;
+  margin-bottom: -.16em;
+  margin-left: -.1em;
+  width: .5em
+}
+
+#search.active #search-query-cursor {
+  background: #666
 }
 
 #search-keyboard {
-  font-size: 2em
+  font-size: 2em;
+  text-align: center
 }
 
 .lang-ko #search-keyboard {
@@ -1373,9 +1373,9 @@ ul {
   z-index: 1
 }
 
-#keyboard {
-  overflow: hidden;
-  text-align: center
+#keyboard-grid {
+  display: inline-block;
+  overflow: hidden
 }
 
 #search-keyboard .letter-tile .delete-icon {
@@ -1400,14 +1400,14 @@ ul {
   background-size: 80%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-globe.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-globe.png)
 }
 
 #search-keyboard .delete-icon {
   background-size: 80%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-delete.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-delete.png)
 }
 
 .letter-suggest {
@@ -1429,7 +1429,7 @@ ul {
   width: 1em
 }
 
-#keyboard .letter-tile {
+#keyboard-grid .letter-tile {
   display: inline-block
 }
 
@@ -1451,6 +1451,10 @@ ul {
 
 #transliteration-container {
   display: none
+}
+
+#search-keyboard.transliterable #transliteration-container {
+  display: block
 }
 
 #transliteration.list-content {
@@ -1479,25 +1483,6 @@ ul {
   cursor: pointer
 }
 
-#search-query {
-  color: #111;
-  height: 100%;
-  width: 100%
-}
-
-#search-query-cursor {
-  border: 1px solid #666;
-  display: inline-block;
-  height: 1em;
-  margin-bottom: -.16em;
-  margin-left: -.1em;
-  width: .5em
-}
-
-#search.active #search-query-cursor {
-  background: #666
-}
-
 #player {
   height: 100%;
   width: 100%
@@ -1521,18 +1506,6 @@ ul {
   height: 100%
 }
 
-#watch-background {
-  background: #000 no-repeat center center;
-  background-size: contain;
-  height: 100%;
-  position: absolute;
-  width: 100%
-}
-
-#watch-background.hidden {
-  display: none
-}
-
 .countdowntimer,
 .ytp-cued-icon,
 .ytp-fallback,
@@ -1545,7 +1518,6 @@ ul {
 .html5-show-video-info-template,
 .html5-storyboard,
 .html5-text-button,
-.html5-video-content,
 .html5-ypc-module,
 .player-actions-container,
 .video-ad-status-bar,
@@ -1640,7 +1612,7 @@ ul {
 
 .advertisement-callout {
   background-size: cover;
-  background: transparent url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/advertisement-bg.png) 0 0 repeat;
+  background: transparent url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/advertisement-bg.png) 0 0 repeat;
   color: #cfc323;
   font-size: 1.1em;
   padding: 0.7em
@@ -1679,7 +1651,6 @@ ul {
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.84) 100%);
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.84) 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.84) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-top: none;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
   height: 101px;
@@ -1687,6 +1658,17 @@ ul {
   position: relative;
   text-align: center;
   width: 515px
+}
+
+.player-controls-border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 10px
 }
 
 .title-card {
@@ -1727,8 +1709,7 @@ ul {
 }
 
 .player-video-avatar {
-  float: left;
-  height: 3.5em
+  float: left
 }
 
 .player-video-avatar img {
@@ -1758,20 +1739,20 @@ ul {
   display: inline-block;
   font-size: 24px;
   margin: 0 1em 0 0;
-  opacity: 0.5;
+  opacity: .5;
   text-shadow: 0px 1px 1px #000;
   vertical-align: middle
 }
 
 .player-controls div:hover {
   color: #fff;
-  opacity: 0.8
+  opacity: .8
 }
 
 .player-controls .icon-player-play,
 .player-controls .icon-player-pause {
   font-size: 43px;
-  margin: 0 0.4em 0 0;
+  margin: 0 0.5em 0 0;
   padding: 0;
   vertical-align: middle
 }
@@ -1785,7 +1766,7 @@ ul {
 }
 
 .player-controls div.disabled-button {
-  opacity: 0.2
+  opacity: .2
 }
 
 .player-controls .icon-flag {
@@ -1799,7 +1780,7 @@ ul {
 }
 
 #transport-closed-captions-button.highlighted {
-  opacity: 0.9
+  opacity: .9
 }
 
 #transport-closed-captions-button.highlighted.active {
@@ -1807,38 +1788,37 @@ ul {
 }
 
 #transport-closed-captions-button.highlighted.disabled-button {
-  opacity: 0.2
+  opacity: .2
 }
 
 #progress-bar>div {
-  background: transparent url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/player-controls.png) no-repeat
+  background: transparent url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/player-controls.png) no-repeat
 }
 
 #progress-bar .player-seek-active {
-  background-position: -27px -179px;
+  background-position: -27px -178px;
   bottom: 0px;
-  height: 12px;
+  height: 10px;
   position: absolute
 }
 
 #progress-bar .player-seek-buffer {
-  background-position: -27px -208px;
-  height: 12px;
-  position: absolute;
-  top: -1px
+  background-position: -27px -207px;
+  height: 10px;
+  position: absolute
 }
 
 #progress-bar .player-seek-ad {
-  background-position: -27px -271px;
-  height: 12px;
+  background-position: -27px -270px;
+  height: 10px;
   position: absolute;
   width: 50px
 }
 
 #progress-bar {
   background-color: rgba(255, 255, 255, 0.1);
-  background-position: -27px -238px;
-  height: 12px;
+  background-position: -27px -237px;
+  height: 10px;
   left: 0;
   overflow: hidden;
   position: absolute;
@@ -1892,6 +1872,15 @@ ul {
   -webkit-transition: all .6s ease
 }
 
+.html5-video-content {
+  position: absolute
+}
+
+.html5-video-player .caption-window {
+  position: absolute;
+  pointer-events: none
+}
+
 .html5-video-player .standard-caption-window {
   position: absolute;
   top: auto !important;
@@ -1899,9 +1888,67 @@ ul {
   width: 80%
 }
 
+.caption-window-transform {
+  display: inline-block;
+  line-height: 1.32em
+}
+
 .html5-video-player .captions-text {
   position: relative;
   word-wrap: normal
+}
+
+.html5-video-player .caption-row {
+  padding-bottom: 5px;
+  padding-top: 5px
+}
+
+.anchor-point-1 {
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0)
+}
+
+.anchor-point-2 {
+  -moz-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0)
+}
+
+.anchor-point-3 {
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%)
+}
+
+.anchor-point-4 {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+.anchor-point-5 {
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%)
+}
+
+.anchor-point-6 {
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  -webkit-transform: translate(0, -100%);
+  transform: translate(0, -100%)
 }
 
 .anchor-point-7 {
@@ -1910,6 +1957,14 @@ ul {
   -o-transform: translate(-50%, -100%);
   -webkit-transform: translate(-50%, -100%);
   transform: translate(-50%, -100%)
+}
+
+.anchor-point-8 {
+  -moz-transform: translate(-100%, -100%);
+  -ms-transform: translate(-100%, -100%);
+  -o-transform: translate(-100%, -100%);
+  -webkit-transform: translate(-100%, -100%);
+  transform: translate(-100%, -100%)
 }
 
 #toast {
@@ -2005,7 +2060,6 @@ ul {
 }
 
 #toast .remote-connect .toast-msg {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/phone_icon.png);
   background-position: center left;
   background-repeat: no-repeat;
   background-size: 1.1em 1.1em;
@@ -2013,11 +2067,51 @@ ul {
 }
 
 #toast .remote-connected {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/remote_connect.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/remote_connect.png)
 }
 
 #toast .remote-disconnected {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/remote_disconnect.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/remote_disconnect.png)
+}
+
+#toast .android-phone-connected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-android-phone-connected.png)
+}
+
+#toast .android-phone-disconnected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-android-phone-disconnected.png)
+}
+
+#toast .android-tablet-connected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-android-tablet-connected.png)
+}
+
+#toast .android-tablet-disconnected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-android-tablet-disconnected.png)
+}
+
+#toast .ios-phone-connected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ios-phone-connected.png)
+}
+
+#toast .ios-phone-disconnected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ios-phone-disconnected.png)
+}
+
+#toast .ios-tablet-connected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ios-tablet-connected.png)
+}
+
+#toast .ios-tablet-disconnected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ios-tablet-disconnected.png)
+}
+
+#toast .laptop-connected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-laptop-connected.png)
+}
+
+#toast .laptop-disconnected {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-laptop-disconnected.png)
 }
 
 #toast .toast-progress {
@@ -2031,19 +2125,19 @@ ul {
 }
 
 #toast .volume-muted {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/volume_mute_pressed.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/volume_mute_pressed.png)
 }
 
 #toast .volume-low {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/volume_0_pressed.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/volume_0_pressed.png)
 }
 
 #toast .volume-mid {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/volume_1_pressed.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/volume_1_pressed.png)
 }
 
 #toast .volume-high {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/volume_2_pressed.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/volume_2_pressed.png)
 }
 
 #toast .volume-toast .toast-msg {
@@ -2112,6 +2206,10 @@ ul {
   width: 90%
 }
 
+#inner-dialog-container li {
+  font-size: .78em
+}
+
 #inner-dialog-container .url {
   color: #fff;
   font-size: 1.25em;
@@ -2134,7 +2232,7 @@ ul {
 #search .pairing .phone-content,
 #dialog .pairing .phone-content,
 #dialog .login-instructions {
-  background: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/phone-landscape.png) top left no-repeat;
+  background: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/phone-landscape.png) top left no-repeat;
   background-size: contain;
   display: inline-block;
   font-size: 2em;
@@ -2290,6 +2388,36 @@ ul {
   padding-bottom: 1em
 }
 
+#dialog.no-app-background>#dialog-wrapper {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/call-to-cast-yt-logo.jpg);
+  background-repeat: no-repeat;
+  background-position: 6em 95%
+}
+
+.call-to-cast-background {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/call-to-cast-devices.jpg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 50%
+}
+
+.call-to-cast-text {
+  color: #f1f1f1;
+  font-family: 'roboto-light';
+  font-weight: normal;
+  margin-bottom: 0;
+  text-shadow: #000 .06em .06em;
+  width: 50%
+}
+
+h2.call-to-cast-text {
+  font-size: 3em
+}
+
+h3.call-to-cast-text {
+  font-size: 1.5em
+}
+
 .flag-list-container {
   margin-top: .5em
 }
@@ -2340,7 +2468,7 @@ ul {
 }
 
 .flag-example {
-  background: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/flag.png) no-repeat 0 0;
+  background: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/flag.png) no-repeat 0 0;
   background-size: contain;
   display: inline-block;
   height: 57%;
@@ -2460,7 +2588,7 @@ ul {
 #shiyojo .playstation-logo,
 #shiyojo .ps3-logo,
 #kenko .warning {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/logo-playstation.png);
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/logo-playstation.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -2474,12 +2602,12 @@ ul {
 }
 
 #shiyojo .ps3-logo {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/logo-ps3.png);
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/logo-ps3.png);
   width: 2.7em
 }
 
 #kenko .warning {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-warning.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-warning.png)
 }
 
 .paid-channel-info {
@@ -2496,7 +2624,7 @@ ul {
 }
 
 .status-dialog .icon {
-  background: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/pairing-promo-combo.png) center center no-repeat;
+  background: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/pairing-promo-combo.png) center center no-repeat;
   background-size: contain;
   display: inline-block;
   height: 11em;
@@ -2575,8 +2703,7 @@ ul {
   margin-top: 1.8em
 }
 
-#search-keyboard.jp .item,
-#letter-suggest.jp .item {
+#search-keyboard.lang-jp .item {
   width: 1.2em
 }
 
@@ -2584,19 +2711,12 @@ ul {
   top: 28%
 }
 
-#search-keyboard.ru .item,
-#letter-suggest.ru .item {
+#search-keyboard.lang-ru .item {
   width: .75em
 }
 
-#search-keyboard.ko #keyboard {
-  display: table;
-  margin: 0 auto;
+#search-keyboard.lang-ko #keyboard-grid {
   text-align: left
-}
-
-#search-keyboard.ko .grid-row {
-  display: table-row
 }
 
 .legend {
@@ -2625,7 +2745,9 @@ ul {
   background-size: contain
 }
 
-.legend .reversed-back {
+.legend .backspace,
+.legend .reversed-back,
+.legend .switch-displays {
   display: none
 }
 
@@ -2662,21 +2784,25 @@ ul {
   display: inline-block
 }
 
+.wiiu .legend {
+  font-size: 1.5em
+}
+
 .desktop .legend .more .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-desktop-dpad-down.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-desktop-dpad-down.png)
 }
 
 .desktop .legend .back .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-desktop-esc.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-desktop-esc.png)
 }
 
 .desktop .legend .search .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-desktop-s.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-desktop-s.png)
 }
 
 .desktop .legend .home .icon,
 .desktop .legend .delete .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-desktop-g.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-desktop-g.png)
 }
 
 .browse-state .more,
@@ -2692,6 +2818,7 @@ ul {
 .watch-state.title-mode .delete,
 .watch-state.transport-mode .delete,
 .watch-state.browse-mode .delete,
+.watch-state.post-play-mode .delete,
 .watch-state.post-play-mode .more,
 .wiiu .search-mode.search-active .delete,
 #dialog-legend .more,
@@ -2720,24 +2847,24 @@ ul {
 }
 
 .ps3 .legend .more .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-ps3-dpad-down.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ps3-dpad-down.png)
 }
 
 .ps3 .legend .back .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-ps3-circle.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ps3-circle.png)
 }
 
 .ps3 .legend .reversed-back .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-ps3-x.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ps3-x.png)
 }
 
 .ps3 .legend .search .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-ps3-triangle.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ps3-triangle.png)
 }
 
 .ps3 .legend .home .icon,
 .ps3 .legend .delete .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-ps3-square.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ps3-square.png)
 }
 
 .ps3 #dialog .logout-authenticated-info {
@@ -2772,20 +2899,40 @@ ul {
 }
 
 .wiiu .legend .more .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-ps3-dpad-down.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-ps3-dpad-down.png)
 }
 
 .wiiu .legend .back .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-wiiu-b.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-wiiu-b.png)
 }
 
 .wiiu .legend .search .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-wiiu-y.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-wiiu-y.png)
 }
 
 .wiiu .legend .home .icon,
 .wiiu .legend .delete .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-wiiu-x.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-wiiu-x.png)
+}
+
+.wiiusteel .legend .switch-displays {
+  display: inline-block
+}
+
+.wiiusteel .legend .switch-displays .icon {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-wiiu-minus.png)
+}
+
+.wiiusteel .nativeosk .legend .back .icon {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-wiiu-back.png)
+}
+
+.wiiusteel .nativeosk.search-mode .legend .backspace {
+  display: inline-block
+}
+
+.wiiusteel .nativeosk.search-mode .legend .backspace .icon {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-wiiu-b.png)
 }
 
 .wiiu .qr-code-wrapper {
@@ -2793,15 +2940,22 @@ ul {
 }
 
 .wiiu .player-controls-widget {
-  background: transparent url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/player-background.png) 0 0 repeat-x;
+  background: transparent url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/player-background.png) 0 0 repeat-x;
   background-size: cover;
-  border: none;
   box-shadow: none
+}
+
+.wiiu .player-controls-border {
+  border: none
 }
 
 .wiiu .advertisement-callout {
   height: 5em;
   width: 18%
+}
+
+.wiiu .search-mode #browse-row {
+  top: 15%
 }
 
 .tv .legend .delete,
@@ -2811,7 +2965,7 @@ ul {
 }
 
 .tv .legend .more .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-tv-dpad-down.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-tv-dpad-down.png)
 }
 
 .lg .legend .back {
@@ -2819,23 +2973,23 @@ ul {
 }
 
 .tv .legend .back .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-tv-back.png)
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-tv-back.png)
 }
 
 .lg .legend .more .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-lgtv-dpad-more.png) !important
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-lgtv-dpad-more.png) !important
 }
 
 .lg .legend .more:hover .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-lgtv-dpad-more-hover.png) !important
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-lgtv-dpad-more-hover.png) !important
 }
 
 .lg .legend .back .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-lgtv-back-default.png) !important
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-lgtv-back-default.png) !important
 }
 
 .lg .legend .back:hover .icon {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-lgtv-back-hover.png) !important
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-lgtv-back-hover.png) !important
 }
 
 body.samsung {
@@ -2844,7 +2998,7 @@ body.samsung {
 
 body.lg {
   background-color: transparent !important;
-  background-image: url(https://web.archive.org/web/20130427132343im_/tv:/) !important
+  background-image: url(https://web.archive.org/web/20130711074930im_/tv:/) !important
 }
 
 .limited-graphics .bg,
@@ -2865,11 +3019,8 @@ body.lg {
 
 .limited-graphics .video-tile .video-thumb {
   background: no-repeat center;
-  background-size: auto
-}
-
-.limited-graphics #browse-scrollbar {
-  background-color: #585858
+  background-size: auto;
+  opacity: 1
 }
 
 .limited-graphics #super-scroller .feed-icon .icon {
@@ -2877,11 +3028,6 @@ body.lg {
 }
 
 .limited-graphics #super-scroller h2.enabled {
-  opacity: 1
-}
-
-.limited-graphics .action-tile.obscured,
-.limited-graphics .video-tile.obscured {
   opacity: 1
 }
 
@@ -2909,11 +3055,27 @@ body.lg {
 }
 
 .limited-graphics .video-tile .bottom {
-  background-color: #252525
+  background-color: #252525;
+  color: #888;
+  opacity: 1
 }
 
-.limited-graphics .video-tile.active .bottom {
-  background: #f1f1f1
+.limited-graphics .video-tile .details {
+  color: #444
+}
+
+.limited-graphics .video-tile .details .activity {
+  color: #888
+}
+
+.limited-graphics .video-tile.active .bottom,
+.limited-graphics .video-tile.active .details .activity {
+  background: #f1f1f1;
+  color: #000
+}
+
+.limited-graphics .video-tile.active .details {
+  color: #666
 }
 
 .limited-graphics .action-tile.active {
@@ -2925,8 +3087,9 @@ body.lg {
 }
 
 .limited-graphics .hide-background.video-tile .video-thumb {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-playbutton.png) !important;
-  background-repeat: no-repeat
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/icon-playbutton.png) !important;
+  background-repeat: no-repeat;
+  opacity: 1
 }
 
 .limited-graphics .action-tile.active {
@@ -2989,8 +3152,7 @@ body.lg {
 }
 
 .limited-graphics #super-scroller {
-  position: absolute;
-  top: 0
+  position: absolute
 }
 
 .limited-graphics #super-scroller .icon {
@@ -2999,13 +3161,7 @@ body.lg {
 
 .limited-graphics #scroller-background {
   background-color: #1c1c1c;
-  height: 100%;
   width: 7.6em
-}
-
-.limited-graphics .search-mode #scroller-background,
-.limited-graphics .watch-state #scroller-background {
-  display: none
 }
 
 .opera .active,
@@ -3036,19 +3192,16 @@ body.lg {
 }
 
 #eureka-player-controls {
-  background: transparent url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/icon-play-pause-eureka.png) no-repeat;
-  background-size: cover;
-  height: 10em;
+  background-size: 100%;
+  border-radius: 1em;
+  height: 11.5em;
   margin: 0 auto;
-  width: 14em
+  overflow: hidden;
+  width: 11.5em
 }
 
 .eureka #eureka-player-controls {
   opacity: 0
-}
-
-#watch.pause #eureka-player-controls {
-  background-position: 100% 0
 }
 
 @-webkit-keyframes showAndShrinkPause {
@@ -3057,15 +3210,13 @@ body.lg {
       opacity: 0
   }
   to {
-      -webkit-transform: scale(.75);
-      opacity: 1
+      opacity: .7
   }
 }
 
 @-webkit-keyframes hideAndGrowPlay {
   from {
-      -webkit-transform: scale(.75);
-      opacity: 1
+      opacity: .7
   }
   to {
       -webkit-transform: scale(1.5);
@@ -3074,13 +3225,14 @@ body.lg {
 }
 
 .eureka #watch.play #eureka-player-controls {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/player-play.png);
   -webkit-animation: hideAndGrowPlay linear 0.25s 0s 1 normal none
 }
 
 .eureka #watch.pause #eureka-player-controls {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/player-pause.png);
   -webkit-animation: showAndShrinkPause linear 0.25s 0s 1 normal none;
-  -webkit-transform: scale(.75);
-  opacity: 1
+  opacity: .7
 }
 
 .nav-arrow {
@@ -3094,57 +3246,110 @@ body.lg {
   width: 6em
 }
 
-.lg .nav-arrows-enabled .nav-arrow {
+.pointer .nav-arrows-enabled .nav-arrow {
   display: block
 }
 
-.lg #up-arrow {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/motion-control-up-button-default.png);
+.pointer #up-arrow {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/motion-control-up-button-default.png);
   top: 5%;
   left: 45%
 }
 
-.lg #up-arrow:hover {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/motion-control-up-button-hover.png)
+.pointer #up-arrow:hover {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/motion-control-up-button-hover.png)
 }
 
-.lg #down-arrow {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/motion-control-down-button-default.png);
+.pointer #down-arrow {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/motion-control-down-button-default.png);
   bottom: 5%;
   left: 45%
 }
 
-.lg #down-arrow:hover {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/motion-control-down-button-hover.png)
+.pointer #down-arrow:hover {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/motion-control-down-button-hover.png)
 }
 
-.lg #left-arrow {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/motion-control-left-button-default.png);
+.pointer #left-arrow {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/motion-control-left-button-default.png);
   top: 50%;
   left: 5%
 }
 
-.lg #left-arrow:hover {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/motion-control-left-button-hover.png)
+.pointer #left-arrow:hover {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/motion-control-left-button-hover.png)
 }
 
-.lg #right-arrow {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/motion-control-right-button-default.png);
+.pointer #right-arrow {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/motion-control-right-button-default.png);
   top: 50%;
   right: 5%
 }
 
-.lg #right-arrow:hover {
-  background-image: url(/web/20130427132343im_/https://www.youtube.com/s/tv/html5/6940619b/img/motion-control-right-button-hover.png)
+.pointer #right-arrow:hover {
+  background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/motion-control-right-button-hover.png)
 }
 
-.lg .search-mode #up-arrow,
-.lg .search-mode #down-arrow {
+.pointer .search-mode #up-arrow,
+.pointer .search-mode #down-arrow {
   display: none
 }
 
 .opera .html5-video-player .captions-text {
   text-shadow: none !important
+}
+
+.sony-odm-2012 {
+  font-family: arial, sans-serif
+}
+
+.sony-odm-2012 .video-tile .bottom .title {
+  letter-spacing: .03em
+}
+
+.sony-odm-2012 .video-tile .details {
+  letter-spacing: .1em;
+  font-size: 1.25em
+}
+
+.sony-odm-2012 .video-tile .details .activity {
+  font-weight: normal;
+  font-size: 1em;
+  overflow: hidden;
+  white-space: normal
+}
+
+.sony-odm-2012 .player-controls div {
+  color: #aaa;
+  opacity: 1;
+  padding-right: 3px;
+  text-shadow: none
+}
+
+.sony-odm-2012 .player-controls div:hover {
+  color: #dedede;
+  opacity: 1
+}
+
+.sony-odm-2012 .player-controls div.active {
+  color: #fff
+}
+
+.sony-odm-2012 .player-controls div.disabled-button {
+  color: #666
+}
+
+.sony-odm-2012 #dialog .login-instructions li,
+.sony-odm-2012 #dialog .pairing .pair-code {
+  font-size: 1em
+}
+
+.sony-odm-2012 #dialog .login-instructions .activate-url {
+  font-size: 0.7em
+}
+
+.sony-odm-2012 #dialog .login-instructions {
+  width: 12em
 }
 
 .toshiba-mstar #dialog .login-instructions li {
@@ -3271,8 +3476,8 @@ body.lg {
 }
 
 /*
-   FILE ARCHIVED ON 13:23:43 Apr 27, 2013 AND RETRIEVED FROM THE
-   INTERNET ARCHIVE ON 20:07:37 Feb 09, 2025.
+   FILE ARCHIVED ON 07:49:30 Jul 11, 2013 AND RETRIEVED FROM THE
+   INTERNET ARCHIVE ON 00:38:45 Feb 11, 2025.
    JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
    ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -3281,13 +3486,12 @@ body.lg {
 
 /*
 playback timings (ms):
-captures_list: 1.782
-exclusion.robots: 0.028
-exclusion.robots.policy: 0.012
-esindex: 0.018
-cdx.remote: 133.464
-LoadShardBlock: 83.632 (3)
-PetaboxLoader3.datanode: 104.061 (4)
-load_resource: 252.818
-PetaboxLoader3.resolve: 206.452
+captures_list: 1.158
+exclusion.robots: 0.018
+exclusion.robots.policy: 0.008
+esindex: 0.01
+cdx.remote: 646.027
+LoadShardBlock: 270.913 (3)
+PetaboxLoader3.datanode: 430.877 (4)
+load_resource: 272.058
 */

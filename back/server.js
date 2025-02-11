@@ -7,9 +7,11 @@ const QRCode = require('qrcode');
 const corsAnywhere = require('cors-anywhere');
 const bodyParser = require('body-parser');
 const oauthRouter = require('./oauth_api_v3_api.js');
-const leanbackAjaxRouter = require('./leanback_ajax_api');
+const leanbackAjaxRouter = require('./leanback_ajax_api')
+;
 const gdataVideoFeedDetails = require('./gdata_video_feed_details');
 const gdataVideoFeedSearch = require('./gdata_video_feed_search');
+const gdataVideoFeedStandardFeeds = require('./gdata_video_feed_standardfeeds');
 
 const { handleGetVideoInfo } = require('./get_video_info');
 
@@ -173,6 +175,9 @@ app.use(gdataVideoFeedDetails);
 
 //for video search, like a ye old search
 app.use(gdataVideoFeedSearch);
+
+//for topic homepage, like a ye old browse topics
+app.use(gdataVideoFeedStandardFeeds);
 
 
 

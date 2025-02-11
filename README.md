@@ -5,11 +5,12 @@ A project to revive the old 2012-2014 YouTubeTV HTML5 Web App.
 
 ## Screenshots
 
-**[Note These Are As Of The 10th Of February At 1:15 EST, Things Will Have Changed]**
+**[Note These Are As Of The 11th Of February At 2:15 EST, Things Will Have Changed]**
 
 ![Screenshot 1](screenshots/s1.png)
 ![Screenshot 2](screenshots/s2.png)
 ![Screenshot 3](screenshots/s3.png)
+![Screenshot 4](screenshots/s4.png)
 
 ## Credits
 
@@ -120,12 +121,13 @@ Progress Report
     Status: Currently static.
     Next Steps: Fetch data from InnnerTube.
 
-3. Browse/Channels - 0% Done
+3. Browse/Channels/Stantered Feeds/ - 40% Done
 
-    Status: Need to find a JSON version of it archives for GDATA.
-    Next Steps: Start work on it.
+    Status: Around half the statndered feeds are done (some need to find the right 
+    browseId, and some need to be added to the list), I also need to work on user feeds as well.
+    Next Steps: Implement /user/, finish feeds.
 
-4a. Watch - 60% Done
+4a. Watch - 65% Done
 
     Status: Playing videos and gets the data it needs for the info..
     Next Steps: Implemete realated videos feed.
@@ -140,15 +142,15 @@ Progress Report
     Status: None.
     Next Steps: Get it working.
 
-6. Sign In - 0% Done
+6. Sign In - 20% Done
 
-    Status: None
-    Next Steps: Get it working.
+    Status: Currently gets a code.
+    Next Steps: Figure out why the /token is only getting called once (it needs to keep looking to work).
 
-7. Assets - 90% Done
+7. Assets - 80% Done
 
     Status: Should have most of em idk.
-    Next Steps: Find the missing assets and add em.
+    Next Steps: Find missing assets and add them, also find as many BGs as I can find (rn we are at 45/115).
 
 8. Other
 

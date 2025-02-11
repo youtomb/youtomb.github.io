@@ -8855,8 +8855,8 @@ console.log("PROXY_URL:", PROXY_URL);
           }      
 
      
-          var videoData = getBestVideoUrl(mediaLinks, false);
-          var audioData = getAudioUrl(mediaLinks, false);
+          var videoData = getBestVideoUrl(mediaLinks, supportsVP9);
+          var audioData = getAudioUrl(mediaLinks, supportsVP9);
           
           console.log("Video MIME:", videoData.mimeType);
           console.log("Audio MIME:", audioData.mimeType);
