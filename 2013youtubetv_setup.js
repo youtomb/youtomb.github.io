@@ -33,7 +33,7 @@ function getLocalIp() {
                 }
             });
         } else {
-            reject('Unsupported platform');
+            
         }
     });
 }
