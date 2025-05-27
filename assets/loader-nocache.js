@@ -67,7 +67,7 @@ window.labels = {
         if (window.yt && yt.tv && yt.tv.initializer) {
             yt.tv.initializer(d);
         } else {
-            window.location.href = "http://www.youtube.com/error?src=404";
+            alert("failed script" + d);
         }
     };
 
@@ -100,11 +100,11 @@ window.labels = {
         }
     } else if (c) {
         window.CLOSURE_NO_DEPS = true;
-        q("https://youtoumb.github.io/assets/appv1.css");
+        q("https://youtomb.github.io/assets/appv1.css");
         n("/app-concat-bundle.js");
     } else {
-        q("https://youtoumb.github.io/assets/appv1.css");
-        n("https://youtoumb.github.io/assets/app-prod.js");
+        q("https://youtomb.github.io/assets/appv1.css");
+        n("https://youtomb.github.io/assets/app-prod.js");
     }
 
     window.checkBrokenLabel = function() {
