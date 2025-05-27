@@ -12,8 +12,6 @@ window.labels = {
     'aj': 'a0000009'
 };
 
-var titlemenu = "init tv mode"
-
 (function() {
     var a = window.labels;
     if (window.jstiming && window.jstiming.load) {
