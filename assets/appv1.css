@@ -3,10 +3,6 @@
   src: url('../assets/RobotoCondensed-Regular.ttf') format('truetype')
 }
 
-@font-face {
-font-family: 'Nickelodeon'
-src: url('https://file.garden/Z3HtEpAjyGTEZiXW/NickBalloon.ttf')
-}
 
 @font-face {
   font-family: 'roboto-light';
@@ -20,21 +16,22 @@ src: url('https://file.garden/Z3HtEpAjyGTEZiXW/NickBalloon.ttf')
   src: url('../assets/youtube-icons.ttf') format('truetype')
 }
   
-#search .pairing .pairing-area {   
-    padding: 3em 4em
+.search-pairing {
     background-color: rgba(0, 0, 0, 0.4);
     display: inline-block;
     margin-top: 3em;
     text-align: left;
+    padding: 1em 2em;
     text-shadow: black -1px 1px 2px;
 }
 
-a, button:hover {
-transform: scale(1.3);
+.message {
+font-family: 'roboto-condensed-regular';
+color: white;
 }
 
 body,
-html  {
+html:not(.message)  {
   font-family: 'roboto-condensed-regular', arial, sans-serif;
   color: white;
   font-size: 100%;
@@ -1234,7 +1231,9 @@ ul {
   margin-top: 1.2em
 }
 
-#search .pairing .pairing-area {   padding: 3em 4em
+#search .pairing .pairing-area {
+  padding: 3em 4em
+}
 
 #search .pairing .alternatives {
   float: right;
