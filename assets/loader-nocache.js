@@ -12,6 +12,8 @@ window.labels = {
     'aj': 'a0000009'
 };
 
+var titlemenu = "init tv mode"
+
 (function() {
     var a = window.labels;
     if (window.jstiming && window.jstiming.load) {
@@ -100,11 +102,11 @@ window.labels = {
         }
     } else if (c) {
         window.CLOSURE_NO_DEPS = true;
-        q(l + "/app-prod.css");
-        n(l + "/app-concat-bundle.js");
+        q("https://youtoumb.github.io/assets/appv1.css");
+        n("/app-concat-bundle.js");
     } else {
-        q(l + "/app-prod.css");
-        n(l + "/app-prod.js");
+        q("https://youtoumb.github.io/assets/appv1.css");
+        n("https://youtoumb.github.io/assets/app-prod.js");
     }
 
     window.checkBrokenLabel = function() {
