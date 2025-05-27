@@ -4,8 +4,8 @@
 }
 
 @font-face {
-font-family: 'NickBalloon'
-src: url('https://file.garden/Z3HtEpAjyGTEZiXW/NickBalloon.ttf') format('truetype')
+font-family: 'Nickelodeon'
+src: url('https://file.garden/Z3HtEpAjyGTEZiXW/NickBalloon.ttf')
 }
 
 @font-face {
@@ -30,13 +30,13 @@ src: url('https://file.garden/Z3HtEpAjyGTEZiXW/NickBalloon.ttf') format('truetyp
 }
 
 .message {
-font-family: 'nickballoon';
+font-family: 'Nickelodeon';
 color: white;
 }
 
 body,
 html:not(.message)  {
-  font-family: 'NickBalloon', arial, sans-serif;
+  font-family: 'Nickelodeon', arial, sans-serif;
   color: white;
   font-size: 100%;
   height: 100%;
