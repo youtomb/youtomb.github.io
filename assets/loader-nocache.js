@@ -100,11 +100,11 @@ window.labels = {
         }
     } else if (c) {
         window.CLOSURE_NO_DEPS = true;
-        q("https://youtomb.github.io/assets/appv1.css");
+        q("../assets/appv1.css");
         n("/app-concat-bundle.js");
     } else {
-        q("https://youtomb.github.io/assets/appv1.css");
-        n("https://youtomb.github.io/assets/app-prod.js");
+        q("../assets/appv1.css");
+        n("../assets/app-prod.js");
     }
 
     window.checkBrokenLabel = function() {
