@@ -20,7 +20,7 @@ src: url('https://file.garden/Z3HtEpAjyGTEZiXW/NickBalloon.ttf') format('truetyp
   src: url('../assets/youtube-icons.ttf') format('truetype')
 }
   
-#search .search-pairing {
+.search-pairing {
     background-color: rgba(0, 0, 0, 0.4);
     display: inline-block;
     margin-top: 3em;
@@ -30,13 +30,14 @@ src: url('https://file.garden/Z3HtEpAjyGTEZiXW/NickBalloon.ttf') format('truetyp
 }
 
 .message {
-font-family: 'NickBalloon';
+font-family: 'nickballoon';
 color: white;
 }
 
 body,
-html {
-  font-family: 'roboto-condensed-regular', arial, sans-serif;
+html:not(.message)  {
+  font-family: 'NickBalloon', arial, sans-serif;
+  color: white;
   font-size: 100%;
   height: 100%;
   margin: auto;
@@ -139,7 +140,7 @@ ul {
 }
 
 .carousel-loading-indicator {
-  background: url(/assets/img/carousel-loading-indicator.gif);
+  background: url(carousel-loading-indicator.gif);
   background-size: 100%;
   border-radius: 1em;
   height: 11.5em;
@@ -895,7 +896,7 @@ ul {
 .video-tile .video-thumb.preloaded {
   background: no-repeat center;
   background-size: auto;
-  background-image: url('/assets/img/icon-playbutton.png')
+  background-image: url('icon-playbutton.png')
 }
 
 .action-tile .content {
@@ -968,11 +969,11 @@ ul {
 }
 
 .action-tile .icon.enabled {
-  background-image: url(/assets/img/icon-settings-checked.png)
+  background-image: url(icon-settings-checked.png)
 }
 
 .action-tile .icon.disabled {
-  background-image: url(/assets/img/icon-settings-unchecked.png)
+  background-image: url(icon-settings-unchecked.png)
 }
 
 .action-tile .sign-out-user-icon,
@@ -984,7 +985,7 @@ ul {
 }
 
 .action-tile .sign-in-user-icon {
-  background-image: url(/assets/img/icon-default-avatar.png)
+  background-image: url(icon-default-avatar.png)
 }
 
 .action-tile .sign-out-username {
@@ -1012,14 +1013,14 @@ ul {
 }
 
 .action-tile .remote-pair-icon {
-  background: url(/assets/img/phone-icons.png) no-repeat center;
+  background: url(phone-icons.png) no-repeat center;
   background-size: contain;
   height: 11em;
   margin-top: 3.5em
 }
 
 .action-tile .remote-reset-phone {
-  background: url(/assets/img/phone-portrait.png) no-repeat center;
+  background: url(phone-portrait.png) no-repeat center;
   background-size: contain;
   height: 14em;
   margin-top: .6em;
@@ -1064,11 +1065,11 @@ ul {
 }
 
 .action-tile .search-icon {
-  background-image: url(/assets/img/icon-search-tile.png)
+  background-image: url(icon-search-tile.png)
 }
 
 .action-tile .clear-search-icon {
-  background-image: url(/assets/img/icon-search-tile-clear.png)
+  background-image: url(icon-search-tile-clear.png)
 }
 
 .action-tile .search-tile-subtitle {
@@ -1078,7 +1079,7 @@ ul {
 }
 
 .action-tile .warning {
-  background-image: url(/assets/img/icon-warning.png)
+  background-image: url(icon-warning.png)
 }
 
 #dialog.remote-reset-dialog>.title {
@@ -1205,14 +1206,14 @@ ul {
   background-size: 1em;
   background-position: left center;
   background-repeat: no-repeat;
-  background-image: url(/assets/img/phone_icon.png);
+  background-image: url(phone_icon.png);
   overflow: hidden;
   text-overflow: ellipsis;
   width: 11.5em
 }
 
 .remote-reset-dialog ul.devices li.connected {
-  background-image: url(/assets/img/phone_icon_connected.png);
+  background-image: url(phone_icon_connected.png);
   color: #f1f1f1
 }
 
@@ -1284,7 +1285,7 @@ ul {
 
 #search-text-box {
   background-color: #f1f1f1;
-  background: transparent url(/assets/img/bg-search-input.png) repeat-x;
+  background: transparent url(bg-search-input.png) repeat-x;
   font-size: 1.7em;
   height: 1.5em;
   line-height: 1.5em;
@@ -1330,7 +1331,7 @@ ul {
 }
 
 #search-suggestion .suggestion-trigger {
-  background: transparent url(/assets/img/suggestion_trigger_hover.png) no-repeat;
+  background: transparent url(suggestion_trigger_hover.png) no-repeat;
   background-size: contain;
   cursor: pointer;
   display: inline-block;
@@ -1344,7 +1345,7 @@ ul {
 
 #search-suggestion.active .suggestion-trigger,
 #search-suggestion .suggestion-trigger:hover {
-  background: transparent url(/assets/img/suggestion_trigger.png) no-repeat;
+  background: transparent url(suggestion_trigger.png) no-repeat;
   background-size: contain
 }
 
@@ -1420,14 +1421,14 @@ ul {
   background-size: 80%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(/assets/img/icon-globe.png)
+  background-image: url(icon-globe.png)
 }
 
 #search-keyboard .delete-icon {
   background-size: 80%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(/assets/img/icon-delete.png)
+  background-image: url(icon-delete.png)
 }
 
 .letter-suggest {
@@ -1632,7 +1633,7 @@ ul {
 
 .advertisement-callout {
   background-size: cover;
-  background: transparent url(/assets/img/advertisement-bg.png) 0 0 repeat;
+  background: transparent url(advertisement-bg.png) 0 0 repeat;
   color: #cfc323;
   font-size: 1.1em;
   padding: 0.7em
@@ -1812,7 +1813,7 @@ ul {
 }
 
 #progress-bar>div {
-  background: transparent url(/assets/img/player-controls.png) no-repeat
+  background: transparent url(player-controls.png) no-repeat
 }
 
 #progress-bar .player-seek-active {
@@ -2087,51 +2088,51 @@ ul {
 }
 
 #toast .remote-connected {
-  background-image: url(/assets/img/remote_connect.png)
+  background-image: url(remote_connect.png)
 }
 
 #toast .remote-disconnected {
-  background-image: url(/assets/img/remote_disconnect.png)
+  background-image: url(remote_disconnect.png)
 }
 
 #toast .android-phone-connected {
-  background-image: url(/assets/img/icon-android-phone-connected.png)
+  background-image: url(icon-android-phone-connected.png)
 }
 
 #toast .android-phone-disconnected {
-  background-image: url(/assets/img/icon-android-phone-disconnected.png)
+  background-image: url(icon-android-phone-disconnected.png)
 }
 
 #toast .android-tablet-connected {
-  background-image: url(/assets/img/icon-android-tablet-connected.png)
+  background-image: url(icon-android-tablet-connected.png)
 }
 
 #toast .android-tablet-disconnected {
-  background-image: url(/assets/img/icon-android-tablet-disconnected.png)
+  background-image: url(icon-android-tablet-disconnected.png)
 }
 
 #toast .ios-phone-connected {
-  background-image: url(/assets/img/icon-ios-phone-connected.png)
+  background-image: url(icon-ios-phone-connected.png)
 }
 
 #toast .ios-phone-disconnected {
-  background-image: url(/assets/img/icon-ios-phone-disconnected.png)
+  background-image: url(icon-ios-phone-disconnected.png)
 }
 
 #toast .ios-tablet-connected {
-  background-image: url(/assets/img/icon-ios-tablet-connected.png)
+  background-image: url(icon-ios-tablet-connected.png)
 }
 
 #toast .ios-tablet-disconnected {
-  background-image: url(/assets/img/icon-ios-tablet-disconnected.png)
+  background-image: url(icon-ios-tablet-disconnected.png)
 }
 
 #toast .laptop-connected {
-  background-image: url(/assets/img/icon-laptop-connected.png)
+  background-image: url(icon-laptop-connected.png)
 }
 
 #toast .laptop-disconnected {
-  background-image: url(/assets/img/icon-laptop-disconnected.png)
+  background-image: url(icon-laptop-disconnected.png)
 }
 
 #toast .toast-progress {
@@ -2145,19 +2146,19 @@ ul {
 }
 
 #toast .volume-muted {
-  background-image: url(/assets/img/volume_mute_pressed.png)
+  background-image: url(volume_mute_pressed.png)
 }
 
 #toast .volume-low {
-  background-image: url(/assets/img/volume_0_pressed.png)
+  background-image: url(volume_0_pressed.png)
 }
 
 #toast .volume-mid {
-  background-image: url(/assets/img/volume_1_pressed.png)
+  background-image: url(volume_1_pressed.png)
 }
 
 #toast .volume-high {
-  background-image: url(/assets/img/volume_2_pressed.png)
+  background-image: url(volume_2_pressed.png)
 }
 
 #toast .volume-toast .toast-msg {
@@ -2252,7 +2253,7 @@ ul {
 #search .pairing .phone-content,
 #dialog .pairing .phone-content,
 #dialog .login-instructions {
-  background: url(/assets/img/phone-landscape.png) top left no-repeat;
+  background: url(phone-landscape.png) top left no-repeat;
   background-size: contain;
   display: inline-block;
   font-size: 2em;
@@ -2409,13 +2410,13 @@ ul {
 }
 
 #dialog.no-app-background>#dialog-wrapper {
-  background-image: url(/assets/img/call-to-cast-yt-logo.jpg);
+  background-image: url(call-to-cast-yt-logo.jpg);
   background-repeat: no-repeat;
   background-position: 6em 95%
 }
 
 .call-to-cast-background {
-  background-image: url(/assets/img/call-to-cast-devices.jpg);
+  background-image: url(call-to-cast-devices.jpg);
   background-position: right center;
   background-repeat: no-repeat;
   background-size: 50%
@@ -2488,7 +2489,7 @@ h3.call-to-cast-text {
 }
 
 .flag-example {
-  background: url(/assets/img/flag.png) no-repeat 0 0;
+  background: url(flag.png) no-repeat 0 0;
   background-size: contain;
   display: inline-block;
   height: 57%;
@@ -2608,7 +2609,7 @@ h3.call-to-cast-text {
 #shiyojo .playstation-logo,
 #shiyojo .ps3-logo,
 #kenko .warning {
-  background-image: url(/assets/img/logo-playstation.png);
+  background-image: url(logo-playstation.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -2622,12 +2623,12 @@ h3.call-to-cast-text {
 }
 
 #shiyojo .ps3-logo {
-  background-image: url(/assets/img/logo-ps3.png);
+  background-image: url(logo-ps3.png);
   width: 2.7em
 }
 
 #kenko .warning {
-  background-image: url(/assets/img/icon-warning.png)
+  background-image: url(icon-warning.png)
 }
 
 .paid-channel-info {
@@ -2644,7 +2645,7 @@ h3.call-to-cast-text {
 }
 
 .status-dialog .icon {
-  background: url(/assets/img/pairing-promo-combo.png) center center no-repeat;
+  background: url(pairing-promo-combo.png) center center no-repeat;
   background-size: contain;
   display: inline-block;
   height: 11em;
@@ -2809,20 +2810,20 @@ h3.call-to-cast-text {
 }
 
 .desktop .legend .more .icon {
-  background-image: url(/assets/img/icon-desktop-dpad-down.png)
+  background-image: url(icon-desktop-dpad-down.png)
 }
 
 .desktop .legend .back .icon {
-  background-image: url(/assets/img/icon-desktop-esc.png)
+  background-image: url(icon-desktop-esc.png)
 }
 
 .desktop .legend .search .icon {
-  background-image: url(/assets/img/icon-desktop-s.png)
+  background-image: url(icon-desktop-s.png)
 }
 
 .desktop .legend .home .icon,
 .desktop .legend .delete .icon {
-  background-image: url(/assets/img/icon-desktop-g.png)
+  background-image: url(icon-desktop-g.png)
 }
 
 .browse-state .more,
@@ -2867,24 +2868,24 @@ h3.call-to-cast-text {
 }
 
 .ps3 .legend .more .icon {
-  background-image: url(/assets/img/icon-ps3-dpad-down.png)
+  background-image: url(icon-ps3-dpad-down.png)
 }
 
 .ps3 .legend .back .icon {
-  background-image: url(/assets/img/icon-ps3-circle.png)
+  background-image: url(icon-ps3-circle.png)
 }
 
 .ps3 .legend .reversed-back .icon {
-  background-image: url(/assets/img/icon-ps3-x.png)
+  background-image: url(icon-ps3-x.png)
 }
 
 .ps3 .legend .search .icon {
-  background-image: url(/assets/img/icon-ps3-triangle.png)
+  background-image: url(icon-ps3-triangle.png)
 }
 
 .ps3 .legend .home .icon,
 .ps3 .legend .delete .icon {
-  background-image: url(/assets/img/icon-ps3-square.png)
+  background-image: url(icon-ps3-square.png)
 }
 
 .ps3 #dialog .logout-authenticated-info {
@@ -2919,20 +2920,20 @@ h3.call-to-cast-text {
 }
 
 .wiiu .legend .more .icon {
-  background-image: url(/assets/img/icon-ps3-dpad-down.png)
+  background-image: url(icon-ps3-dpad-down.png)
 }
 
 .wiiu .legend .back .icon {
-  background-image: url(/assets/img/icon-wiiu-b.png)
+  background-image: url(icon-wiiu-b.png)
 }
 
 .wiiu .legend .search .icon {
-  background-image: url(/assets/img/icon-wiiu-y.png)
+  background-image: url(icon-wiiu-y.png)
 }
 
 .wiiu .legend .home .icon,
 .wiiu .legend .delete .icon {
-  background-image: url(/assets/img/icon-wiiu-x.png)
+  background-image: url(icon-wiiu-x.png)
 }
 
 .wiiusteel .legend .switch-displays {
@@ -2940,11 +2941,11 @@ h3.call-to-cast-text {
 }
 
 .wiiusteel .legend .switch-displays .icon {
-  background-image: url(/assets/img/icon-wiiu-minus.png)
+  background-image: url(icon-wiiu-minus.png)
 }
 
 .wiiusteel .nativeosk .legend .back .icon {
-  background-image: url(/assets/img/icon-wiiu-back.png)
+  background-image: url(icon-wiiu-back.png)
 }
 
 .wiiusteel .nativeosk.search-mode .legend .backspace {
@@ -2952,7 +2953,7 @@ h3.call-to-cast-text {
 }
 
 .wiiusteel .nativeosk.search-mode .legend .backspace .icon {
-  background-image: url(/assets/img/icon-wiiu-b.png)
+  background-image: url(icon-wiiu-b.png)
 }
 
 .wiiu .qr-code-wrapper {
@@ -2960,7 +2961,7 @@ h3.call-to-cast-text {
 }
 
 .wiiu .player-controls-widget {
-  background: transparent url(/assets/img/player-background.png) 0 0 repeat-x;
+  background: transparent url(player-background.png) 0 0 repeat-x;
   background-size: cover;
   box-shadow: none
 }
@@ -2985,7 +2986,7 @@ h3.call-to-cast-text {
 }
 
 .tv .legend .more .icon {
-  background-image: url(/assets/img/icon-tv-dpad-down.png)
+  background-image: url(icon-tv-dpad-down.png)
 }
 
 .lg .legend .back {
@@ -2993,23 +2994,23 @@ h3.call-to-cast-text {
 }
 
 .tv .legend .back .icon {
-  background-image: url(/assets/img/icon-tv-back.png)
+  background-image: url(icon-tv-back.png)
 }
 
 .lg .legend .more .icon {
-  background-image: url(/assets/img/icon-lgtv-dpad-more.png) !important
+  background-image: url(icon-lgtv-dpad-more.png) !important
 }
 
 .lg .legend .more:hover .icon {
-  background-image: url(/assets/img/icon-lgtv-dpad-more-hover.png) !important
+  background-image: url(icon-lgtv-dpad-more-hover.png) !important
 }
 
 .lg .legend .back .icon {
-  background-image: url(/assets/img/icon-lgtv-back-default.png) !important
+  background-image: url(icon-lgtv-back-default.png) !important
 }
 
 .lg .legend .back:hover .icon {
-  background-image: url(/assets/img/icon-lgtv-back-hover.png) !important
+  background-image: url(icon-lgtv-back-hover.png) !important
 }
 
 body.samsung {
@@ -3107,7 +3108,7 @@ body.lg {
 }
 
 .limited-graphics .hide-background.video-tile .video-thumb {
-  background-image: url(/assets/img/icon-playbutton.png) !important;
+  background-image: url(icon-playbutton.png) !important;
   background-repeat: no-repeat;
   opacity: 1
 }
@@ -3245,12 +3246,12 @@ body.lg {
 }
 
 .eureka #watch.play #eureka-player-controls {
-  background-image: url(/assets/img/player-play.png);
+  background-image: url(player-play.png);
   -webkit-animation: hideAndGrowPlay linear 0.25s 0s 1 normal none
 }
 
 .eureka #watch.pause #eureka-player-controls {
-  background-image: url(/assets/img/player-pause.png);
+  background-image: url(player-pause.png);
   -webkit-animation: showAndShrinkPause linear 0.25s 0s 1 normal none;
   opacity: .7
 }
@@ -3271,43 +3272,43 @@ body.lg {
 }
 
 .pointer #up-arrow {
-  background-image: url(/assets/img/motion-control-up-button-default.png);
+  background-image: url(motion-control-up-button-default.png);
   top: 5%;
   left: 45%
 }
 
 .pointer #up-arrow:hover {
-  background-image: url(/assets/img/motion-control-up-button-hover.png)
+  background-image: url(motion-control-up-button-hover.png)
 }
 
 .pointer #down-arrow {
-  background-image: url(/assets/img/motion-control-down-button-default.png);
+  background-image: url(motion-control-down-button-default.png);
   bottom: 5%;
   left: 45%
 }
 
 .pointer #down-arrow:hover {
-  background-image: url(/assets/img/motion-control-down-button-hover.png)
+  background-image: url(motion-control-down-button-hover.png)
 }
 
 .pointer #left-arrow {
-  background-image: url(/assets/img/motion-control-left-button-default.png);
+  background-image: url(motion-control-left-button-default.png);
   top: 50%;
   left: 5%
 }
 
 .pointer #left-arrow:hover {
-  background-image: url(/assets/img/motion-control-left-button-hover.png)
+  background-image: url(motion-control-left-button-hover.png)
 }
 
 .pointer #right-arrow {
-  background-image: url(/assets/img/motion-control-right-button-default.png);
+  background-image: url(motion-control-right-button-default.png);
   top: 50%;
   right: 5%
 }
 
 .pointer #right-arrow:hover {
-  background-image: url(/assets/img/motion-control-right-button-hover.png)
+  background-image: url(motion-control-right-button-hover.png)
 }
 
 .pointer .search-mode #up-arrow,
