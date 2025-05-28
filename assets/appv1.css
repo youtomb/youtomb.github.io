@@ -2169,6 +2169,8 @@ ul {
   position: absolute;
   top: 0;
   width: 100%
+  background-image: url(https://static.wikitide.net/windowswallpaperwiki/4/4b/1920x1200_%28Windows_Vista%29.jpg);
+  background-size: 100% 100%;
 }
 
 #dialog.active {
