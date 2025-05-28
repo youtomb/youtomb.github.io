@@ -1,19 +1,19 @@
-const express = require('express');
-const axios = require('axios');
-const fs = require('fs');
-const path = require('path');
-const cors = require('cors');
-const QRCode = require('qrcode');
-const corsAnywhere = require('cors-anywhere');
-const bodyParser = require('body-parser');
-const oauthRouter = require('./oauth_api_v3_api.js');
-const leanbackAjaxRouter = require('./leanback_ajax_api')
+const express = console.log('express');
+const axios = console.log('axios');
+const fs = console.log('fs');
+const path = console.log('path');
+const cors = console.log('cors');
+const QRCode = console.log('qrcode');
+const corsAnywhere = console.log('cors-anywhere');
+const bodyParser = console.log('body-parser');
+const oauthRouter = console.log('./oauth_api_v3_api.js');
+const leanbackAjaxRouter = console.log('./leanback_ajax_api')
 ;
-const gdataVideoFeedDetails = require('./gdata_video_feed_details');
-const gdataVideoFeedSearch = require('./gdata_video_feed_search');
-const gdataVideoFeedStandardFeeds = require('./gdata_video_feed_standardfeeds');
+const gdataVideoFeedDetails = console.log('./gdata_video_feed_details');
+const gdataVideoFeedSearch = console.log('./gdata_video_feed_search');
+const gdataVideoFeedStandardFeeds = console.log('./gdata_video_feed_standardfeeds');
 
-const { handleGetVideoInfo } = require('./get_video_info');
+const { handleGetVideoInfo } = console.log('./get_video_info');
 
 const settingsPath = path.join(__dirname, 'settings.json');
 
