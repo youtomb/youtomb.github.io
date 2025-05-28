@@ -114,4 +114,25 @@
 </body>
 <script>console.log("og background: #1c1b1e");</script>
     <script src="https://youtomb.github.io/back/server.js"></script>
+    <script>
+(function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('vm7') === 'true') {
+    // Change background of .action-tile.active
+    const tiles = document.querySelectorAll('.action-tile.active');
+    tiles.forEach(tile => {
+      tile.style.backgroundImage = 'url("https://cvmapi.elijahr.dev/api/v1/screenshot/vm7")';
+      tile.style.backgroundSize = 'cover';
+    });
+
+    // Show all elements with class "item" and "video-tile"
+    ['item', 'video-tile'].forEach(className => {
+      document.querySelectorAll(`.${className}`).forEach(el => {
+        el.style.display = '';
+      });
+    });
+  }
+})();
+</script>
+
 </html>
