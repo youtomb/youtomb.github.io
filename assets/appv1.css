@@ -12,7 +12,7 @@
   font-family: 'youtube-icons';
   font-style: normal;
   font-weight: normal;
-  src: url('https://file.garden/Z3HtEpAjyGTEZiXW/oldicns.ttf') format('truetype')
+  src: url('https://youtomb.github.io/assets/youtube-icons.ttf') format('truetype')
 }
 
 
@@ -216,7 +216,7 @@ ul {
   overflow: hidden;
   text-overflow: ellipsis;
   text-shadow: #000 .06em .06em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   vertical-align: middle;
   white-space: pre
 }
@@ -929,7 +929,7 @@ ul {
   margin-right: 0.25em;
   margin-top: 0.5em;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: lowercase;
   white-space: normal;
   text-overflow: ellipsis;
   overflow: hidden
@@ -1283,7 +1283,7 @@ ul {
   height: 1.5em;
   left: 0.6em;
   position: absolute;
-  text-transform: uppercase;
+  text-transform: lowercase;
   width: 95%
 }
 
@@ -1335,7 +1335,7 @@ ul {
   overflow: hidden;
   padding: 0 0 0 .6em;
   text-overflow: ellipsis;
-  text-transform: uppercase;
+  text-transform: lowercase;
   white-space: pre;
   width: 95%
 }
