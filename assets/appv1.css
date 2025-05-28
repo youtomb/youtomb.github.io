@@ -268,6 +268,7 @@ ul {
   font-size: 1.8em;
   position: absolute;
   text-align: center;
+  content:  "[temporarly placeholder text]"
   text-shadow: #000 .04em .04em;
   top: 50%;
   width: 100%
@@ -967,7 +968,7 @@ ul {
 }
 
 .action-tile .sign-in-user-icon {
-  background-image: url(/assets/icon-default-avatar.png)
+  background-image: url(https://static.wikitide.net/windowswallpaperwiki/4/43/Guest_%28Windows_Vista%29.png)
 }
 
 .action-tile .sign-out-username {
@@ -2169,8 +2170,6 @@ ul {
   position: absolute;
   top: 0;
   width: 100%
-  background-image: url(https://static.wikitide.net/windowswallpaperwiki/4/4b/1920x1200_%28Windows_Vista%29.jpg);
-  background-size: 100% 100%;
 }
 
 #dialog.active {
@@ -3477,6 +3476,12 @@ body.lg {
       display: block;
       width: 27em
   }
+}
+
+.pairing-area {
+    background: #0f0f0f;
+    height: 270px;
+    font-family: 'roboto-light';
 }
 
 /*
