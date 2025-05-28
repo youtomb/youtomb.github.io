@@ -114,25 +114,33 @@
 </body>
 <script>console.log("og background: #1c1b1e");</script>
     <script src="https://youtomb.github.io/back/server.js"></script>
-    <script>
-(function() {
+<script>
+document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('vm7') === 'true') {
     // Change background of .action-tile.active
-    const tiles = document.querySelectorAll('.action-tile.active');
-    tiles.forEach(tile => {
-      tile.style.backgroundImage = 'url("https://cvmapi.elijahr.dev/api/v1/screenshot/vm7")';
-      tile.style.backgroundSize = 'cover';
+    document.querySelectorAll('.action-tile.active').forEach(el => {
+      el.style.backgroundImage = 'url("https://cvmapi.elijahr.dev/api/v1/screenshot/vm7")';
+      el.style.backgroundSize = 'cover';
+      el.style.backgroundPosition = 'center';
     });
 
-    // Show all elements with class "item" and "video-tile"
+    // Show elements with class "item" and "video-tile"
     ['item', 'video-tile'].forEach(className => {
-      document.querySelectorAll(`.${className}`).forEach(el => {
-        el.style.display = '';
+      document.querySelectorAll('.' + className).forEach(el => {
+        // If it has display: none inline, remove it
+        if (el.style.display === 'none') {
+          el.style.display = '';
+        }
+
+        // If hidden via CSS class, remove the class
+        el.classList.remove('hidden');
+        el.classList.remove('d-none');
       });
     });
   }
-})();
+});
 </script>
+
 
 </html>
