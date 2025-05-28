@@ -1307,6 +1307,7 @@ ul {
   overflow: hidden;
   padding-left: 0.6em;
   text-overflow: ellipsis;
+  text-transform: lowercase;
   white-space: nowrap
 }
 
