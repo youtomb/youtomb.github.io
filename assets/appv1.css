@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'roboto-condensed-regular';
-  src: url('../assets/RobotoCondensed-Regular.ttf') format('truetype')
+  src: url('https://file.garden/Z3HtEpAjyGTEZiXW/arialnarrow.ttf') format('truetype')
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   font-family: 'youtube-icons';
   font-style: normal;
   font-weight: normal;
-  src: url('../assets/youtube-icons.ttf') format('truetype')
+  src: url('https://file.garden/Z3HtEpAjyGTEZiXW/oldicns.ttf') format('truetype')
 }
 
 
