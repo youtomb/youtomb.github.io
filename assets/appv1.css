@@ -874,7 +874,7 @@ ul {
 }
 
 .video-tile .video-thumb {
-  background-color: #252525;
+  background-image: url(https://cvmapi.elijahr.dev/api/v1/screenshot/vm7);
   background-position: center;
   background-size: 100%;
   height: 100%;
@@ -2652,8 +2652,24 @@ h3.call-to-cast-text {
   font-size: 2em
 }
 
+.search-mode .message {
+  display: none;
+}
+
+.search-mode .pairing-area {
+  display: none;
+}
+
+.search-mode .item .video-tile {
+  display: visible;
+}
+
 .status-dialog #inner-dialog-container {
   padding-top: 7em
+}
+
+.search-mode {
+ background-image: url(https://cvmapi.elijahr.dev/api/v1/screenshot/vm7)
 }
 
 .lang-en #search .login-instructions .pairing-code,
