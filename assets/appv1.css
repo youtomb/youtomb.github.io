@@ -15,7 +15,12 @@
   src: url('https://youtomb.github.io/assets/youtube-icons.ttf') format('truetype')
 }
 
-
+@font-face {
+  font-family: 'Handlee';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://file.garden/Z3HtEpAjyGTEZiXW/Handlee-Regular.woff') format('truetype')
+}
 
 body,
 html {
@@ -171,9 +176,9 @@ ul {
 }
 
 #scroller-background {
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.8) 6em, rgba(0, 0, 0, 0.0) 32em);
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8) 6em, rgba(0, 0, 0, 0.0) 32em);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 6em, rgba(0, 0, 0, 0.0) 32em);
+  background: -o-linear-gradient(left, rgba(0, 2, 0, 0.8) 6em, rgba(0, 0, 0, 0.0) 32em);
+  background: -webkit-linear-gradient(left, rgba(0, 2, 0, 0.8) 6em, rgba(0, 0, 0, 0.0) 32em);
+  background: linear-gradient(to right, rgba(0, 2, 0, 0.8) 6em, rgba(0, 0, 0, 0.0) 32em);
   height: 100%;
   width: 33em
 }
