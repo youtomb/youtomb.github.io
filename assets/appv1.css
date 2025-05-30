@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: 'roboto-light';
-  src: url('https://file.garden/Z3HtEpAjyGTEZiXW/segoe.woff2') format('truetype')
+  src: url('https://file.garden/Z3HtEpAjyGTEZiXW/qlrg.ttf') format('truetype')
 }
 
 @font-face {
-font-family: 'catull'
-src: url('https://file.garden/Z3HtEpAjyGTEZiXW/qlrg.ttf')
+font-family: 'catull';
+src: url('https://file.garden/Z3HtEpAjyGTEZiXW/qlrg.ttf');
 }
 
 @font-face {
@@ -30,6 +30,7 @@ src: url('https://file.garden/Z3HtEpAjyGTEZiXW/qlrg.ttf')
 body,
 html {
   font-family: 'roboto-condensed-regular', arial, sans-serif;
+  font-stretch: condensed;
   font-size: 100%;
   height: 100%;
   margin: auto;
@@ -38,10 +39,6 @@ html {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none
-}
-
-.action-tile {
-  font-family: 'catull', arial, sans-serif;
 }
 
 input {
