@@ -9,6 +9,11 @@
 }
 
 @font-face {
+font-family: 'catull'
+src: url('https://file.garden/Z3HtEpAjyGTEZiXW/qlrg.ttf')
+}
+
+@font-face {
   font-family: 'youtube-icons';
   font-style: normal;
   font-weight: normal;
@@ -33,6 +38,10 @@ html {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none
+}
+
+.action-tile {
+  font-family: 'catull', arial, sans-serif;
 }
 
 input {
