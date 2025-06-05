@@ -35,6 +35,7 @@ html {
   height: 100%;
   margin: auto;
   overflow: visible;
+  overscroll-behavior: none;
   padding: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
