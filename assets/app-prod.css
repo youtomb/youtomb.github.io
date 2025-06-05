@@ -22,7 +22,7 @@ html {
   font-size: 100%;
   height: 100%;
   margin: auto;
-  overflow: hidden;
+  overflow: visible;
   padding: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -127,7 +127,7 @@ ul {
   height: 11.5em;
   margin: 0 auto;
   opacity: .7;
-  overflow: hidden;
+  overflow: visible;
   width: 11.5em
 }
 
@@ -212,7 +212,7 @@ ul {
   font-weight: normal;
   margin: 0 0 0 1.4em;
   max-width: 20em;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
   text-shadow: #000 .06em .06em;
   text-transform: uppercase;
@@ -634,7 +634,7 @@ ul {
 #browse {
   display: none;
   height: 100%;
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   width: 100%;
   top: 0;
@@ -723,7 +723,7 @@ ul {
   color: #f1f1f1;
   height: 100%;
   list-style: none;
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   top: 3.5em;
   width: 27em
@@ -735,7 +735,7 @@ ul {
 
 .post-play-title {
   font-size: 1.4em;
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   text-overflow: ellipsis;
   text-shadow: #000 .08em .08em;
@@ -801,7 +801,7 @@ ul {
   display: none;
   font-weight: 300;
   margin: 0.2em 0 0 1.9em;
-  overflow: hidden;
+  overflow: visible;
   width: 84%
 }
 
@@ -820,7 +820,7 @@ ul {
   font-weight: 300;
   height: 50%;
   margin: 1em .6em 1em 1.1em;
-  overflow: hidden;
+  overflow: visible;
   padding-left: 17%;
   white-space: normal;
   word-break: break-word
@@ -856,7 +856,7 @@ ul {
   height: 17%;
   letter-spacing: -.03em;
   line-height: 1.1em;
-  overflow: hidden;
+  overflow: visible;
   padding: .6em .6em .8em .6em;
   text-overflow: ellipsis;
   white-space: normal
@@ -1188,7 +1188,7 @@ ul {
   background-position: left center;
   background-repeat: no-repeat;
   background-image: url(/web/20130711074930im_/https://www.youtube.com/s/tv/html5/7b193301/img/phone_icon.png);
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
   width: 11.5em
 }
@@ -1303,7 +1303,7 @@ ul {
   height: 1.5em;
   line-height: 1.5em;
   max-width: 90%;
-  overflow: hidden;
+  overflow: visible;
   padding-left: 0.6em;
   text-overflow: ellipsis;
   white-space: nowrap
@@ -1331,7 +1331,7 @@ ul {
 #search-query {
   color: #111;
   height: 100%;
-  overflow: hidden;
+  overflow: visible;
   padding: 0 0 0 .6em;
   text-overflow: ellipsis;
   text-transform: uppercase;
@@ -1460,7 +1460,7 @@ ul {
 #transliteration.list-content {
   height: 1.2em;
   margin: 0 auto 3px;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
   width: 77%
 }
@@ -1562,7 +1562,7 @@ ul {
   position: absolute;
   left: -1px;
   top: -1px;
-  overflow: hidden;
+  overflow: visible;
   width: 1px !important;
   height: 1px !important
 }
@@ -1692,7 +1692,7 @@ ul {
 .player-meta {
   color: #f1f1f1;
   left: 5%;
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   top: 24%;
   white-space: nowrap;
@@ -1721,7 +1721,7 @@ ul {
   font-size: 2.4em;
   letter-spacing: -.03em;
   margin: -.1em 0 0 2.9em;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
   width: 75%
 }
@@ -1820,7 +1820,7 @@ ul {
   background-position: -27px -237px;
   height: 10px;
   left: 0;
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   top: 0;
   width: 515px
@@ -1984,7 +1984,7 @@ ul {
 #toast .qr-code-container {
   background-color: #f1f1f1;
   height: 16em;
-  overflow: hidden;
+  overflow: visible;
   text-align: right;
   visibility: hidden;
   width: 0em;
@@ -2015,7 +2015,7 @@ ul {
 
 #toast .toast {
   height: 3.5em;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   text-align: center;
   width: 100%;
@@ -3196,7 +3196,7 @@ body.lg {
   border-radius: 1em;
   height: 11.5em;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
   width: 11.5em
 }
 
@@ -3315,7 +3315,7 @@ body.lg {
 .sony-odm-2012 .video-tile .details .activity {
   font-weight: normal;
   font-size: 1em;
-  overflow: hidden;
+  overflow: visible;
   white-space: normal
 }
 
