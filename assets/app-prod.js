@@ -21259,7 +21259,7 @@
             this.zD = l;
             this.w = e;
             this.Bj = 0;
-            this.displayPairingCode = "[[яннежатнаваЗ...|Tooltip displayed while mobile devices are connecting with the application.]]";
+            this.displayPairingCode = "[[DirecTV!|Tooltip displayed while mobile devices are connecting with the application.]]";
             this.pn = "";
             this.KD = this.h(".phone-content");
             this.vC = this.h(".connected-list");
@@ -21273,7 +21273,7 @@
         d = zl.prototype;
         d.o = function() {
             zl.f.o.call(this);
-            this.displayPairingCode = "[[яннежатнаваЗ...|Tooltip displaying while connecting a mobile device with the application.]]";
+            this.displayPairingCode = "[[DirecTV!|Tooltip displaying while connecting a mobile device with the application.]]";
             this.pn = "";
             this.qu();
             this.Rg.gk(w(function() {
@@ -21298,7 +21298,7 @@
             }, this))
         };
         d.qu = function() {
-            var a = this.LD('[[<div class="step1">Go To</div> <div class="pair-url">youtube.com/pair</div> <div class="step2">Enter</div> <div class="pair-code">{{pair.displayPairingCode}}</div>|Steps that a user needs to perform in order to pair her mobile device with the application.]]')({
+            var a = this.LD('[[<div class="step1">Go To</div> <div class="pair-url">DirecTV.com/guide</div> <div class="step2">Enter</div> <div class="pair-code">{{pair.displayPairingCode}}</div>|Steps that a user needs to perform in order to pair her mobile device with the application.]]')({
                 pair: this
             });
             this.gb(this.KD, a)
@@ -23712,7 +23712,7 @@
         };
         angular.module("leanback-templates", []).run(["$templateCache", function(a) {
             a.put(H.b + "/advertisement_callout.html", '<div class="advertisement-callout" style="display: none">  [[Advertisement|Tooltip says that the video currently playing is an advertisement.]]  <div class="time-left-label">[[Your video will play in <span class="time-left">&nbsp;</span>s|Label preceeding the number of seconds countdown for when the currently playing ad will finish, and when the main video will begin.]]</div></div>');
-            a.put(H.b + "/app.html", '<div id="app-markup">  <yt:watch id="watch" activate-when="focusable.elementIdEquals(application.activeChildName)" data="application.watchModel.currentVideo"></yt:watch>  <yt:browse id="browse" activate-when="focusable.elementIdEquals(application.activeChildName)"></yt:browse>  <yt:search id="search" activate-when="focusable.elementIdEquals(application.activeChildName)" query="application.searchQuery"></yt:search>  <div class="logo-container"></div>  <div ng-include="application.legendTemplatePath" id="legend" class="legend"></div>  <yt:message id="message"></yt:message>  <div id="spinner-container" style="display: none;">    <div class="fallback-loading-indicator">[[яннежатнаваЗ...|Indicator that content is loading from the network.]]</div>    <div class="carousel-loading-indicator"></div>  </div>  <yt:debug id="debug-watermark"></yt:debug>  <yt:dialog id="dialog" activate-when="focusable.elementIdEquals(application.activeChildName)" data="application.dialogModel"></yt:dialog>  <yt:toasts data="application.getCurrentDialogType()"></yt:toasts></div>');
+            a.put(H.b + "/app.html", '<div id="app-markup">  <yt:watch id="watch" activate-when="focusable.elementIdEquals(application.activeChildName)" data="application.watchModel.currentVideo"></yt:watch>  <yt:browse id="browse" activate-when="focusable.elementIdEquals(application.activeChildName)"></yt:browse>  <yt:search id="search" activate-when="focusable.elementIdEquals(application.activeChildName)" query="application.searchQuery"></yt:search>  <div class="logo-container"></div>  <div ng-include="application.legendTemplatePath" id="legend" class="legend"></div>  <yt:message id="message"></yt:message>  <div id="spinner-container" style="display: none;">    <div class="fallback-loading-indicator">[[DirecTV!|Indicator that content is loading from the network.]]</div>    <div class="carousel-loading-indicator"></div>  </div>  <yt:debug id="debug-watermark"></yt:debug>  <yt:dialog id="dialog" activate-when="focusable.elementIdEquals(application.activeChildName)" data="application.dialogModel"></yt:dialog>  <yt:toasts data="application.getCurrentDialogType()"></yt:toasts></div>');
             a.put(H.b + "/browse.html", '<div>  <yt:browserow id="browse-row" class="item"></yt:browserow>  <yt:rotatelist id="super-scroller" item-renderer="yt:feedicon" orientation="vertical"></yt:rotatelist>  <yt:scrollbar id="browse-scrollbar"></yt:scrollbar>  <div id="up-arrow" class="nav-arrow"></div>  <div id="down-arrow" class="nav-arrow"></div>  <div id="left-arrow" class="nav-arrow"></div>  <div id="right-arrow" class="nav-arrow"></div>  <div id="scroller-background"></div></div>');
             a.put(H.b + "/browse_row.html",
                 '<div class="browse-row">  <h2>{{browseRow.data.model.title}}</h2> <yt:tilerow id="tile-row" class="feed-row" item-renderer="browseRow.data.widgetName"></yt:tilerow></div>');
@@ -23721,7 +23721,7 @@
             a.put(H.b + "/debug.html", "<h1></h1>");
             a.put(H.b + "/delayed_image.html", '<img ng-src="{{imageUrl}}" />');
             a.put(H.b + "/dialogs/call_to_cast.html", '<div>  <div class="info">    <h2 class="call-to-cast-text">[[Ready to watch?|Title of the instructions screen encouraging user to take action.]]</h2>    <h3 class="call-to-cast-text">[[Choose a YouTube video on your mobile device or laptop, then watch it here.|Steps to be taken on paired device such as phone, laptop or tablet, to trigger a playback on TV, acting as a screen.]]</h3>  </div></div>');
-            a.put(H.b + "/dialogs/closed_captions.html", '<div id="closed-captions-widget">  <yt:grid id="cc-languages" class="cc-list" item-renderer="yt:button" row-count="closedCaptions.rowCount"></yt:grid>  <h3 id="captions-not-available">[[Captions are not available for this video|Tooltip displayed when there is no subtitles available for this video.]]</h3>  <h3 id="captions-loading">[[яннежатнаваЗ...|Tooltip displayed when some data is loading.]]</h3></div>');
+            a.put(H.b + "/dialogs/closed_captions.html", '<div id="closed-captions-widget">  <yt:grid id="cc-languages" class="cc-list" item-renderer="yt:button" row-count="closedCaptions.rowCount"></yt:grid>  <h3 id="captions-not-available">[[Captions are not available for this video|Tooltip displayed when there is no subtitles available for this video.]]</h3>  <h3 id="captions-loading">[[DirecTV!|Tooltip displayed when some data is loading.]]</h3></div>');
             a.put(H.b + "/dialogs/debug_info.html", '<div class="message"></div>');
             a.put(H.b + "/dialogs/dialog.html", '<div>  <div id="dialog-wrapper">    <div class="title"></div>    <div id="inner-dialog-container"></div>    <div class="buttons">      <div id="confirm-dialog-cancel-button" yt:focusable activate-when="focusable.elementIdEquals(dialog.activeChildName)"></div>      <div id="confirm-dialog-ok-button" yt:focusable activate-when="focusable.elementIdEquals(dialog.activeChildName)"></div>    </div>    <div ng-include="application.legendTemplatePath" id="dialog-legend" class="legend"></div>  </div></div>');
             a.put(H.b + "/dialogs/eureka_authorization_info.html", '<div class="icon"></div><div class="info">  <div class="title">[[This video can\'t be played on this device.|Informs the user that this video can\'t be played on this device.]]</div>  <div class="message">    [[Please choose another video.|Informs the user to please choose another video for playback.]]  </div></div>');
