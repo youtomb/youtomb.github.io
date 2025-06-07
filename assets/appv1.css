@@ -2663,9 +2663,6 @@ h3.call-to-cast-text {
   display: none;
 }
 
-.search-mode .pairing-area {
-  display: none;
-}
 
 .search-mode .item .video-tile {
   display: visible;
