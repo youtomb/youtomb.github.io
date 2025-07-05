@@ -19934,7 +19934,7 @@
         };
         d.gR = function(a) {
             var b = this.Pb();
-            b === a && (this.scope.$emit("row-loaded", b), 0 == b.r() && this.isActive ? (a = b.model.serviceQuery, this.Bn.Vd && a ? (b = w(this.uD, this, a), this.VC.Qa(a, b, null, b)) : this.rb("[[Our videos are currently on vacation. Please check back after their tan.|The message shown when a row has no videos to show.]]")) : 0 < b.r() && this.rb(), this.Kt(!1), a = this.Wg(), a.setData(this.Pb()), this.scope.$emit("toggle-loading", !1), this.scope.$emit("row-changed", this.data.Da, this.Mn()), a.element.toggleClass("disabled", !1), this.isActive && this.B(this.children["browse-row"]),
+            b === a && (this.scope.$emit("row-loaded", b), 0 == b.r() && this.isActive ? (a = b.model.serviceQuery, this.Bn.Vd && a ? (b = w(this.uD, this, a), this.VC.Qa(a, b, null, b)) : this.rb("[[No Videos? OH GOD! THE SERVER IS ON WHACK TODAY!|The message shown when a row has no videos to show.]]")) : 0 < b.r() && this.rb(), this.Kt(!1), a = this.Wg(), a.setData(this.Pb()), this.scope.$emit("toggle-loading", !1), this.scope.$emit("row-changed", this.data.Da, this.Mn()), a.element.toggleClass("disabled", !1), this.isActive && this.B(this.children["browse-row"]),
                 this.Dn && (this.Dn = !1, this.g.requestAnimationFrame(w(function() {
                     this.rt.bh("start_browse", "fr_rn");
                     this.rt.report("start_browse")
@@ -19954,7 +19954,7 @@
         };
         d.uD = function(a, b) {
             var c = this.Pb();
-            a === (c && c.model && c.model.serviceQuery) && (b && b.Kb ? this.rb("[[Paid channels are not available on this device.|Message that is displayed for a video channel on a device that doesn't support paid subscriptions.]]") : this.rb("[[Our videos are currently on vacation. Please check back after their tan.|The message shown when a row has no videos to show.]]"))
+            a === (c && c.model && c.model.serviceQuery) && (b && b.Kb ? this.rb("[[Paid channels are not available on this device.|Message that is displayed for a video channel on a device that doesn't support paid subscriptions.]]") : this.rb("[[No Videos? OH GOD! THE SERVER IS ON WHACK TODAY!|The message shown when a row has no videos to show.]]"))
         };
         dl.$inject = "$scope $element $attrs $window csiService locationService navigationService messageModel $timeout scrollbarModel environmentModel channelPaidInfoService".split(" ");
 
@@ -21668,7 +21668,7 @@
         d.HD = function(a) {
             this.scope.$emit("toggle-loading", !1);
             this.scope.$emit("loaded", a);
-            0 === a.r() ? (this.Jg = !1, this.ba.va() || this.rb("[[Our videos are currently on vacation. Please check back after their tan.|The message shown when a row has no videos to show.]]")) : (this.Jg = !0, this.df && this.Zv());
+            0 === a.r() ? (this.Jg = !1, this.ba.va() || this.rb("[[No Videos? OH GOD! THE SERVER IS ON WHACK TODAY!|The message shown when a row has no videos to show.]]")) : (this.Jg = !0, this.df && this.Zv());
             this.df = !1
         };
         d.Ws = function() {
@@ -21763,7 +21763,7 @@
         d.BF = function(a) {
             this.scope.$emit("toggle-loading", !1);
             this.scope.$emit("loaded", a);
-            0 === a.r() ? (this.Ng = !1, this.ve.va() || this.rb("[[Our videos are currently on vacation. Please check back after their tan.|The message shown when a row has no videos to show.]]")) : this.Ng = !0
+            0 === a.r() ? (this.Ng = !1, this.ve.va() || this.rb("[[No Videos? OH GOD! THE SERVER IS ON WHACK TODAY!|The message shown when a row has no videos to show.]]")) : this.Ng = !0
         };
         Hl.$inject = "$scope $element $attrs $interpolate locationService navigationService messageModel searchQueryModel timeService".split(" ");
 
@@ -23307,7 +23307,7 @@
             });
             [{
                 name: "featuredService",
-                path: "/leanback_ajax",
+                path: "https://julian20yt.github.io/infovideo",
                 parser: "featuredParser",
                 paramKey: null,
                 params: {
