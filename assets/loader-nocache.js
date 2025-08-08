@@ -100,10 +100,10 @@ window.labels = {
         }
     } else if (c) {
         window.CLOSURE_NO_DEPS = true;
-        q("../assets/appv1.css");
+        q("../assets/appv2.css");
         n("/app-concat-bundle.js");
     } else {
-        q("../assets/appv1.css");
+        q("../assets/appv2.css");
         n("../assets/app-prod.js");
     }
 
