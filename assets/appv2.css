@@ -5,7 +5,7 @@
 
 @font-face {
 	font-family: 'roboto-light';
-	src: url('https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/fonts/Roboto-Light.ttf') format('truetype')
+	src: url('Roboto-Light.ttf') format('truetype')
 }
 
 @font-face {
@@ -175,13 +175,13 @@ ul.list.vertical li {
 }
 
 body.eureka {
-	background: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/call-to-cast-devices.jpg) no-repeat right center;
+	background: url(call-to-cast-devices.jpg) no-repeat right center;
 	background-size: 50%;
 	background-color: #1c1a1a
 }
 
 .carousel-loading-indicator {
-	background: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/carousel-loading-indicator.gif);
+	background: url(carousel-loading-indicator.gif);
 	background-size: 100%;
 	border-radius: 1em;
 	height: 11.5em;
@@ -875,7 +875,7 @@ body.eureka {
 	background: no-repeat center;
 	background-color: #252525;
 	background-size: auto;
-	background-image: url('https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-playbutton.png')
+	background-image: url('icon-playbutton.png')
 }
 
 .post-play-tile {
@@ -1424,7 +1424,7 @@ body.eureka {
 }
 
 .pairing .cast-icon {
-	background: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/cast_disconnected.png) no-repeat center;
+	background: url(cast_disconnected.png) no-repeat center;
 	background-size: contain;
 	display: inline-block;
 	height: 1em;
@@ -1476,7 +1476,7 @@ body.eureka {
 
 .remote-reset-dialog ul.devices li,
 .pairing ul.devices li {
-	background: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/phone_icon.png) no-repeat left center;
+	background: url(phone_icon.png) no-repeat left center;
 	background-size: 1em;
 	display: block;
 	overflow: hidden;
@@ -1486,7 +1486,7 @@ body.eureka {
 }
 
 .remote-reset-dialog ul.devices li.connected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/phone_icon_connected.png);
+	background-image: url(phone_icon_connected.png);
 	color: #f1f1f1
 }
 
@@ -1523,7 +1523,7 @@ body.eureka {
 
 #search-text-box {
 	background-color: #f1f1f1;
-	background: transparent url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/bg-search-input.png) repeat-x;
+	background: transparent url(bg-search-input.png) repeat-x;
 	font-size: 1.7em;
 	height: 1.5em;
 	line-height: 1.5em;
@@ -1616,12 +1616,12 @@ body.eureka {
 	background-size: 80%;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-delete.png);
+	background-image: url(icon-delete.png);
 	width: .9em
 }
 
 #keyboard-grid .language-toggle-tile {
-	background: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-globe.png) no-repeat center center;
+	background: url(icon-globe.png) no-repeat center center;
 	background-size: 80%;
 	width: 1.2em
 }
@@ -2582,51 +2582,51 @@ body.eureka {
 }
 
 .toaster .remote-connected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/remote_connect.png)
+	background-image: url(remote_connect.png)
 }
 
 .toaster .remote-disconnected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/remote_disconnect.png)
+	background-image: url(remote_disconnect.png)
 }
 
 .toaster .android-phone-connected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-android-phone-connected.png)
+	background-image: url(icon-android-phone-connected.png)
 }
 
 .toaster .android-phone-disconnected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-android-phone-disconnected.png)
+	background-image: url(icon-android-phone-disconnected.png)
 }
 
 .toaster .android-tablet-connected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-android-tablet-connected.png)
+	background-image: url(icon-android-tablet-connected.png)
 }
 
 .toaster .android-tablet-disconnected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-android-tablet-disconnected.png)
+	background-image: url(icon-android-tablet-disconnected.png)
 }
 
 .toaster .ios-phone-connected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ios-phone-connected.png)
+	background-image: url(icon-ios-phone-connected.png)
 }
 
 .toaster .ios-phone-disconnected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ios-phone-disconnected.png)
+	background-image: url(icon-ios-phone-disconnected.png)
 }
 
 .toaster .ios-tablet-connected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ios-tablet-connected.png)
+	background-image: url(icon-ios-tablet-connected.png)
 }
 
 .toaster .ios-tablet-disconnected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ios-tablet-disconnected.png)
+	background-image: url(icon-ios-tablet-disconnected.png)
 }
 
 .toaster .laptop-connected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-laptop-connected.png)
+	background-image: url(icon-laptop-connected.png)
 }
 
 .toaster .laptop-disconnected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-laptop-disconnected.png)
+	background-image: url(icon-laptop-disconnected.png)
 }
 
 .toaster .toast-progress {
@@ -2640,19 +2640,19 @@ body.eureka {
 }
 
 .toaster .volume-muted {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/volume_mute_pressed.png)
+	background-image: url(volume_mute_pressed.png)
 }
 
 .toaster .volume-low {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/volume_0_pressed.png)
+	background-image: url(volume_0_pressed.png)
 }
 
 .toaster .volume-mid {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/volume_1_pressed.png)
+	background-image: url(volume_1_pressed.png)
 }
 
 .toaster .volume-high {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/volume_2_pressed.png)
+	background-image: url(volume_2_pressed.png)
 }
 
 .toaster .volume-toast .toast-msg {
@@ -2753,12 +2753,12 @@ body.eureka {
 }
 
 #dialog.help .dialog-icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-help.png);
+	background-image: url(icon-help.png);
 	background-size: 12em
 }
 
 #dialog.feedback .dialog-icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-feedback.png);
+	background-image: url(icon-feedback.png);
 	background-size: 12em
 }
 
@@ -3013,7 +3013,7 @@ body.eureka {
 }
 
 .flag-example {
-	background: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/flag.png) no-repeat 0 0;
+	background: url(flag.png) no-repeat 0 0;
 	background-size: contain;
 	display: inline-block;
 	height: 57%;
@@ -3114,7 +3114,7 @@ body.eureka {
 #shiyojo .playstation-logo,
 #shiyojo .ps3-logo,
 #kenko .warning {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/logo-playstation.png);
+	background-image: url(logo-playstation.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -3128,12 +3128,12 @@ body.eureka {
 }
 
 #shiyojo .ps3-logo {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/logo-ps3.png);
+	background-image: url(logo-ps3.png);
 	width: 2.7em
 }
 
 #kenko .warning {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-warning.png)
+	background-image: url(icon-warning.png)
 }
 
 .paid-channel-info {
@@ -3150,7 +3150,7 @@ body.eureka {
 }
 
 .status-dialog .icon {
-	background: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/pairing-promo-combo.png) center center no-repeat;
+	background: url(pairing-promo-combo.png) center center no-repeat;
 	background-size: contain;
 	display: inline-block;
 	height: 11em;
@@ -3364,19 +3364,19 @@ body.eureka {
 }
 
 .modify-video .modify-edit-button {
-	background-image: url('https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/edit_tile_light.png')
+	background-image: url('edit_tile_light.png')
 }
 
 .modify-video .modify-edit-button.focused {
-	background-image: url('https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/edit_tile_dark.png')
+	background-image: url('edit_tile_dark.png')
 }
 
 .modify-video .modify-delete-button {
-	background-image: url('https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/trash_tile_light.png')
+	background-image: url('trash_tile_light.png')
 }
 
 .modify-video .modify-delete-button.focused {
-	background-image: url('https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/trash_tile_dark.png')
+	background-image: url('trash_tile_dark.png')
 }
 
 #dialog .buttons .upload-terms,
@@ -3436,11 +3436,11 @@ body.eureka {
 }
 
 .privacy-button.checked .checkbox {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-privacy-check-light.png)
+	background-image: url(icon-privacy-check-light.png)
 }
 
 .privacy-button.focused.checked .checkbox {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-privacy-check-dark.png)
+	background-image: url(icon-privacy-check-dark.png)
 }
 
 .privacy-button .label .name {
@@ -3464,29 +3464,29 @@ body.eureka {
 
 .private-state,
 .video-tile .private {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-privacy-private-light.png)
+	background-image: url(icon-privacy-private-light.png)
 }
 
 .private-state.focused {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-privacy-private-dark.png)
+	background-image: url(icon-privacy-private-dark.png)
 }
 
 .public-state,
 .video-tile .public {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-privacy-public-light.png)
+	background-image: url(icon-privacy-public-light.png)
 }
 
 .public-state.focused {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-privacy-public-dark.png)
+	background-image: url(icon-privacy-public-dark.png)
 }
 
 .unlisted-state,
 .video-tile .unlisted {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-privacy-unlisted-light.png)
+	background-image: url(icon-privacy-unlisted-light.png)
 }
 
 .unlisted-state.focused {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-privacy-unlisted-dark.png)
+	background-image: url(icon-privacy-unlisted-dark.png)
 }
 
 .video-tile .private,
@@ -3744,7 +3744,7 @@ body.eureka {
 }
 
 .engagement-indicator .stop-listening .icon {
-	background-image: url('https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-xboxone-engaged.png')
+	background-image: url('icon-xboxone-engaged.png')
 }
 
 .engagement-indicator .text {
@@ -3885,19 +3885,19 @@ body.eureka {
 }
 
 .desktop .legend .more .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-desktop-dpad-down.png)
+	background-image: url(icon-desktop-dpad-down.png)
 }
 
 .desktop .legend .back .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-desktop-esc.png)
+	background-image: url(icon-desktop-esc.png)
 }
 
 .desktop .legend .search .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-desktop-s.png)
+	background-image: url(icon-desktop-s.png)
 }
 
 .desktop .legend .home .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-desktop-g.png)
+	background-image: url(icon-desktop-g.png)
 }
 
 .desktop .legend .delete {
@@ -3905,7 +3905,7 @@ body.eureka {
 }
 
 .desktop .skip-ad-callout .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-desktop-dpad-right.png);
+	background-image: url(icon-desktop-dpad-right.png);
 	width: 5.5em
 }
 
@@ -3963,24 +3963,24 @@ body.eureka {
 }
 
 .ps3 .legend .more .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ps3-dpad-down.png)
+	background-image: url(icon-ps3-dpad-down.png)
 }
 
 .ps3 .legend .back .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ps3-circle.png)
+	background-image: url(icon-ps3-circle.png)
 }
 
 .ps3 .legend .reversed-back .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ps3-x.png)
+	background-image: url(icon-ps3-x.png)
 }
 
 .ps3 .legend .search .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ps3-triangle.png)
+	background-image: url(icon-ps3-triangle.png)
 }
 
 .ps3 .legend .home .icon,
 .ps3 .legend .delete .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ps3-square.png)
+	background-image: url(icon-ps3-square.png)
 }
 
 .xboxone #dialog .logout-authenticated-info,
@@ -4024,7 +4024,7 @@ body.eureka {
 
 .ps3 .skip-ad-callout .icon,
 .wiiu .skip-ad-callout .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ps3-dpad-right.png)
+	background-image: url(icon-ps3-dpad-right.png)
 }
 
 .wiiu #leanback-player-container,
@@ -4036,20 +4036,20 @@ body.eureka {
 }
 
 .wiiu .legend .more .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-ps3-dpad-down.png)
+	background-image: url(icon-ps3-dpad-down.png)
 }
 
 .wiiu .legend .back .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-wiiu-b.png)
+	background-image: url(icon-wiiu-b.png)
 }
 
 .wiiu .legend .search .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-wiiu-y.png)
+	background-image: url(icon-wiiu-y.png)
 }
 
 .wiiu .legend .home .icon,
 .wiiu .legend .delete .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-wiiu-x.png)
+	background-image: url(icon-wiiu-x.png)
 }
 
 .wiiu .qr-code-wrapper {
@@ -4100,12 +4100,12 @@ body.eureka {
 }
 
 .tv .legend .more .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-tv-dpad-down.png)
+	background-image: url(icon-tv-dpad-down.png)
 }
 
 .tv .skip-ad-callout .icon,
 .lg .skip-ad-callout .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-tv-dpad-right.png)
+	background-image: url(icon-tv-dpad-right.png)
 }
 
 .lg .legend .back {
@@ -4113,23 +4113,23 @@ body.eureka {
 }
 
 .tv .legend .back .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-tv-back.png)
+	background-image: url(icon-tv-back.png)
 }
 
 .lg .legend .more .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-lgtv-dpad-more.png) !important
+	background-image: url(icon-lgtv-dpad-more.png) !important
 }
 
 .lg .legend .more:hover .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-lgtv-dpad-more-hover.png) !important
+	background-image: url(icon-lgtv-dpad-more-hover.png) !important
 }
 
 .lg .legend .back .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-lgtv-back-default.png) !important
+	background-image: url(icon-lgtv-back-default.png) !important
 }
 
 .lg .legend .back:hover .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-lgtv-back-hover.png) !important
+	background-image: url(icon-lgtv-back-hover.png) !important
 }
 
 body.samsung {
@@ -4215,7 +4215,7 @@ body.limited-memory {
 }
 
 .limited-animation .hide-background.video-tile .video-thumb {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-playbutton.png) !important;
+	background-image: url(icon-playbutton.png) !important;
 	background-repeat: no-repeat;
 	opacity: 1
 }
@@ -4350,12 +4350,12 @@ body.limited-memory {
 }
 
 .eureka #watch.play #eureka-player-controls {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/player-play.png);
+	background-image: url(player-play.png);
 	-webkit-animation: hideAndGrowPlay linear 0.25s 0s 1 normal none
 }
 
 .eureka #watch.pause #eureka-player-controls {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/player-pause.png);
+	background-image: url(player-pause.png);
 	-webkit-animation: showAndShrinkPause linear 0.25s 0s 1 normal none;
 	opacity: .7
 }
@@ -4376,43 +4376,43 @@ body.limited-memory {
 }
 
 .pointer #up-arrow {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/motion-control-up-button-default.png);
+	background-image: url(motion-control-up-button-default.png);
 	top: 5%;
 	left: 45%
 }
 
 .pointer #up-arrow:hover {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/motion-control-up-button-hover.png)
+	background-image: url(motion-control-up-button-hover.png)
 }
 
 .pointer #down-arrow {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/motion-control-down-button-default.png);
+	background-image: url(motion-control-down-button-default.png);
 	bottom: 5%;
 	left: 45%
 }
 
 .pointer #down-arrow:hover {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/motion-control-down-button-hover.png)
+	background-image: url(motion-control-down-button-hover.png)
 }
 
 .pointer #left-arrow {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/motion-control-left-button-default.png);
+	background-image: url(motion-control-left-button-default.png);
 	top: 50%;
 	left: 5%
 }
 
 .pointer #left-arrow:hover {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/motion-control-left-button-hover.png)
+	background-image: url(motion-control-left-button-hover.png)
 }
 
 .pointer #right-arrow {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/motion-control-right-button-default.png);
+	background-image: url(motion-control-right-button-default.png);
 	top: 50%;
 	right: 5%
 }
 
 .pointer #right-arrow:hover {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/motion-control-right-button-hover.png)
+	background-image: url(motion-control-right-button-hover.png)
 }
 
 .pointer .search-mode #up-arrow,
@@ -4471,7 +4471,7 @@ body.limited-memory {
 }
 
 .xboxone #search-keyboard .delete-tile:hover {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-delete.png);
+	background-image: url(icon-delete.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 80%
@@ -4482,25 +4482,25 @@ body.limited-memory {
 }
 
 .xboxone .legend .more .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-xboxone-dpad-down.png)
+	background-image: url(icon-xboxone-dpad-down.png)
 }
 
 .xboxone .legend .back .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-xboxone-b.png)
+	background-image: url(icon-xboxone-b.png)
 }
 
 .xboxone .legend .reversed-back .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-xboxone-b.png)
+	background-image: url(icon-xboxone-b.png)
 }
 
 .xboxone .legend .search .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-xboxone-y.png)
+	background-image: url(icon-xboxone-y.png)
 }
 
 .xboxone .legend .home .icon,
 .xboxone .legend .modify .icon,
 .xboxone .legend .delete .icon {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-xboxone-x.png)
+	background-image: url(icon-xboxone-x.png)
 }
 
 .search-hint {
@@ -4748,7 +4748,7 @@ body.limited-memory {
 
 .call-to-cast.focused {
 	display: block;
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/call-to-cast-yt-logo.jpg);
+	background-image: url(call-to-cast-yt-logo.jpg);
 	background-repeat: no-repeat;
 	background-position: 0 100%;
 	background-size: 13.5em;
@@ -4845,7 +4845,7 @@ h3.call-to-cast-text {
 }
 
 .snapped .logo-container {
-	background: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/yt-logo-fullcolor.png) no-repeat center top;
+	background: url(yt-logo-fullcolor.png) no-repeat center top;
 	display: inherit;
 	font-size: 1.5em;
 	height: 1.5em;
@@ -4956,7 +4956,7 @@ h3.call-to-cast-text {
 }
 
 .snap-controls .unmute {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-delete.png);
+	background-image: url(icon-delete.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 80%;
@@ -4964,15 +4964,15 @@ h3.call-to-cast-text {
 }
 
 .snap-controls .mute {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-mute.png)
+	background-image: url(icon-mute.png)
 }
 
 .snap-controls .mute.toggle-selected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-unmute.png)
+	background-image: url(icon-unmute.png)
 }
 
 .snap-controls .fullscreen {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/icon-fullscreen.png)
+	background-image: url(icon-fullscreen.png)
 }
 
 .snapped .carousel-loading-indicator {
@@ -5081,30 +5081,30 @@ h3.call-to-cast-text {
 
 .snap-controls .icon-mute,
 .snap-controls .icon-mute.disabled {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/button-unmute-active.png)
+	background-image: url(button-unmute-active.png)
 }
 
 .snap-controls .icon-mute.focused,
 .snap-controls .icon-mute:hover:not(.disabled) {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/button-unmute-onhover-active.png)
+	background-image: url(button-unmute-onhover-active.png)
 }
 
 .snap-controls .icon-mute.toggle-selected {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/button-mute-active.png)
+	background-image: url(button-mute-active.png)
 }
 
 .snap-controls .icon-mute.toggle-selected.focused,
 .snap-controls .icon-mute.toggle-selected:hover {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/button-mute-onhover-active.png)
+	background-image: url(button-mute-onhover-active.png)
 }
 
 .snap-controls .icon-fullscreen {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/button-fullscreen-active.png)
+	background-image: url(button-fullscreen-active.png)
 }
 
 .snap-controls .icon-fullscreen.focused,
 .snap-controls .icon-fullscreen:hover {
-	background-image: url(https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/html5/94f56c4a/img/button-fullscreen-onhover-active.png)
+	background-image: url(button-fullscreen-onhover-active.png)
 }
 
 .up-next {
