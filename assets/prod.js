@@ -30425,7 +30425,7 @@
                 constructor: Hh,
                 id: "featuredService",
                 parser: "$featuredParser",
-                path: "/leanback_ajax",
+                path: "/leanback.json",
                 opt_params: {
                     action_featured: 1,
                     client: "lb4",
