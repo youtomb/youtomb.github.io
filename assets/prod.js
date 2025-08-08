@@ -1336,7 +1336,10 @@
             xV: "SU",
             EV: "WL"
         }
-
+          , uc = {
+            mqdefault: [0, 1280],
+            hqdefault: [1281, Number.MAX_VALUE]
+        }
           , vc = {
             "channel.banner.tv.low.image.url": [0, 51],
         }
