@@ -30796,32 +30796,7 @@
     setInterval(applyChristmasChanges, 500);
 })();
 
-(function() {
-    function applyfoolChanges() {
-        if (month === 3 && (day === 1 || day === 30)) {
-            // Change all elements with class "search-icon" to "xboxone-upload-icon"
-            document.querySelectorAll('.search-icon').forEach(el => {
-                el.classList.remove('search-icon');
-                el.classList.add('feedback-icon');
-            });
 
-            // Change innerHTML of all elements with class "title"
-            document.querySelectorAll('.title').forEach(el => {
-                if (el.innerHTML !== "APRIL FOOLS!") {
-                    el.innerHTML = "APRIL FOOLS!";
-                }
-            });
-            document.querySelectorAll('.description').forEach(el => {
-                if (el.innerHTML !== "APRIL FOOLS!") {
-                    el.innerHTML = "APRIL FOOLS!";
-                }
-            });
-        }
-    }
-
-    // Run every half second
-    setInterval(applyfoolChanges, 500);
-})();
 
 
 /*
