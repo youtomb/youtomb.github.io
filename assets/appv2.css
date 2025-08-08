@@ -116,12 +116,13 @@ ul.list.vertical li {
 }
 
 .logo-container.icon-youtube-logo {
-	color: #999;
-	font-family: 'youtube-icons';
-	font-size: 3em;
-	position: absolute;
-	right: 6%;
-	top: 6.3%
+    color: #fff;
+    font-family: 'youtube-icons';
+    font-size: 3em;
+    position: absolute;
+    right: 6%;
+    top: 6.3%;
+    opacity: 0.5;
 }
 
 .watch-state .logo-container {
