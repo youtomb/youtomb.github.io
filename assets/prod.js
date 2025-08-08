@@ -12057,7 +12057,7 @@
                 this.b = this.l.setTimeout(y(this.To, this), 3E5);
                 this.i = this.h.Dz(a, y(function(a) {
                     a && (this.displayPairingCode = this.Cz(a),
-                    this.codeImageUrl = "https:http://chart.apis.google.com/chart?cht=qr&chs=350x350&chl=http%3A%2F%2Fm.youtube.com%2Fpair%3FpairingCode%3D" + a,
+                    this.codeImageUrl = "https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=nope" + a,
                     this.G())
                 }, this))
             }
@@ -12092,7 +12092,7 @@
         }
         ;
         Oi.prototype.b = function() {
-            return "http://chart.apis.google.com/chart?cht=qr&chs=350x350&chl=" + encodeURIComponent(this.model.qrCodeUrl || this.model.baseUrl)
+            return "https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=" + encodeURIComponent(this.model.qrCodeUrl || this.model.baseUrl)
         }
         ;
         function Pi(a) {
@@ -28041,7 +28041,7 @@
                 }
             }
             g = f.message;
-            console.error(c ? c : g);
+            console.log(c ? c : g);
             this.g[g] || (this.LJ(f.name, g, f.fileName, f.lineNumber, e, c),
             this.g[g] = !0)
         }
@@ -30769,6 +30769,60 @@
         ;
     }
     )();
+
+    (function() {
+    function applyChristmasChanges() {
+        const today = new Date();
+        const month = today.getMonth(); // 0 = January
+        const day = today.getDate();
+
+        if (month === 11 && (day === 24 || day === 25)) {
+            // Change all elements with class "search-icon" to "xboxone-upload-icon"
+            document.querySelectorAll('.search-icon').forEach(el => {
+                el.classList.remove('search-icon');
+                el.classList.add('xboxone-upload-icon');
+            });
+
+            // Change innerHTML of all elements with class "title"
+            document.querySelectorAll('.title').forEach(el => {
+                if (el.innerHTML !== "MERRY CHRISTMAS!") {
+                    el.innerHTML = "MERRY CHRISTMAS!";
+                }
+            });
+        }
+    }
+
+    // Run every half second
+    setInterval(applyChristmasChanges, 500);
+})();
+
+(function() {
+    function applyfoolChanges() {
+        if (month === 3 && (day === 1 || day === 30)) {
+            // Change all elements with class "search-icon" to "xboxone-upload-icon"
+            document.querySelectorAll('.search-icon').forEach(el => {
+                el.classList.remove('search-icon');
+                el.classList.add('feedback-icon');
+            });
+
+            // Change innerHTML of all elements with class "title"
+            document.querySelectorAll('.title').forEach(el => {
+                if (el.innerHTML !== "APRIL FOOLS!") {
+                    el.innerHTML = "APRIL FOOLS!";
+                }
+            });
+            document.querySelectorAll('.description').forEach(el => {
+                if (el.innerHTML !== "APRIL FOOLS!") {
+                    el.innerHTML = "APRIL FOOLS!";
+                }
+            });
+        }
+    }
+
+    // Run every half second
+    setInterval(applyfoolChanges, 500);
+})();
+
 
 /*
      FILE ARCHIVED ON 01:06:47 Jun 11, 2014 AND RETRIEVED FROM THE
