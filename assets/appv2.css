@@ -69,8 +69,12 @@ input {
 	padding: 0
 }
 
-body {
+body.old {
 	background-color: #1c1a1a
+}
+
+body {
+	background-image: ./img/default.jpg
 }
 
 p,
