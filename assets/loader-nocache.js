@@ -104,7 +104,7 @@ window.labels = {
         n("/app-concat-bundle.js");
     } else {
         q("../assets/appv2.css");
-        n("../assets/app-prod.js");
+        n("../assets/prod.js");
     }
 
     window.checkBrokenLabel = function() {
