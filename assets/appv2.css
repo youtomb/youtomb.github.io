@@ -74,7 +74,7 @@ body.old {
 }
 
 body {
-	background-image: ./img/default.jpg
+	background-image: url(./img/default.jpg)
 }
 
 p,
@@ -168,11 +168,11 @@ ul.list.vertical li {
 }
 
 .browse-state .carousel-loading-indicator {
-	display: none
+	display: block
 }
 
 .browse-state .fallback-loading-indicator {
-	display: block
+	display: none
 }
 
 .opera #spinner-container {
