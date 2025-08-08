@@ -1328,7 +1328,7 @@
             KO: "\u3131\u3134\u3137\u3139\u3141\u3142\u3145\u3147\u3148\u314a\u314b\u314c\u314d\u314e\n\u314f\u3151\u3153\u3155\u3157\u315b\u315c\u3160\u3161\u3163\u3150\u3152\u3154\u31561234567890_",
             RU: "\u0430\u0431\u0432\u0433\u0434\u0435\u0451\u0436\u0437\u0438\u0439\u043a\u043b\u043c\u043d\u043e\u043f\u0440\u0441\u0442\u0443\u0444\u0445\u0446\u0447\u0448\u0449\u044a\u044b\u044c\u044d\u044e\u044f_",
             JP: "\u3042\u304b\u3055\u305f\u306a\u306f\u307e\u3084\u3089\u308f\u309b",
-            NUMBERS: "1234567890"
+            NUMBERS: "1234567890\ufffc\ufffb\ufffd\u221e"
         }
           , tc = {
             FR: "HL",
@@ -1341,7 +1341,7 @@
             hqdefault: [1281, Number.MAX_VALUE]
         }
           , vc = {
-            "channel.banner.tv.low.image.url": [0, 854],
+            "channel.banner.tv.low.image.url": [0, 47],
             "channel.banner.tv.medium.image.url": [855, 1280],
             "channel.banner.tv.high.image.url": [1281, Number.MAX_VALUE]
         }
@@ -7631,7 +7631,7 @@
         d.ID = function() {
             this.W ? this.Ue() : $c("html5-video-player") ? (this.W = !0,
             this.Ue()) : (this.j("plht_rq"),
-            this.$a.get("/leanback_ajax", {
+            this.$a.get("/leanback.json", {
                 action_player_template: 1,
                 hl: this.$.Oa,
                 override_hl: 1
