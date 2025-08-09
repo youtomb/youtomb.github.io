@@ -16336,7 +16336,7 @@
                 }, this);
                 b(f)
             }, this);
-            yk(this.Pe("/pairing/get_lounge_token_batch"), {
+            yk(this.Pe("https://web.archive.org/web/20150808000537cs_/https://www.youtube.com/api/lounge/pairing/generate_screen_id"), {
                 Ud: {
                     screen_ids: a
                 },
