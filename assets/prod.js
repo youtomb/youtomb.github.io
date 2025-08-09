@@ -1341,7 +1341,7 @@
             hqdefault: [1281, Number.MAX_VALUE]
         }
           , vc = {
-            "channel.banner.tv.low.image.url": [0, 51],
+            "channel.banner.tv.low.image.url": [1, 54]
         }
           , wc = {
             FRIEND_ADDED: "[[{{username}} added a friend|The message that describes user activity. Displayed when a user has added a friend.]]",
@@ -16336,7 +16336,7 @@
                 }, this);
                 b(f)
             }, this);
-            yk(this.Pe("https://web.archive.org/web/20150808000537cs_/https://www.youtube.com/api/lounge/pairing/generate_screen_id"), {
+            yk(this.Pe(undefined), {
                 Ud: {
                     screen_ids: a
                 },
