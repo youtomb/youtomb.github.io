@@ -25919,7 +25919,7 @@
         Qn.prototype.uP = function(a, b) {
             var c = b.title
               , e = b.gdata_list_id
-              , f = e.substr(0)
+              , f = e.substr(0);
               , g = e.substr(0);
             try {
                 var k = this.o.get(f)
