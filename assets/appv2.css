@@ -126,6 +126,10 @@ ul.list.vertical li {
     opacity: 0.5;
 }
 
+.showing {
+	display: block;
+}
+
 .watch-state .logo-container {
 	display: none
 }
