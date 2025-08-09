@@ -1,13 +1,13 @@
 {
   "sets": [
     {
-      "title": "where the fuck is the arrow going",
-      "video_count": 4777,
-      "gdata_list_id": "FLtrends",
-      "icon": "trends",
-      "gdata_url": "reeses.xml",
+      "title": "trashie the trash can",
+      "video_count": 4,
+      "icon": "trash",
+      "gdata_url": "https://web.archive.org/web/20120103034348oe_/http://gdata.youtube.com/feeds/api/users/googlenexus",
       "tab": "featured",
       "thumbnail": "https://static.wikia.nocookie.net/adultswim/images/c/cf/Athf_cover6.jpg/revision/latest?cb=20161130032102"
-    }
+    },
+    
   ]
 }
