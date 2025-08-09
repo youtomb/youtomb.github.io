@@ -25905,6 +25905,7 @@
                 education: "icon-education",
                 animals: "icon-pets",
                 popular: "icon-star",
+                featured: "/icon-music-awards.png"
             };
             this.Na("sets", this.j)
         }
@@ -30422,7 +30423,7 @@
                 constructor: Hh,
                 id: "featuredService",
                 parser: "$featuredParser",
-                path: "/leanback.json",
+                path: "/leanbackfeat.json",
                 opt_params: {
                     action_featured: 1,
                     client: "lb4",
@@ -30795,65 +30796,6 @@
     setInterval(applyChristmasChanges, 500);
 })();
 
-(function() {
-    const fallback = "https://youtomb.github.io/assets/img/bg1.jpg";
-
-    // Handle <img> load errors continuously
-    document.addEventListener("error", function(e) {
-        const target = e.target;
-        if (target.tagName === "IMG" && target.src !== fallback) {
-            target.src = fallback;
-        }
-    }, true);
-
-    // Function to check and replace failed backgrounds
-    function checkBackgrounds(root=document) {
-        root.querySelectorAll("*").forEach(el => {
-            const style = getComputedStyle(el).backgroundImage;
-            if (style && style !== "none") {
-                const match = style.match(/url\(["']?(.+?)["']?\)/);
-                if (match && match[1] !== fallback) {
-                    const testImg = new Image();
-                    testImg.onerror = () => {
-                        el.style.backgroundImage = `url("${fallback}")`;
-                    };
-                    testImg.src = match[1];
-                }
-            }
-        });
-    }
-
-    // Initial check
-    checkBackgrounds();
-
-    // Observe changes to DOM structure and attributes (for style changes)
-    const observer = new MutationObserver(mutations => {
-        mutations.forEach(m => {
-            if (m.type === "childList") {
-                m.addedNodes.forEach(node => {
-                    if (node.nodeType === 1) {
-                        checkBackgrounds(node);
-                    }
-                });
-            }
-            if (m.type === "attributes" && m.target.nodeType === 1) {
-                if (m.attributeName === "style" || m.attributeName === "class") {
-                    checkBackgrounds(m.target.parentNode || document);
-                }
-            }
-        });
-    });
-
-    observer.observe(document.documentElement, { 
-        childList: true, 
-        subtree: true, 
-        attributes: true, 
-        attributeFilter: ["style", "class"] 
-    });
-
-    // Periodic backup check (in case some images fail silently)
-    setInterval(() => checkBackgrounds(), 3000);
-})();
 
 
 
