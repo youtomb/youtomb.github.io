@@ -7629,7 +7629,7 @@
         d.ID = function() {
             this.W ? this.Ue() : $c("html5-video-player") ? (this.W = !0,
             this.Ue()) : (this.j("plht_rq"),
-            this.$a.get("/leanback.json", {
+            this.$a.get("/tv-player.js", {
                 action_player_template: 1,
                 hl: this.$.Oa,
                 override_hl: 1
@@ -30423,7 +30423,7 @@
                 constructor: Hh,
                 id: "featuredService",
                 parser: "$featuredParser",
-                path: "/leanbackfeat.json",
+                path: "/leanback.json",
                 opt_params: {
                     action_featured: 1,
                     client: "lb4",
