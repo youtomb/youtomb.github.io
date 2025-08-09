@@ -25905,7 +25905,6 @@
                 education: "icon-education",
                 animals: "icon-pets",
                 popular: "icon-star",
-                featured: "/icon-music-awards.png"
             };
             this.Na("sets", this.j)
         }
@@ -25920,8 +25919,8 @@
         Qn.prototype.uP = function(a, b) {
             var c = b.title
               , e = b.gdata_list_id
-              , f = e.substr(0, 2)
-              , g = e.substr(2);
+              , f = e.substr(0)
+              , g = e.substr(0);
             try {
                 var k = this.o.get(f)
                   , l = this.g(e, g, b.icon)
