@@ -2,9 +2,37 @@
   "sets": [
     {
       "title": "trashie the trash can",
-      "video_count": 4,
       "icon": "trash",
-      "gdata_url": "https://web.archive.org/web/20120103034348oe_/https://www.xbox.com",
+      "tab": "featured",
+      "thumbnail": "https://static.wikia.nocookie.net/adultswim/images/c/cf/Athf_cover6.jpg/revision/latest?cb=20161130032102"
+    },
+    {
+      "title": "beak the line can",
+      "icon": "trends",
+      "tab": "featured",
+      "thumbnail": "https://static.wikia.nocookie.net/adultswim/images/c/cf/Athf_cover6.jpg/revision/latest?cb=20161130032102"
+    },
+    {
+      "title": "Gaming",
+      "icon": "gaming",
+      "tab": "featured",
+      "thumbnail": "https://static.wikia.nocookie.net/adultswim/images/c/cf/Athf_cover6.jpg/revision/latest?cb=20161130032102"
+    },
+    {
+      "title": "i like dis",
+      "icon": "like",
+      "tab": "featured",
+      "thumbnail": "https://static.wikia.nocookie.net/adultswim/images/c/cf/Athf_cover6.jpg/revision/latest?cb=20161130032102"
+    },
+    {
+      "title": "D PAD TIME",
+      "icon": "tv-dpad",
+      "tab": "featured",
+      "thumbnail": "https://static.wikia.nocookie.net/adultswim/images/c/cf/Athf_cover6.jpg/revision/latest?cb=20161130032102"
+    },
+    {
+      "title": "GUIDE_LOGO",
+      "icon": "search-clear",
       "tab": "featured",
       "thumbnail": "https://static.wikia.nocookie.net/adultswim/images/c/cf/Athf_cover6.jpg/revision/latest?cb=20161130032102"
     }
