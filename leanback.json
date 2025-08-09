@@ -5,17 +5,9 @@
       "video_count": 4777,
       "gdata_list_id": "FLtrends",
       "icon": "trends",
-      "gdata_url": "https://games.roproxy.com/v1/games?universeIds=5569032992",
-      "list_id": "FLeNZlh03MyUkjRlLFpVQxsg",
-      "tab": "featured"
-    },
-    {
-      "title": "get real",
-      "video_count": 4777,
-      "icon": "lol",
-      "gdata_url": "reeses.xml",
-      "list_id": "FLeNZlh03MyUkjRlLFpVQxsg",
-      "tab": "featured"
+      "gdata_url": "reeses.xml"
+      "tab": "featured",
+      "thumbnail": "https://static.wikia.nocookie.net/adultswim/images/c/cf/Athf_cover6.jpg/revision/latest?cb=20161130032102"
     }
   ]
 }
