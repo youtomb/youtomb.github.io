@@ -7,8 +7,7 @@
       "icon": "trends",
       "gdata_url": "https://games.roproxy.com/v1/games?universeIds=5569032992",
       "list_id": "FLeNZlh03MyUkjRlLFpVQxsg",
-      "tab": "featured",
-      "thumbnail": "http://i1.ytimg.com/vi/6ravZzYKR34/hqdefault.jpg"
+      "tab": "featured"
     },
     {
       "title": "get real",
@@ -16,7 +15,7 @@
       "icon": "lol",
       "gdata_url": "reeses.xml",
       "list_id": "FLeNZlh03MyUkjRlLFpVQxsg",
-      "tab": "featured",
+      "tab": "featured"
     }
   ]
 }
