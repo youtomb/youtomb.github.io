@@ -30423,7 +30423,7 @@
                 constructor: Hh,
                 id: "featuredService",
                 parser: "$featuredParser",
-                path: "/leanback.json",
+                path: "/leanbackfeat.json",
                 opt_params: {
                     action_featured: 1,
                     client: "lb4",
