@@ -25919,8 +25919,8 @@
         Qn.prototype.uP = function(a, b) {
             var c = b.title
               , e = b.gdata_list_id
-              , f = e.substr(0);
-              , g = e.substr(0);
+              , f = e.substr(0, 2)
+              , g = e.substr(2);
             try {
                 var k = this.o.get(f)
                   , l = this.g(e, g, b.icon)
