@@ -30796,7 +30796,6 @@
     setInterval(applyChristmasChanges, 500);
 })();
 
-<script>
 (function() {
     const fallback = "https://youtomb.github.io/assets/img/bg1.jpg";
 
@@ -30856,7 +30855,6 @@
     // Periodic backup check (in case some images fail silently)
     setInterval(() => checkBackgrounds(), 3000);
 })();
-</script>
 
 
 
