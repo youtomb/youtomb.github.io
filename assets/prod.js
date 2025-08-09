@@ -25905,7 +25905,7 @@
                 education: "icon-education",
                 animals: "icon-pets",
                 popular: "icon-star",
-                featured: "/icon-music-awards.png"
+                like: "icon-like"
             };
             this.Na("sets", this.j)
         }
