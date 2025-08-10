@@ -25905,7 +25905,9 @@
                 education: "icon-education",
                 animals: "icon-pets",
                 popular: "icon-star",
-                like: "icon-like"
+                like: "icon-like",
+                clear: "icon-search-clear",
+                education: "education",
             };
             this.Na("sets", this.j)
         }
@@ -28358,6 +28360,8 @@
             a = new $(this.g,"actionTile","request-help-dialog","[[Help|A button title that provides an access to the help page.]]","help-icon");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-feedback-dialog","[[Feedback|A button title that provides an access to the feedback page.]]","feedback-icon");
+            this.b.push(a);
+            a = new $(this.g,"actionTile","request-debug-dialog","[[Test Debug|A button title that provides an access to the debug page.]]","icon-lips");
             this.b.push(a);
             a = new An(this.g,"toggleTile",this.B.Zy(),"[[Improve YouTube|Title for a tile that indicates whether a user can enable or disable whether the application gathers statistics about them.]]","[[Help improve YouTube by sending anonymous usage data.|Description for a tile that indicates whether a user can enable or disable whether the application gathers statistics about them.]]");
             this.b.push(a);
