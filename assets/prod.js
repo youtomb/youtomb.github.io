@@ -28387,6 +28387,8 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","cmd-playback","[[Request Playback|Button that does what the title says.]]","icon-player-play");
             this.b.push(a);
+            a = new $(this.g,"actionTile",""request-video-uploads","[[Request Video Uploads|Button that does what the title says.]]","icon-guide-my-subs");
+            this.b.push(a);
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","")
                   , b = new $(this.g,"actionTile","request-debug-dialog","SHOW DEBUG INFO","warning");
