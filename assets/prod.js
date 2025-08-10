@@ -28375,15 +28375,17 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-playback","[[Playback Test|Button that opens Playback without selecting any video]]","icon-edit");
             this.b.push(a);
-            a = new $(this.g,"actionTile","request-like-video","[[Like Button|placeholder]]","icon-edit");
+            a = new $(this.g,"actionTile","load-browse","[[Reload|placeholder]]","icon-edit");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-remote-reset-dialog","[[Remote Reset Dialog|placeholder]]","icon-edit");
             this.b.push(a);
-            a = new An(this.g,"toggleTile",this.w.g,"[[Sounds|Title for a tile that toggles sounds.]]","[[Turn on or off application sounds.|Description for a tile that toggles sounds made by the YouTube TV application]]");
-            this.b.push(a)
             a = new An(this.g,"toggleTile",this.B.Zy(),"[[Improve YouTube|Title for a tile that indicates whether a user can enable or disable whether the application gathers statistics about them.]]","[[Help improve YouTube by sending anonymous usage data.|Description for a tile that indicates whether a user can enable or disable whether the application gathers statistics about them.]]");
             this.b.push(a);
             a = new An(this.g,"toggleTile",this.S,'[[Safe Search|Title for settings tile that toggles "Safe Mode".]]','[[Enable or disable Safe Search.|Description for tile that toggles "Safe Mode".]]');
+            this.b.push(a);
+            a = new An(this.g,"toggleTile",this.w.g,"[[Sounds|Title for a tile that toggles sounds.]]","[[Turn on or off application sounds.|Description for a tile that toggles sounds made by the YouTube TV application]]");
+            this.b.push(a)
+            a = new $(this.g,"actionTile","request-licenses-dialog","[[CREDITS|Button that shows credit information, giving credit to all open-source software used in building this product.]]","icon-gaming");
             this.b.push(a);
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","")
