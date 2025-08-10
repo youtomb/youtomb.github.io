@@ -28353,10 +28353,6 @@
         d = Xk.prototype;
         d.Ez = function() {
             this.b = [];
-            if (this.h.supportsSounds) {
-                var a = new An(this.g,"toggleTile",this.w.g,"[[Sounds|Title for a tile that toggles sounds.]]","[[Turn on or off application sounds.|Description for a tile that toggles sounds made by the YouTube TV application]]");
-                this.b.push(a)
-            }
             a = new $(this.g,"actionTile","request-help-dialog","[[Help|A button title that provides an access to the help page.]]","help-icon");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-feedback-dialog","[[Feedback|A button title that provides an access to the feedback page.]]","feedback-icon");
@@ -28365,7 +28361,7 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","network-failure","[[Network Forced Fail|A button title that forces network failure]]","warning");
             this.b.push(a);
-            a = new $(this.g,"actionTile","request-kenko-dialog","[[Kenko|A button title that kenko]]","warning");
+            a = new $(this.g,"actionTile","request-kenko-dialog","[[Kenko|A button title that kenko]]","feedback-icon");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-logout-dialog","[[LOG OUT|A button title that fakes a log out]]","warning");
             this.b.push(a);
@@ -28377,6 +28373,14 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-video-edit","[[Edit video|Button that opens video editing dialog]]","icon-edit");
             this.b.push(a);
+            a = new $(this.g,"actionTile","request-playback","[[Playback Test|Button that opens Playback without selecting any video]]","icon-edit");
+            this.b.push(a);
+            a = new $(this.g,"actionTile","request-like-video","[[Like Button|placeholder]]","icon-edit");
+            this.b.push(a);
+            a = new $(this.g,"actionTile","request-remote-reset-dialog","[[Remote Reset Dialog|placeholder]]","icon-edit");
+            this.b.push(a);
+            a = new An(this.g,"toggleTile",this.w.g,"[[Sounds|Title for a tile that toggles sounds.]]","[[Turn on or off application sounds.|Description for a tile that toggles sounds made by the YouTube TV application]]");
+            this.b.push(a)
             a = new An(this.g,"toggleTile",this.B.Zy(),"[[Improve YouTube|Title for a tile that indicates whether a user can enable or disable whether the application gathers statistics about them.]]","[[Help improve YouTube by sending anonymous usage data.|Description for a tile that indicates whether a user can enable or disable whether the application gathers statistics about them.]]");
             this.b.push(a);
             a = new An(this.g,"toggleTile",this.S,'[[Safe Search|Title for settings tile that toggles "Safe Mode".]]','[[Enable or disable Safe Search.|Description for tile that toggles "Safe Mode".]]');
