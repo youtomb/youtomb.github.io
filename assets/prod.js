@@ -28390,10 +28390,13 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-video-uploads","[[Request Video Uploads|Button that does what the title says.]]","icon-guide-my-subs");
             this.b.push(a);
-            a = new $(this.g,"actionTile","flagClaimDialog","[[Show flag dialog|Button that does what the title says.]]","icon-lol");
+            a = new $(this.g,"actionTile","toggle-loading","[[Toggle Loading|Button that does what the title says.]]","icon-lol");
             this.b.push(a);
-            a = new $(this.g,"actionTile","missingChannelError","[[Cause an missing channel error|Button that does what the title says.]]", "[[{{username}}|username checker]]");
+            a = new $(this.g,"actionTile","goto-watch","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
             this.b.push(a);
+            a = new $(this.g,"actionTile","request-flag-video-dialog","[[FLAG YOUR MOTHER|Button that does what the title says.]]", "icon-remote", "[[What The Heck|Description testing]]");
+            this.b.push(a);
+            
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","")
                   , b = new $(this.g,"actionTile","request-debug-dialog","SHOW DEBUG INFO","warning");
