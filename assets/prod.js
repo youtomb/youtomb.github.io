@@ -28383,8 +28383,6 @@
             this.b.push(a);
             a = new An(this.g,"toggleTile",this.S,'[[Safe Search|Title for settings tile that toggles "Safe Mode".]]','[[Enable or disable Safe Search.|Description for tile that toggles "Safe Mode".]]');
             this.b.push(a);
-            a = new An(this.g,"toggleTile",this.w.g,"[[Sounds|Title for a tile that toggles sounds.]]","[[Turn on or off application sounds.|Description for a tile that toggles sounds made by the YouTube TV application]]");
-            this.b.push(a)
             a = new $(this.g,"actionTile","request-licenses-dialog","[[CREDITS|Button that shows credit information, giving credit to all open-source software used in building this product.]]","icon-gaming");
             this.b.push(a);
             a = new $(this.g,"actionTile","cmd-playback","[[Request Playback|Button that does what the title says.]]","icon-player-play");
