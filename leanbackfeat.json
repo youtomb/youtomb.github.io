@@ -202,6 +202,7 @@
                 {
                     "gdata_url": "http://gdata.youtube.com/feeds/api/users/Y30JRSgfhYXA6i6xX1erWg/uploads",
                     "title": "Smosh",
+                    "icon": "back",
                     "tab": "featured",
                     "gdata_list_id": "UUY30JRSgfhYXA6i6xX1erWg"
                 },
@@ -209,6 +210,7 @@
                     "gdata_url": "http://gdata.youtube.com/feeds/api/users/aBf1a-dpIsw8OxqH4ki2Kg/uploads",
                     "title": "Geek & Sundry",
                     "tab": "featured",
+                    "icon": "back",
                     "gdata_list_id": "UUaBf1a-dpIsw8OxqH4ki2Kg"
                 },
                 {
@@ -220,7 +222,46 @@
                     "list_id": "LBpop,0,t,en_US",
                     "tab": "featured",
                     "thumbnail": "http://i1.ytimg.com/vi/1b1loWJfxaA/hqdefault.jpg"
-                }
-    
+                },
+    {
+                    "title": "kekekekeke",
+                    "video_count": 30,
+                    "gdata_list_id": "STmost_popular",
+                    "icon": "checkon",
+                    "gdata_url": "http://gdata.youtube.com/feeds/api/standardfeeds/US/most_popular?time=today",
+                    "list_id": "LBpop,0,t,en_US",
+                    "tab": "featured",
+                    "thumbnail": "http://i1.ytimg.com/vi/1b1loWJfxaA/hqdefault.jpg"
+                },
+    {
+                    "title": "Yo Mama So Fat!",
+                    "video_count": 30,
+                    "gdata_list_id": "STmost_popular",
+                    "icon": "checkoff",
+                    "gdata_url": "http://gdata.youtube.com/feeds/api/standardfeeds/US/most_popular?time=today",
+                    "list_id": "LBpop,0,t,en_US",
+                    "tab": "featured",
+                    "thumbnail": "http://i1.ytimg.com/vi/1b1loWJfxaA/hqdefault.jpg"
+                },
+    {
+                    "title": "HOW DID YOU DIE?!?!?!?!",
+                    "video_count": 30,
+                    "gdata_list_id": "STmost_popular",
+                    "icon": "popular",
+                    "gdata_url": "http://gdata.youtube.com/feeds/api/standardfeeds/US/most_popular?time=today",
+                    "list_id": "LBpop,0,t,en_US",
+                    "tab": "back",
+                    "thumbnail": "http://i1.ytimg.com/vi/1b1loWJfxaA/hqdefault.jpg"
+                },
+    {
+                    "title": "i think Most Popular did it...",
+                    "video_count": 30,
+                    "gdata_list_id": "STmost_popular",
+                    "icon": "popular",
+                    "gdata_url": "http://gdata.youtube.com/feeds/api/standardfeeds/US/most_popular?time=today",
+                    "list_id": "LBpop,0,t,en_US",
+                    "tab": "purguide",
+                    "thumbnail": "http://i1.ytimg.com/vi/1b1loWJfxaA/hqdefault.jpg"
+                },
   ]
 }
