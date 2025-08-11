@@ -76,7 +76,8 @@ body.old {
 }
 
 body {
-	background-color: #1c1a1a;
+	background-color: #1c1a1a
+	background-image: url(https://youtomb.github.io/assets/img/default.png) !important;
 }
 
 p,
@@ -100,6 +101,11 @@ ul {
 .hidden {
 	display: none !important
 }
+
+.show {
+	display: absolute !important
+}
+
 
 ul.list li {
 	display: inline
@@ -159,7 +165,7 @@ ul.list.vertical li {
 }
 
 #app-markup.watch-state {
-	background-color: #000000cc !important
+	background-color: #0a0a0a !important
 }
 
 .wiiu #app-markup.watch-state {
