@@ -50,6 +50,8 @@
 	src: url('https://web.archive.org/web/20140611010647im_/https://www.youtube.com/s/tv/fonts/MarcellusSC-Regular.woff') format('woff')
 }
 
+
+
 body,
 html {
 	font-family: 'roboto-condensed-regular', arial, sans-serif;
@@ -152,8 +154,12 @@ ul.list.vertical li {
 	height: 100%
 }
 
-#app-markup.watch-state {
+#app-markup.watch-state.old {
 	background-color: #000
+}
+
+#app-markup.watch-state {
+	background-color: #000000cc !important
 }
 
 .wiiu #app-markup.watch-state {
