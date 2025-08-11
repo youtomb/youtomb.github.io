@@ -28407,13 +28407,17 @@
             this.b.push(a);    
             a = new $(this.g,"actionTile","request-loading-dialog","[[request loading dialog|Button that does what the title says.]]", "icon-desktop-esc", "[[this option tried to kill the sign in button, blame it for that.|Description testing]]");
             this.b.push(a);  
+            a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")
+            this.b.push(a);
+            var a = new hp(this.h,"toggleTile",this.U.h,"[[Sounds|Title for a tile that toggles sounds.]]","[[Turn on or off application sounds.|Description for a tile that toggles sounds made by the YouTube TV application]]");
+            this.b.push(a)
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")
                   , b = new $(this.g,"actionTile","request-debug-dialog","SHOW DEBUG INFO","warning");
                 this.b.push(a);
                 this.b.push(b)
             }
-            if (this.i.supportsSounds = 1 || this.i.supportsSounds = 0) {
+            if (this.i.supportsSounds) {
                 var a = new hp(this.h,"toggleTile",this.U.h,"[[Sounds|Title for a tile that toggles sounds.]]","[[Turn on or off application sounds.|Description for a tile that toggles sounds made by the YouTube TV application]]");
                 this.g.push(a)
             }
