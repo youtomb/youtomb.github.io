@@ -7629,7 +7629,7 @@
         d.ID = function() {
             this.W ? this.Ue() : $c("html5-video-player") ? (this.W = !0,
             this.Ue()) : (this.j("plht_rq"),
-            this.$a.get("/tv-player.js", {
+            this.$a.get("https://youtomb.github.io/assets/tv-player.js", {
                 action_player_template: 1,
                 hl: this.$.Oa,
                 override_hl: 1
