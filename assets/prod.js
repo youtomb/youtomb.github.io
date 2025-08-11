@@ -28407,7 +28407,7 @@
             this.b.push(a);    
             a = new $(this.g,"actionTile","request-loading-dialog","[[request loading dialog|Button that does what the title says.]]", "icon-desktop-esc", "[[this option tried to kill the sign in button, blame it for that.|Description testing]]");
             this.b.push(a);  
-            if (this.h.cb = 0 || this.h.cb = 1) {
+            if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")
                   , b = new $(this.g,"actionTile","request-debug-dialog","SHOW DEBUG INFO","warning");
                 this.b.push(a);
