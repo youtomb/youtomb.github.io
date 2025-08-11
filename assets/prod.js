@@ -4515,7 +4515,7 @@
         tf.prototype.yc = function() {
             this.b.Ca("needs_rental_auth_dialog", !0);
             var a = this.b.get("sound-enabled", void 0, !0);
-            a && this.b.Ca("sound-enabled", "false" !== a);
+            a && this.b.Ca("sound-enabled", "true" !== a);
             for (var b = ["captions-settings", "mdx-paired-devices", "private_data", "device-retention-permission", "recent-searches"], a = 0, c = b.length; a < c; ++a)
                 this.b.get(b[a], void 0);
             b = [["mdx-device-id", void 0], ["tv-refresh-token", 15768E3]];
@@ -28402,7 +28402,7 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-video-privacy","[[privacy ahh|Button that does what the title says.]]", "icon-youtube-logo", "[[this option tried to kill the debug button's liver|Description testing]]");
             this.b.push(a);    
-            a = new $(this.g,"actionTile","request-video-privacy","[[privacy ahh|Button that does what the title says.]]", "icon-youtube-logo", "[[this option tried to kill the debug button's liver|Description testing]]");
+            a = new $(this.g,"actionTile","request-loading-dialog","[[request loading dialog|Button that does what the title says.]]", "icon-desktop-esc", "[[this option tried to kill the sign in button, blame it for that.|Description testing]]");
             this.b.push(a);    
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","")
