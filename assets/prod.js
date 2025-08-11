@@ -27634,7 +27634,7 @@
                 b.I(c + "/rebound/watch_legacy.html", '<div>  <div id="leanback-player-container"></div>  <div id="title-tray" class="$watch-title-tray" data-model="{{getCurrentVideo()}}"></div>  <div id="eureka-player-controls-container">    <div id="eureka-player-controls"></div>  </div>  <div id="transport-controls" class="$transport-controls"></div>  <div id="ad-callout" class="$advertisement-callout"></div></div>');
                 b.I(c + "/rebound/watch_list.html", '<div>  <div class="row-title">{{getRowTitle()}}</div>  <div class="selected-title">    <div>{{getSelectedTitle()}}</div>    <div class="views">{{getViewCount()}}</div>  </div></div>');
                 b.I(c + "/rebound/watch_sets.html", '<div>  <div id="leanback-player-container"></div>  <div id="eureka-player-controls-container">    <div id="eureka-player-controls"></div>  </div>  <div id="watch-list" class="$watchList"></div>  <div id="transport-controls" class="$transport-controls"></div>  <div id="ad-callout" class="$advertisement-callout"></div></div>');
-                b.I(c + "/rebound/watch_title_tray.html", '<div class="title-card">  <div class="player-meta">    <div class="player-video-avatar" style="background-image:url(\'https://web.archive.org/web/20151212013633im_/https://s.ytimg.com/yts/favicon-vflz7uhzw.ico\')"></div>    <div class="player-video-title">hello this video changes every reload</div>    <div class="player-video-details">      <div class="username">SpongeBonnie</div>      <div class="set-context hidden">[[{{playlistTitle}}: {{videoIndex}} of {{videoCount}}|The playlist title and the index of the current video in the playlist.]]</div>      <div class="uploaded-date">{{uploadedDate}}</div>      <div class="view-count"><span class="view-count-label">32.5K</span></div>      <div id="badges" class="badges">        <span class="live-badge">[[Live|Label indicating that this is a live video.]]</span>      </div>    </div>  </div></div>');
+                b.I(c + "/rebound/watch_title_tray.html", '<div class="title-card">  <div class="player-meta">    <div class="player-video-avatar" style="background-image:url(\'{{channelAvatarUrl}}\')"></div>    <div class="player-video-title">{{videoTitle}}</div>    <div class="player-video-details">      <div class="username">{{channelName}}</div>      <div class="set-context hidden">[[{{playlistTitle}}: {{videoIndex}} of {{videoCount}}|The playlist title and the index of the current video in the playlist.]]</div>      <div class="uploaded-date">{{uploadedDate}}</div>      <div class="view-count"><span class="view-count-label">{{viewCountLabel}}</span></div>      <div id="badges" class="badges hidden">        <span class="live-badge">[[Live|Label indicating that this is a live video.]]</span>      </div>    </div>  </div></div>');
                 a()
             }
         }
@@ -28394,9 +28394,16 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","goto-watch","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
             this.b.push(a);
-            a = new $(this.g,"actionTile","request-flag-video-dialog","[[FLAG YOUR MOTHER|Button that does what the title says.]]", "icon-remote", "[[What The Heck|Description testing]]");
+            a = new $(this.g,"actionTile","request-flag-video-dialog","[[FLAG YOUR MOTHER|Button that does what the title says.]]", "icon-player-rew", "[[What The Heck|Description testing]]");
             this.b.push(a);
-            
+            a = new $(this.g,"actionTile","request-flag-options-dialog","[[flag yo mother 2|Button that does what the title says.]]", "icon-player-next", "[[What The Heck|Description testing]]");
+            this.b.push(a);
+            a = new $(this.g,"actionTile","request-clear-searches","[[Clear all searches|Button that does what the title says.]]", "icon-player-pause", "[[What The Heck|Description testing]]");
+            this.b.push(a);
+            a = new $(this.g,"actionTile","request-video-privacy","[[privacy ahh|Button that does what the title says.]]", "icon-youtube-logo", "[[this option tried to kill the debug button's liver|Description testing]]");
+            this.b.push(a);    
+            a = new $(this.g,"actionTile","request-video-privacy","[[privacy ahh|Button that does what the title says.]]", "icon-youtube-logo", "[[this option tried to kill the debug button's liver|Description testing]]");
+            this.b.push(a);    
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","")
                   , b = new $(this.g,"actionTile","request-debug-dialog","SHOW DEBUG INFO","warning");
