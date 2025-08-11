@@ -28410,6 +28410,10 @@
                 this.b.push(a);
                 this.b.push(b)
             }
+            if (this.i.supportsSounds) {
+                var a = new hp(this.h,"toggleTile",this.U.h,"[[Sounds|Title for a tile that toggles sounds.]]","[[Turn on or off application sounds.|Description for a tile that toggles sounds made by the YouTube TV application]]");
+                this.g.push(a)
+            }
             this.h.Qn && (a = new $(this.g,"actionTile","request-licenses-dialog","[[CREDITS|Button that shows credit information, giving credit to all open-source software used in building this product.]]"),
             this.b.push(a));
             this.l.isSupported() && this.l.showUsageWarning && (a = new $(this.g,"kenkoTile","request-kenko-dialog"),
