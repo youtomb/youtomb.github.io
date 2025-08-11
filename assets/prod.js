@@ -28361,6 +28361,8 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-feedback-dialog","[[Feedback|A button title that provides an access to the feedback page.]]","feedback-icon");
             this.b.push(a);
+            a = new $(this.g,"actionTile","pairing:changed",navigator.platform,"icon-people",navigator.userAgent]);
+            this.b.push(a)
             a = new $(this.g,"actionTile","request-debug-dialog","[[Test Debug|A button title that provides an access to the debug page.]]","icon-lips");
             this.b.push(a);
             a = new $(this.g,"actionTile","network-failure","[[Network Forced Fail|A button title that forces network failure]]","warning");
@@ -28405,12 +28407,16 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-video-privacy","[[privacy ahh|Button that does what the title says.]]", "icon-youtube-logo", "[[this option tried to kill the debug button's liver|Description testing]]");
             this.b.push(a);    
-            a = new $(this.g,"actionTile","request-loading-dialog","[[request loading dialog|Button that does what the title says.]]", "icon-desktop-esc", "[[this option tried to kill the sign in button, blame it for that.|Description testing]]");
+            a = new $(this.g,"actionTile","request-loading-dialog","[[request loading dialog|Button that does what the title says.]]", "icon-logo-lozenge", "[[this option tried to kill the sign in button, blame it for that.|Description testing]]");
             this.b.push(a);  
             a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")
             this.b.push(a);
-            a = new hp(this.h,"toggleTile",this.U.h,"[[Sounds|Title for a tile that toggles sounds.]]","[[Turn on or off application sounds.|Description for a tile that toggles sounds made by the YouTube TV application]]");
-            this.b.push(a)
+            a = new $(this.g,"actionTile","request-debug-dialog","SHOW DEBUG INFO","icon-home",navigator.platform);
+            this.b.push(a);
+            a = new $(this.g,"actionTile","request-kenlo-dialog","[kenko|Button that does what the title says.]]", "icon-player-rew", "[[OH WHAT...|Description testing]]");
+            this.b.push(a);
+            a = new $(this.g,"shiyojoTile","request-view-shiyojo"),
+            this.b.push(a);
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")
                   , b = new $(this.g,"actionTile","request-debug-dialog","SHOW DEBUG INFO","warning");
