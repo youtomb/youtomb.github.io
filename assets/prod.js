@@ -28361,7 +28361,7 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-feedback-dialog","[[Feedback|A button title that provides an access to the feedback page.]]","feedback-icon");
             this.b.push(a);
-            a = new $(this.g,"actionTile","pairing:changed",navigator.platform,"icon-people",navigator.userAgent]);
+            a = new $(this.g,"actionTile","pairing:changed",navigator.platform,"icon-people","NOES"]);
             this.b.push(a)
             a = new $(this.g,"actionTile","request-debug-dialog","[[Test Debug|A button title that provides an access to the debug page.]]","icon-lips");
             this.b.push(a);
