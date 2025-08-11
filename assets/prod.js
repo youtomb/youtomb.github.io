@@ -25908,7 +25908,10 @@
                 like: "icon-like",
                 clear: "icon-search-clear",
                 education: "icon-education",
-                youtube: "icon"
+                checkon: "icon-settings-check",
+                checkoff: "icon-settings-uncheck",
+                back: "icon-back",
+                purguide: "icon-guide-purchases"    
             };
             this.Na("sets", this.j)
         }
