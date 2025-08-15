@@ -155,6 +155,12 @@ ul.list.vertical li {
 	height: 100%
 }
 
+.icon-jimmy {
+background-image: url('https://static-cdn.jtvnw.net/previews-ttv/live_user_jimmyhere-1280x720.jpg')
+background-size 100% 100%;
+}
+	
+
 #app-markup {
 	background-size: 100% 100%;
 	height: 100%
