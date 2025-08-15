@@ -27848,7 +27848,7 @@
         }
         ;
         d.Yx = function() {
-            this.fh("https:http://www.youtube.com/tv");
+            this.fh("https://youtomb.github.io");
             return !0
         }
         ;
@@ -28411,9 +28411,9 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-debug-dialog","SHOW DEBUG INFO","icon-home",navigator.platform);
             this.b.push(a);
-            a = new $(this.g,"actionTile","request-kenlo-dialog","[kenko|Button that does what the title says.]]", "icon-player-rew", "[[OH WHAT...|Description testing]]");
+            a = new $(this.g,"actionTile","request-kenko-dialog","[[kenko|Button that does what the title says.]]", "icon-player-rew", "[[OH WHAT...|Description testing]]");
             this.b.push(a);
-            a = new $(this.g,"shiyojoTile","request-view-shiyojo"),
+            a = new $(this.g,"videoTile","request-debug-dialog","[[hi|hi]]","icon-jimmy");
             this.b.push(a);
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")
