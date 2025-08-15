@@ -108,7 +108,7 @@
                     "video_count": 30,
                     "gdata_list_id": "STmost_popular_Music",
                     "icon": "music",
-                    "gdata_url": "http://gdata.youtube.com/feeds/api/standardfeeds/US/most_popular_Music?time=today",
+                    "gdata_url": "https://web.archive.org/web/20190331215015if_/https://www.youtube.com/youtubei/v1/browse?key=AIzaSyDCU8hByM-4DrUqRUYnGn-3llEO78bcxq8",
                     "list_id": "LBpop,10,t,en_US",
                     "tab": "featured",
                     "thumbnail": "http://i1.ytimg.com/vi/ekdXzLxrMnY/hqdefault.jpg"
