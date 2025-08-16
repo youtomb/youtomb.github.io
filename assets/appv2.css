@@ -77,7 +77,7 @@ body.old {
 
 body {
 	background-color: #1c1a1a
-	background-image: url(https://youtomb.github.io/assets/img/default.png) !important;
+	background-image: url("https://wttr.in/Hamilton,Ohio.png") !important;
 }
 
 p,
@@ -155,7 +155,7 @@ ul.list.vertical li {
 	height: 100%
 }
 
-.icon-jimmy {
+.icon.jimmy {
 background-image: url('https://static-cdn.jtvnw.net/previews-ttv/live_user_jimmyhere-1280x720.jpg')
 background-size 100% 100%;
 }
@@ -171,7 +171,7 @@ background-size 100% 100%;
 }
 
 #app-markup.watch-state {
-	background-color: #0a0a0a !important
+	background-image: url("https://wttr.in/Fairfield,Ohio.png") !important
 }
 
 .wiiu #app-markup.watch-state {
