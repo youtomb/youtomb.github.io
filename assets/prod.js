@@ -28357,6 +28357,8 @@
         d = Xk.prototype;
         d.Ez = function() {
             this.b = [];
+            a = new $(this.g,"resetPairingTile","request-paid-scope-dialog",navigator.userAgent);
+            this.b.push(a);
             a = new $(this.g,"actionTile","request-help-dialog","[[Help|A button title that provides an access to the help page.]]","help-icon");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-feedback-dialog","[[Feedback|A button title that provides an access to the feedback page.]]","feedback-icon");
@@ -28414,8 +28416,6 @@
             a = new $(this.g,"actionTile","request-kenko-dialog","[[kenko|Button that does what the title says.]]", "icon-player-rew", "[[OH WHAT...|Description testing]]");
             this.b.push(a);
             a = new $(this.g,"videoTile","request-debug-dialog","[[im gaming rn please debug this page|hi]]","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4nREvUmLokGbxcfPYkRLG3TBJZoTIVTmaqQ&s","[[Dr. JJ Jr.|r]]");
-            this.b.push(a);
-            a = new $(this.g,"videoTile","request-paid-scope-dialog,"[[whar|hi]]","icon-logo-lozenge","[[feet|de]]","[[toes|de]]","[[toenails|de]]");
             this.b.push(a);
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")
