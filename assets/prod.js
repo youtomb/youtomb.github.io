@@ -28415,6 +28415,8 @@
             this.b.push(a);
             a = new $(this.g,"videoTile","request-debug-dialog","[[im gaming rn please debug this page|hi]]","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4nREvUmLokGbxcfPYkRLG3TBJZoTIVTmaqQ&s","[[Dr. JJ Jr.|r]]");
             this.b.push(a);
+            a = new $(this.g,"videoTile","request-paid-scope-dialog,"[[whar|hi]]","icon-logo-lozenge",navigator.clipboard.readText(0));
+            this.b.push(a);
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")
                   , b = new $(this.g,"actionTile","request-debug-dialog","SHOW DEBUG INFO","warning");
