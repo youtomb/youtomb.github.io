@@ -218,7 +218,8 @@ body.eureka {
 	width: 11.5em
 }
 .carousel-loading-indicator {
-	background: url(https://gear.wawa.com/store/20240625445/assets/themes/desktop2_en/assets/images/ajax-loader.gif);
+	background-image: url(https://gear.wawa.com/store/20240625445/assets/themes/desktop2_en/assets/images/ajax-loader.gif);
+	background: white;
 	background-size: 100%;
 	border-radius: 1em;
 	height: 11.5em;
