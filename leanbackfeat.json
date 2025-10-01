@@ -267,6 +267,7 @@
                     "title": "dinner",
                     "video_count": 30,
                     "icon": "checkon",
+      "gdata_list_id": "STmost_popular",
                     "gdata_url": "https://gdata.vidtape.lol/console_browse?start-index=1&max-results=40&feed=videos_recently_featured&racy=include&app=desktop",
                     "list_id": "LBpop,0,t,en_US",
                     "tab": "purguide",
