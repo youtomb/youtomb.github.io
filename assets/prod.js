@@ -5538,7 +5538,7 @@
             this.gm();
             var f = {
                 client_id: this.Qi(),
-                scope: "https:http://gdata.youtube.com"
+                scope: "https://corsproxy.io/??https://gdata.youtube.com"
             };
             return this.g.zc("/o/oauth2/device/code", null, f, y(function(b) {
                 this.AJ(b, a, e)
@@ -5570,7 +5570,7 @@
                 client_id: this.Qi(),
                 client_secret: this.um(),
                 code: a,
-                grant_type: "https:http://oauth.net/grant_type/device/1.0"
+                grant_type: "https://corsproxy.io/??https://oauth.net/grant_type/device/1.0"
             }
               , f = y(function(e) {
                 this.BJ(e, a, b, c)
@@ -9510,7 +9510,7 @@
         }
         ;
         d.df = function() {
-            return this.b.useTestInnerTube ? "https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.b.useReleaseInnerTube || this.b.qf && !this.b.oa ? "https:https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : "https:https://www.googleapis.com/youtubei/v1"
+            return this.b.useTestInnerTube ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.b.useReleaseInnerTube || this.b.qf && !this.b.oa ? "https://corsproxy.io/??https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : "https://corsproxy.io/??https://www.googleapis.com/youtubei/v1"
         }
         ;
         d.Qc = function(a) {
@@ -9602,7 +9602,7 @@
         }
         ;
         d.Gv = function(a, b, c) {
-            return this.b + "https://i1.ytimg.com/" + b + "/" + a + "/" + c + ".jpg"
+            return this.b + "https://corsproxy.io/?https://i1.ytimg.com/" + b + "/" + a + "/" + c + ".jpg"
         }
         ;
         d.QO = function(a) {
@@ -11808,7 +11808,7 @@
         }
         ;
         d.df = function() {
-            return this.b.useStageGdata ? "https://stage.gdata.youtube.com/feeds/api" : "https://gdata.youtube.com/feeds/api"
+            return this.b.useStageGdata ? "https://corsproxy.io/?https://stage.gdata.youtube.com/feeds/api" : "https://corsproxy.io/?https://gdata.youtube.com/feeds/api"
         }
         ;
         d.Yg = function() {
@@ -12057,7 +12057,7 @@
                 this.b = this.l.setTimeout(y(this.To, this), 3E5);
                 this.i = this.h.Dz(a, y(function(a) {
                     a && (this.displayPairingCode = this.Cz(a),
-                    this.codeImageUrl = "https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=nope" + a,
+                    this.codeImageUrl = "https://corsproxy.io/?https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=nope" + a,
                     this.G())
                 }, this))
             }
@@ -12092,7 +12092,7 @@
         }
         ;
         Oi.prototype.b = function() {
-            return "https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=" + encodeURIComponent(this.model.qrCodeUrl || this.model.baseUrl)
+            return "https://corsproxy.io/?https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=" + encodeURIComponent(this.model.qrCodeUrl || this.model.baseUrl)
         }
         ;
         function Pi(a) {
@@ -16830,7 +16830,7 @@
         ;
         d.kh = function(a) {
             this.j = a;
-            this.h.QI() && (a ? this.h.xt('<additionalData xmlns="https:http://www.youtube.com/dial"><screenId>' + a + "</screenId></additionalData>") : this.h.xt(""))
+            this.h.QI() && (a ? this.h.xt('<additionalData xmlns="https://corsproxy.io/?https://www.youtube.com/dial"><screenId>' + a + "</screenId></additionalData>") : this.h.xt(""))
         }
         ;
         d.qy = function(a) {
@@ -17009,7 +17009,7 @@
         d.Hu = function(a, b, c) {
             var e = this.b;
             if (m(c) ? c : this.g)
-                e = "https://" + this.h + this.i + this.b;
+                e = "https://corsproxy.io/?https://" + this.h + this.i + this.b;
             return Fh(e + a, b || {})
         }
         ;
@@ -17069,11 +17069,11 @@
         d = Kk.prototype;
         d.fw = function(a) {
             this.i.supportedCastVersion && (this.j ? a() : (this.g.push(a),
-            1 < this.g.length || (this.o ? Ig("https:https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js", {
+            1 < this.g.length || (this.o ? Ig("https://corsproxy.io/?https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js", {
                 timeout: 3E4
             }).zd(y(this.nC, this)).vh(function() {
                 console.log("Failed to load cast v2 SDK")
-            }) : Ig("https:https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js", {
+            }) : Ig("https://corsproxy.io/?https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js", {
                 timeout: 3E4
             }).zd(y(this.mC, this)).vh(function() {
                 console.log("Failed to load cast SDK")
@@ -17222,7 +17222,7 @@
         }
         ;
         d.df = function() {
-            return this.pa.useStageGdata ? "https://stage.gdata.youtube.com/feeds/api" : "https://gdata.youtube.com/feeds/api"
+            return this.pa.useStageGdata ? "https://corsproxy.io/?https://stage.gdata.youtube.com/feeds/api" : "https://corsproxy.io/?https://gdata.youtube.com/feeds/api"
         }
         ;
         d.aM = function(a, b, c, e) {
@@ -17431,11 +17431,11 @@
               , c = this.createElement("entry")
               , e = this.createElement("id");
             this.g.vm(e, b);
-            var f = this.createElement("batch:id", "https:http://schemas.google.com/gdata/batch");
+            var f = this.createElement("batch:id", "https://corsproxy.io/??https://schemas.google.com/gdata/batch");
             this.g.vm(f, a);
             a = this.createElement("link");
             Lk(a, {
-                rel: "https:http://schemas.google.com/g/2005#batch",
+                rel: "https://corsproxy.io/??https://schemas.google.com/g/2005#batch",
                 type: "application/atom+xml",
                 href: b
             });
@@ -17450,7 +17450,7 @@
             kd(c);
             var e = this.createElement("id");
             this.g.vm(e, a);
-            var f = this.createElement("batch:operation", "https:http://schemas.google.com/gdata/batch");
+            var f = this.createElement("batch:operation", "https://corsproxy.io/??https://schemas.google.com/gdata/batch");
             Lk(f, {
                 type: "query"
             });
@@ -19745,7 +19745,7 @@
         d.Oe = function(a) {
             this.title = el(a.title);
             this.avatarImageURL = a.avatar.thumbnails[0].url;
-            this.backgroundImageURL = a.banner ? a.banner.thumbnails[0].url : "https:https://s.ytimg.com/yts/img/channels/c4/default_banner_hq-vfl4dpY8T.png";
+            this.backgroundImageURL = a.banner ? a.banner.thumbnails[0].url : "https://corsproxy.io/??https://s.ytimg.com/yts/img/channels/c4/default_banner_hq-vfl4dpY8T.png";
             this.SB(a);
             this.RB(a);
             this.l.isHidden = this.b.isHidden && this.h.isHidden;
@@ -26117,7 +26117,7 @@
             var n = !1
               , q = null;
             this.b.Fb(y(function(u) {
-                n || (-1 == b.indexOf("//") && (b = "https://www.googleapis.com" + b,
+                n || (-1 == b.indexOf("//") && (b = "https://corsproxy.io/?https://www.googleapis.com" + b,
                 c = c || {},
                 c.key = "AI39si5-UxCbfO2jRg9EV2bWI0UDWm74GkLzZWFHkQR0bm4d0JTKyrhSi6NZORaTMuJaRH8zs0PmsCONB9uV3pSgzZklwvMoRA",
                 b = Ge(b, c)),
@@ -27483,7 +27483,7 @@
         Oo.prototype.o = function(a, b) {
             var c = this.g.ih()
               , e = '<?xml version="1.0" encoding="UTF-8"?><service xmlns="urn:dial-multiscreen-org:schemas:dial"><name>YouTube</name><options allowStop="false" /><state>' + (null != c || this.i ? "running" : "stopped") + "</state>";
-            null != c && (e += '<additionalData xmlns="https:http://www.youtube.com/dial"><screenId>' + c + "</screenId></additionalData>");
+            null != c && (e += '<additionalData xmlns="https://corsproxy.io/?https://www.youtube.com/dial"><screenId>' + c + "</screenId></additionalData>");
             b.mimeType = 'text/xml; charset="utf-8"';
             b.responseCode = 200;
             b.body = e + "</service>";
@@ -27853,7 +27853,7 @@
         }
         ;
         d.Vx = function() {
-            this.fh("https:https://kcdsfrdvcs.appspot.com");
+            this.fh("https://corsproxy.io/?https://kcdsfrdvcs.appspot.com");
             return !0
         }
         ;
@@ -28598,13 +28598,13 @@
         }
         ;
         d.Qu = function() {
-            this.g.zc("https:https://www.youtube.com/api/xbox/deregister", null, {
+            this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/xbox/deregister", null, {
                 style: "json"
             })
         }
         ;
         d.Au = function(a) {
-            this.g.zc("https:https://www.youtube.com/api/xbox/register", null, {
+            this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/xbox/register", null, {
                 token: a
             })
         }
@@ -28633,7 +28633,7 @@
         d.Mq = function(a) {
             var b = y(this.UH, this);
             this.j.push(a);
-            1 == this.j.length && this.g.zc("https:https://www.youtube.com/api/xbox/refresh", null, {
+            1 == this.j.length && this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/xbox/refresh", null, {
                 style: "json"
             }, y(this.Hg, this, b), y(this.Bi, this, b))
         }

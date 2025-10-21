@@ -9513,7 +9513,7 @@ console.log("PROXY_URL:", PROXY_URL);
         b = xs(b);
         if (!b) return [];
         var d = {
-            $E: "https://web.archive.org/web/20160618062316/https://youtube.com/api/drm/fps?ek=uninitialized"
+            $E: "https://corsproxy.io/?https://web.archive.org/web/20160618062316/https://youtube.com/api/drm/fps?ek=uninitialized"
         },
             e, f = [],
             h = [],
@@ -21422,7 +21422,7 @@ console.log("PROXY_URL:", PROXY_URL);
             a = WE(RE());
             C(D(a)) || (b.e = a);
             b = AG(this, b);
-            var d = new Q("https://web.archive.org/web/20160618062316/http://pagead2.googlesyndication.com/pagead/gen_204");
+            var d = new Q("https://corsproxy.io/?https://web.archive.org/web/20160618062316/http://pagead2.googlesyndication.com/pagead/gen_204");
             Qb(b, function (a, b) {
                 oh(d, b, null != a ? "boolean" == typeof a ? a ? "t" : "f" : "" + a : "")
             }, this);
@@ -26232,7 +26232,7 @@ console.log("PROXY_URL:", PROXY_URL);
     }
 
     function aN() {
-        return iM('<a href="https://web.archive.org/web/20160618062316/https://www.google.com/settings/ads/onweb" target="_blank">')
+        return iM('<a href="https://corsproxy.io/?https://web.archive.org/web/20160618062316/https://www.google.com/settings/ads/onweb" target="_blank">')
     }
 
     function bN(a) {
@@ -26242,7 +26242,7 @@ console.log("PROXY_URL:", PROXY_URL);
 
     function cN(a) {
         for (var b = "<ul class='videoAdUiWhyThisAdReasons videoAdUiHideIfEmpty'>", c = a.targetingReasons, d = c.length, e = 0; e < d; e++) b += "<li>" + X(c[e]) + "</li>";
-        b += "</ul><div class='videoAdUiWhyThisAdGenericMessage'>" + X(a.Sh) + "</div><a class='videoAdUiWhyThisAdMute videoAdUiHideIfEmpty'>" + X(a.mute) + "</a><a class='videoAdUiWhyThisAdControl videoAdUiHideIfEmpty' href='https://web.archive.org/web/20160618062316/https://www.google.com/settings/ads/onweb' target='_blank'>" + X(a.control) + "</a>";
+        b += "</ul><div class='videoAdUiWhyThisAdGenericMessage'>" + X(a.Sh) + "</div><a class='videoAdUiWhyThisAdMute videoAdUiHideIfEmpty'>" + X(a.mute) + "</a><a class='videoAdUiWhyThisAdControl videoAdUiHideIfEmpty' href='https://corsproxy.io/?https://web.archive.org/web/20160618062316/https://www.google.com/settings/ads/onweb' target='_blank'>" + X(a.control) + "</a>";
         a = "" + bN({
             heading: wM("" + X(a.heading)),
             message: wM(b),
@@ -29437,7 +29437,7 @@ console.log("PROXY_URL:", PROXY_URL);
 
     function gS(a, b, c, d) {
         d = d || {};
-        var e = new Q("https://web.archive.org/web/20160618062316/https://ssl.google-analytics.com/collect?v=1&t=timing&tid=UA-68696278-1&utc=" + iS());
+        var e = new Q("https://corsproxy.io/?https://web.archive.org/web/20160618062316/https://ssl.google-analytics.com/collect?v=1&t=timing&tid=UA-68696278-1&utc=" + iS());
         d.cid = jS(a);
         d.utv = b;
         d.utt = c;
@@ -29856,7 +29856,7 @@ console.log("PROXY_URL:", PROXY_URL);
 
     function NS() {
         this.A = null;
-        this.B = "https://web.archive.org/web/20160618062316/http://www.google.com/adsense/support";
+        this.B = "https://corsproxy.io/?https://web.archive.org/web/20160618062316/http://www.google.com/adsense/support";
         this.C = 0;
         this.b = 15;
         this.o = 5;
@@ -35061,7 +35061,7 @@ console.log("PROXY_URL:", PROXY_URL);
         }, f = kf({
             src: this.J,
             type: "application/x-shockwave-flash",
-            pluginspage: "https://web.archive.org/web/20160618062316/https://www.macromedia.com/go/getflashplayer"
+            pluginspage: "https://corsproxy.io/?https://web.archive.org/web/20160618062316/https://www.macromedia.com/go/getflashplayer"
         }, {
             allownetworking: "none",
             allowscriptaccess: "never"
@@ -35141,8 +35141,8 @@ console.log("PROXY_URL:", PROXY_URL);
         this.aa = -1
     }
     B(NY, jY);
-    var OY = $e(Ke(Le("https://web.archive.org/web/20160618062316/https://imasdk.googleapis.com/flash/sdkloader/flashinhtml.swf")));
-    $e(Ke(Le("https://web.archive.org/web/20160618062316/http://imasdk.googleapis.com/flash/sdkloader/flashinhtml.swf")));
+    var OY = $e(Ke(Le("https://corsproxy.io/?https://web.archive.org/web/20160618062316/https://imasdk.googleapis.com/flash/sdkloader/flashinhtml.swf")));
+    $e(Ke(Le("https://corsproxy.io/?https://web.archive.org/web/20160618062316/http://imasdk.googleapis.com/flash/sdkloader/flashinhtml.swf")));
     g = NY.prototype;
     g.T = function () {
         this.P = !1;
@@ -36645,7 +36645,7 @@ console.log("PROXY_URL:", PROXY_URL);
                 a = D(a)
             } else {
                 var b = new Q(a),
-                    c = new Q("https://web.archive.org/web/20160618062316/http://tpc.googlesyndication.com/pagead/js/loader12.html");
+                    c = new Q("https://corsproxy.io/?https://web.archive.org/web/20160618062316/http://tpc.googlesyndication.com/pagead/js/loader12.html");
                 "https" == b.A && bh(c, "https");
                 this.ya = b.g;
                 a = eh(c, a || "", void 0).toString()
@@ -39386,7 +39386,7 @@ console.log("PROXY_URL:", PROXY_URL);
         y1.call(this, 2, a, b, d)
     }
     B(e2, y1);
-    e2.g = "https://web.archive.org/web/20160618062316/https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyBbSB-E7SYd1iggX6r2b5C7ljvO6fVqaj0&shortUrl=";
+    e2.g = "https://corsproxy.io/?https://web.archive.org/web/20160618062316/https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyBbSB-E7SYd1iggX6r2b5C7ljvO6fVqaj0&shortUrl=";
     e2.o = "43";
     e2.b = function (a) {
         var b = new U1;
@@ -39416,7 +39416,7 @@ console.log("PROXY_URL:", PROXY_URL);
     };
     e2.prototype.Cg = function (a, b) {
         var c = this.C;
-        c & 1 || c & 4 || c & 8 ? this.D ? c & 8 ? H0(this.D) : ("goo.gl" == Ng(this.D) ? (c = e2.b("https://web.archive.org/web/20160618062316/https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyBbSB-E7SYd1iggX6r2b5C7ljvO6fVqaj0&shortUrl=" + this.D), $1(c, function (a) {
+        c & 1 || c & 4 || c & 8 ? this.D ? c & 8 ? H0(this.D) : ("goo.gl" == Ng(this.D) ? (c = e2.b("https://corsproxy.io/?https://web.archive.org/web/20160618062316/https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyBbSB-E7SYd1iggX6r2b5C7ljvO6fVqaj0&shortUrl=" + this.D), $1(c, function (a) {
             a = fg(a.responseText);
             if (!a) throw Error("Invalid expanded forced ad URL.");
             if (!a.longUrl) throw Error("Missing forced ad URL information.");
@@ -45000,7 +45000,7 @@ console.log("PROXY_URL:", PROXY_URL);
     }
 
     function d6(a, b, c) {
-        0 == c.b && b.fallback ? b.fallback() : 0 == c.b && b.fallbackMessage ? b.fallbackMessage() : a.innerHTML = '<div id="flash-upgrade">' + pi("FLASH_UPGRADE", void 0, 'You need to upgrade your Adobe Flash Player to watchthis video. <br> <a href="https://web.archive.org/web/20160618062316/http://get.adobe.com/flashplayer/">Download it from Adobe.</a>') + "</div>"
+        0 == c.b && b.fallback ? b.fallback() : 0 == c.b && b.fallbackMessage ? b.fallbackMessage() : a.innerHTML = '<div id="flash-upgrade">' + pi("FLASH_UPGRADE", void 0, 'You need to upgrade your Adobe Flash Player to watchthis video. <br> <a href="https://corsproxy.io/?https://web.archive.org/web/20160618062316/http://get.adobe.com/flashplayer/">Download it from Adobe.</a>') + "</div>"
     }
 
     function c6(a, b) {
@@ -45351,9 +45351,9 @@ console.log("PROXY_URL:", PROXY_URL);
     g.Lw = function () {
         p6(this);
         this.C = "unsupported";
-        var a = 'Adobe Flash Player or an HTML5 supported browser is required for video playback. <br> <a href="https://web.archive.org/web/20160618062316/http://get.adobe.com/flashplayer/">Get the latest Flash Player</a> <br> <a href="/html5">Learn more about upgrading to an HTML5 browser</a>',
+        var a = 'Adobe Flash Player or an HTML5 supported browser is required for video playback. <br> <a href="https://corsproxy.io/?https://web.archive.org/web/20160618062316/http://get.adobe.com/flashplayer/">Get the latest Flash Player</a> <br> <a href="/html5">Learn more about upgrading to an HTML5 browser</a>',
             b = navigator.userAgent.match(/Version\/(\d).*Safari/);
-        b && 5 <= parseInt(b[1], 10) && (a = 'Adobe Flash Player or QuickTime is required for video playback. <br> <a href="https://web.archive.org/web/20160618062316/http://get.adobe.com/flashplayer/"> Get the latest Flash Player</a> <br> <a href="https://web.archive.org/web/20160618062316/http://www.apple.com/quicktime/download/">Get the latest version of QuickTime</a>');
+        b && 5 <= parseInt(b[1], 10) && (a = 'Adobe Flash Player or QuickTime is required for video playback. <br> <a href="https://corsproxy.io/?https://web.archive.org/web/20160618062316/http://get.adobe.com/flashplayer/"> Get the latest Flash Player</a> <br> <a href="https://corsproxy.io/?https://web.archive.org/web/20160618062316/http://www.apple.com/quicktime/download/">Get the latest version of QuickTime</a>');
         b = this.b.messages.player_fallback || a;
         a = xf(document, "player-unavailable");
         if (xf(document, "unavailable-submessage") && a) {
