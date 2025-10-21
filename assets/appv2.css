@@ -77,7 +77,7 @@ body.old {
 
 body {
 	background-color: #1c1a1a;
-	background-image: url("https://wttr.in/Hamilton,Ohio.png") !important;
+	background-image: url("https://youtomb.github.io/default.jpg") !important;
 }
 
 p,
@@ -171,7 +171,7 @@ background-size 100% 100%;
 }
 
 #app-markup.watch-state {
-	background-image: url("https://static-cdn.jtvnw.net/previews-ttv/live_user_jimmyhere-1280x720.jpg") !important
+	background-image: url("https://static-cdn.jtvnw.net/previews-ttv/live_user_chibidoki-640x480.jpg") !important
 }
 
 .wiiu #app-markup.watch-state {
@@ -207,7 +207,7 @@ body.eureka {
 	background-color: #1c1a1a
 }
 
-.carousel-loading-indicatorold {
+/* .carousel-loading-indicatorold {
 	background: url(carousel-loading-indicator.gif);
 	background-size: 100%;
 	border-radius: 1em;
@@ -216,10 +216,9 @@ body.eureka {
 	opacity: .7;
 	overflow: hidden;
 	width: 11.5em
-}
+} */
 .carousel-loading-indicator {
-	background-image: url(https://gear.wawa.com/store/20240625445/assets/themes/desktop2_en/assets/images/ajax-loader.gif);
-	background: white;
+	background-image: url(/assets/carousel-loading-indicator.gif);
 	background-size: 100%;
 	border-radius: 1em;
 	height: 11.5em;

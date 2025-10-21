@@ -3326,7 +3326,7 @@
             this.duration = 0;
             this.durationLabel = "";
             this.errorCode = null;
-            this.imageUrl = a + "/no_thumbnail.jpg";
+            this.imageUrl = a + "https://static-cdn.jtvnw.net/previews-ttv/live_user_chibidoki-640x480.jpg";
             this.H = this.k = !1;
             this.likesLabel = "";
             this.likesStyle = {};
@@ -28363,6 +28363,8 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-feedback-dialog","[[Feedback|A button title that provides an access to the feedback page.]]","feedback-icon");
             this.b.push(a);
+            a = new $(this.g,"actionTile","update-background","[[Update Background|hi]]","icon-player-rew","[[Reloads the background.|r]]");
+            this.b.push(a);
             a = new $(this.g,"actionTile","request-debug-dialog","[[Test Debug|A button title that provides an access to the debug page.]]","icon-lips");
             this.b.push(a);
             a = new $(this.g,"actionTile","network-failure","[[Network Forced Fail|A button title that forces network failure]]","warning");
@@ -28415,7 +28417,7 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-kenko-dialog","[[kenko|Button that does what the title says.]]", "icon-player-rew", "[[OH WHAT...|Description testing]]");
             this.b.push(a);
-            a = new $(this.g,"videoTile","request-debug-dialog","[[im gaming rn please debug this page|hi]]","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4nREvUmLokGbxcfPYkRLG3TBJZoTIVTmaqQ&s","[[Dr. JJ Jr.|r]]");
+            a = new $(this.g,"videoTile","request-debug-dialog","[[im gaming rn please debug this page|hi]]","icon-player-rew","[[Dr. JJ Jr.|r]]","test439439439439","493");
             this.b.push(a);
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")

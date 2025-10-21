@@ -67,7 +67,7 @@ window.labels = {
         if (window.yt && yt.tv && yt.tv.initializer) {
             yt.tv.initializer(d);
         } else {
-            alert("failed script" + d);
+            alert("The Site cannot load, That is all we know.");
         }
     };
 
@@ -137,3 +137,4 @@ window.labels = {
         p("initializeOrRedirect('" + l + "');");
     }
 })();
+
