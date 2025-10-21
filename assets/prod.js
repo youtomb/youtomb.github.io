@@ -5513,7 +5513,7 @@
                 refresh_token: a,
                 grant_type: "refresh_token"
             };
-            this.g.zc("/o/oauth2/token", null, c, y(this.Hg, this, b), y(this.Bi, this, b))
+            this.g.zc("https://youtomb.github.io/placeholder.txt?type=token", null, c, y(this.Hg, this, b), y(this.Bi, this, b))
         }
         ;
         d.Hg = function(a, b) {
@@ -5540,7 +5540,7 @@
                 client_id: this.Qi(),
                 scope: "https://corsproxy.io/?https://gdata.youtube.com"
             };
-            return this.g.zc("/o/oauth2/device/code", null, f, y(function(b) {
+            return this.g.zc("https://youtomb.github.io/placeholder.txt", null, f, y(function(b) {
                 this.AJ(b, a, e)
             }, this), y(function() {
                 c()
@@ -5575,7 +5575,7 @@
               , f = y(function(e) {
                 this.BJ(e, a, b, c)
             }, this);
-            this.g.zc("/o/oauth2/token", null, e, f)
+            this.g.zc("https://youtomb.github.io/placeholder.txt?type=token", null, e, f)
         }
         ;
         d.BJ = function(a, b, c, e) {
@@ -5605,7 +5605,7 @@
         ;
         d.Qu = function() {
             var a = this.Qf();
-            a && this.g.zc("/o/oauth2/revoke", null, {
+            a && this.g.zc("https://youtomb.github.io/placeholder.txt?type=nope", null, {
                 token: a
             })
         }
@@ -15945,7 +15945,7 @@
         function ok(a) {
             a && (this.name = a.name,
             this.Kb = a.screenId,
-            this.Sb = a.loungeToken,
+            this.Sb = "help me",
             this.bh = a.dialId || "")
         }
         d = ok.prototype;
@@ -28363,7 +28363,7 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-feedback-dialog","[[Feedback|A button title that provides an access to the feedback page.]]","feedback-icon");
             this.b.push(a);
-            a = new $(this.g,"actionTile","update-background","[[Update Background|hi]]","icon-player-rew","[[Reloads the background.|r]]");
+            a = new $(this.g,"actionTile","update-background","[[r|hi]]","help-icon","[[r|r]]");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-debug-dialog","[[Test Debug|A button title that provides an access to the debug page.]]","icon-lips");
             this.b.push(a);
