@@ -5538,7 +5538,7 @@
             this.gm();
             var f = {
                 client_id: this.Qi(),
-                scope: "https://corsproxy.io/??https://gdata.youtube.com"
+                scope: "https://corsproxy.io/?https://gdata.youtube.com"
             };
             return this.g.zc("/o/oauth2/device/code", null, f, y(function(b) {
                 this.AJ(b, a, e)
@@ -5570,7 +5570,7 @@
                 client_id: this.Qi(),
                 client_secret: this.um(),
                 code: a,
-                grant_type: "https://corsproxy.io/??https://oauth.net/grant_type/device/1.0"
+                grant_type: "https://corsproxy.io/?https://oauth.net/grant_type/device/1.0"
             }
               , f = y(function(e) {
                 this.BJ(e, a, b, c)
@@ -9510,7 +9510,7 @@
         }
         ;
         d.df = function() {
-            return this.b.useTestInnerTube ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.b.useReleaseInnerTube || this.b.qf && !this.b.oa ? "https://corsproxy.io/??https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : "https://corsproxy.io/??https://www.googleapis.com/youtubei/v1"
+            return this.b.useTestInnerTube ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.b.useReleaseInnerTube || this.b.qf && !this.b.oa ? "https://corsproxy.io/?https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : "https://corsproxy.io/?https://www.googleapis.com/youtubei/v1"
         }
         ;
         d.Qc = function(a) {
@@ -17431,11 +17431,11 @@
               , c = this.createElement("entry")
               , e = this.createElement("id");
             this.g.vm(e, b);
-            var f = this.createElement("batch:id", "https://corsproxy.io/??https://schemas.google.com/gdata/batch");
+            var f = this.createElement("batch:id", "https://corsproxy.io/?https://schemas.google.com/gdata/batch");
             this.g.vm(f, a);
             a = this.createElement("link");
             Lk(a, {
-                rel: "https://corsproxy.io/??https://schemas.google.com/g/2005#batch",
+                rel: "https://corsproxy.io/?https://schemas.google.com/g/2005#batch",
                 type: "application/atom+xml",
                 href: b
             });
@@ -17450,7 +17450,7 @@
             kd(c);
             var e = this.createElement("id");
             this.g.vm(e, a);
-            var f = this.createElement("batch:operation", "https://corsproxy.io/??https://schemas.google.com/gdata/batch");
+            var f = this.createElement("batch:operation", "https://corsproxy.io/?https://schemas.google.com/gdata/batch");
             Lk(f, {
                 type: "query"
             });
@@ -19745,7 +19745,7 @@
         d.Oe = function(a) {
             this.title = el(a.title);
             this.avatarImageURL = a.avatar.thumbnails[0].url;
-            this.backgroundImageURL = a.banner ? a.banner.thumbnails[0].url : "https://corsproxy.io/??https://s.ytimg.com/yts/img/channels/c4/default_banner_hq-vfl4dpY8T.png";
+            this.backgroundImageURL = a.banner ? a.banner.thumbnails[0].url : "https://corsproxy.io/?https://s.ytimg.com/yts/img/channels/c4/default_banner_hq-vfl4dpY8T.png";
             this.SB(a);
             this.RB(a);
             this.l.isHidden = this.b.isHidden && this.h.isHidden;
