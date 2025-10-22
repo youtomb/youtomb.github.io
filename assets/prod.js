@@ -27639,6 +27639,7 @@
                 b.I(c + "/rebound/watch_list.html", '<div>  <div class="row-title">{{getRowTitle()}}</div>  <div class="selected-title">    <div>{{getSelectedTitle()}}</div>    <div class="views">{{getViewCount()}}</div>  </div></div>');
                 b.I(c + "/rebound/watch_sets.html", '<div>  <div id="leanback-player-container"></div>  <div id="eureka-player-controls-container">    <div id="eureka-player-controls"></div>  </div>  <div id="watch-list" class="$watchList"></div>  <div id="transport-controls" class="$transport-controls"></div>  <div id="ad-callout" class="$advertisement-callout"></div></div>');
                 b.I(c + "/rebound/watch_title_tray.html", '<div class="title-card">  <div class="player-meta">    <div class="player-video-avatar" style="background-image:url(\'{{channelAvatarUrl}}\')"></div>    <div class="player-video-title">{{videoTitle}}</div>    <div class="player-video-details">      <div class="username">{{channelName}}</div>      <div class="set-context hidden">[[{{playlistTitle}}: {{videoIndex}} of {{videoCount}}|The playlist title and the index of the current video in the playlist.]]</div>      <div class="uploaded-date">{{uploadedDate}}</div>      <div class="view-count"><span class="view-count-label">{{viewCountLabel}}</span></div>      <div id="badges" class="badges hidden">        <span class="live-badge">[[Live|Label indicating that this is a live video.]]</span>      </div>    </div>  </div></div>');
+                
                 a()
             }
         }
@@ -28440,8 +28441,10 @@
             this.b.push(b));
             a = new $(this.g,"actionTile","request-tos-dialog","[[Terms of Service and Privacy|Title of menu item which shows links to terms of service and privacy documents on youtube.com]]");
             this.b.push(a)
-            a = new $(this.g,"channelTile","request-recent-search","[[dvr thing|what the fuck]]");
+            a = new $(this.g,"channelTile","request-recent-search","[[dvr thing|what the fuck]]","");
             this.b.push(a)
+            a = new $(this.g,"playlistTile","request-search","[[basically search but in the settings page lmao|hi]]","icon-player-rew","[[Dr. JJ Jr.|r]]","test439439439439","493","4","roboto");
+            this.b.push(a);
         }
         ;
         d.kw = function() {
