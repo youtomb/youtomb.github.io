@@ -28440,7 +28440,7 @@
             this.b.push(b));
             a = new $(this.g,"actionTile","request-tos-dialog","[[Terms of Service and Privacy|Title of menu item which shows links to terms of service and privacy documents on youtube.com]]");
             this.b.push(a)
-            a = new $(this.g,"dvrClipTile","request-recent-search","[[dvr thing|what the fuck]]");
+            a = new $(this.g,"channelTile","request-recent-search","[[dvr thing|what the fuck]]");
             this.b.push(a)
         }
         ;
