@@ -28368,7 +28368,7 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","goto-watch","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
             this.b.push(a);
-            a = new $(this.g,"classicTile","goto-old","[[Go to classic mode|Button that does what the title says.]]", "icon-player-rew");
+            a = new $(this.g,"classicTile","goto-old","[[Original Version|Button that does what the title says.]]", "icon-player-rew");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-help-dialog","[[Help|A button title that provides an access to the help page.]]","help-icon");
             this.b.push(a);
