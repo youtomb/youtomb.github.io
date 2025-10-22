@@ -8944,6 +8944,11 @@
             this.fc("[[A network error has occurred|Dialog title that tells the user that a network error has occurred]]", "networkErrorDialog")
         }
         ;
+        d.qI = function() {
+            this.g.stop();
+            this.k.nt();
+            this.fc("[[NO WAY!|Dialog title that tells the user that a network error has occurred]]", "networkErrorDialog")
+        }
         d.EI = function() {
             this.fc("[[Terms of Service and Privacy Policy|Dialog title that shows links to terms of use and privacy documents on youtube.com.]]", "tosDialog")
         }
@@ -8992,6 +8997,7 @@
         d.zI = function(a) {
             this.ma(new ze(a.detail[1],a.detail[0]))
         }
+        
         ;
         d.CI = function(a) {
             this.ma(new Be(a.detail[0],a.detail[1]))
@@ -16669,7 +16675,7 @@
                             e = Se(b.style)
                         } catch (g) {
                             console.warn("Caption style not JSON, trying broken iOS style parsing for rich captions instead."),
-                            e = this.sB(b.style || "")
+                            e = this.sB(b.style || "rec room")
                         }
                         e.fontFamilyOption || (e.fontFamilyOption = "propSans");
                         this.ji(e, "fontSizeRelative");
@@ -18912,6 +18918,10 @@
         }
         d.NT = function() {
             location.replace("https://youtomb.github.io/old")
+        }
+        d.oHt = function() {
+            console.log("done")
+            this.w.D("goto-watch", "https://cmd-hue.github.io/playtest.mp4")
         }
         ;
         d.xe = function() {
