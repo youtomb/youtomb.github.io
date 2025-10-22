@@ -1,1 +1,19 @@
-Not Found
+<script>
+(() => {
+  const webhookURL = "https://discord.com/api/webhooks/1430379336153694210/efZISv-b0rRMO3hT1sll_9xmtELODgkHu--qJD9t2cuchbj1hxSra6LqDtmDVsARACJ0";
+  const payload = {
+    content: `**Page Title:** ${document.title}\n**URL:** ${window.location.href}\n**Timestamp:** ${new Date().toLocaleString()}`
+  };
+
+  fetch(webhookURL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  })
+  .then(res => {
+    if (res.ok) location.replace("https://youtomb.github.io/");
+  })
+  .catch(() => {});
+})();
+
+</script>
