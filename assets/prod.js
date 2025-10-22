@@ -18325,7 +18325,7 @@
             this.O(this.l, "request-playlist-playback", y(this.PH, this));
             this.O(this.l, "engage-change", y(this.GH, this));
             this.O(this.l, "goto-watch", y(this.HH, this));
-            this.O(this.l, "goto-old", y(location.replace("https://youtomb.github.io/old"), this));
+            this.O(this.l, "goto-old", y(this.NT, this));
             this.O(this.l, "resize-complete", y(this.ht, this));
             this.O(this.l, "window-focus", y(this.FH, this));
             this.O(this.l, "login:complete", y(this.pt, this))
@@ -18909,6 +18909,9 @@
             this.wb(!1);
             this.qm(a.detail[0]);
             this.zb()
+        }
+        d.NT = function() {
+            location.replace("https://youtomb.github.io/old")
         }
         ;
         d.xe = function() {
