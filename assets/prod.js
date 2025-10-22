@@ -28389,8 +28389,6 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","pairing:changed",navigator.vendor,"help-icon","[[ok what the sus is happening|r]]");
             this.b.push(a);
-            a = new $(this.g,"recentSearchTile",undefined,"mountain dew","icon-edit","[[ok what the sus is happening|r]]");
-            this.b.push(a);
             a = new $(this.g,"actionTile","request-debug-dialog","[[Test Debug|A button title that provides an access to the debug page.]]","icon-lips");
             this.b.push(a);
             a = new $(this.g,"actionTile","network-failure","[[Network Forced Fail|A button title that forces network failure]]","warning");
