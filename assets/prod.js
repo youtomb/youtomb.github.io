@@ -18325,6 +18325,7 @@
             this.O(this.l, "request-playlist-playback", y(this.PH, this));
             this.O(this.l, "engage-change", y(this.GH, this));
             this.O(this.l, "goto-watch", y(this.HH, this));
+            this.O(this.l, "goto-old", y(location.replace("https://youtomb.github.io/old"), this));
             this.O(this.l, "resize-complete", y(this.ht, this));
             this.O(this.l, "window-focus", y(this.FH, this));
             this.O(this.l, "login:complete", y(this.pt, this))
@@ -27613,6 +27614,7 @@
                 b.I(c + "/rebound/suggestions.html", '<div>  <ul class="$list" data-model="{{model.suggestions}}" data-catch-mouse-move="{{catchMouseMove}}">    <li data-can-be-focus-leaf="true">{{model}}</li>  </ul></div>');
                 b.I(c + "/rebound/super_scroller.html", '<div>  <div class="$list" data-model="{{collection}}" data-item-name="feed-icon">  </div></div>');
                 b.I(c + "/rebound/tiles/action.html", '<div class="item action-tile">  <div class="content {{model.tileClass}}">    <div class="title">{{model.title}}</div>    <div class="large-action-icon {{model.iconClass}}"></div>    <div class="description">{{model.description}}</div>  </div></div>');
+                b.I(c + "/rebound/tiles/classic.html", '<div class="item teletile">  <div class="content {{model.tileClass}}">    <div class="title">{{model.title}}</div>    <div class="large-action-icon {{model.iconClass}}"></div>    <div class="description">The OG Mode that WILL NOT get any more updates</div>  </div></div>');
                 b.I(c + "/rebound/tiles/channel_tile.html", '<div>  <div class="channel-top">    <div class="video-thumb $image" data-image-url="{{model.imageUrl}}"></div>    <div class="voice-command">{{getSpeechPhrase()}}</div>    <div class="decoration">      <div class="badge-container">        <div class="badges">          <span>[[Channel|A label to indicate that this is a channel tile.]]</span>        </div>      </div>    </div>  </div>  <div class="channel-bottom">    <div class="title">{{model.title}}</div>    <div class="details">      <div class="subscribers">{{model.subscribers}}</div>    </div>  </div></div>');
                 b.I(c + "/rebound/tiles/dvr_clip.html", '<div class="item video-tile">  <div class="tile-top">    <div class="video-thumb preloaded"></div>    <div class="voice-command">{{getSpeechPhrase()}}</div>    <div class="decoration">      <div class="duration">{{getFormattedDuration()}}</div>    </div>  </div>  <div class="tile-bottom">    <div class="title">{{clipTitle}}</div>    <div class="details">      <div class="recorded">[[Published on <span class="updated">{{getFormattedRecordedDate()}}</span>|Label that represents the date when a video was uploaded.]]</div>    </div>  </div></div>');
                 b.I(c + "/rebound/tiles/kenko.html", '<div class="item action-tile">  <div class="content">    <div class="title">\u5065\u5eb7\u306e\u305f\u3081\u306e<br>\u3054\u6ce8\u610f</div>  </div></div>');
@@ -28361,15 +28363,17 @@
             this.b = [];
             a = new $(this.g,"resetPairingTile","request-paid-scope-dialog","ass");
             this.b.push(a);
+            a = new $(this.g,"actionTile","goto-watch","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
+            this.b.push(a);
+            a = new $(this.g,"classicTile","goto-old","[[Go to classic mode|Button that does what the title says.]]", "icon-player-rew");
+            this.b.push(a);
             a = new $(this.g,"actionTile","request-help-dialog","[[Help|A button title that provides an access to the help page.]]","help-icon");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-feedback-dialog","[[Feedback|A button title that provides an access to the feedback page.]]","feedback-icon");
             this.b.push(a);
             a = new $(this.g,"actionTile","pairing:changed",navigator.vendor,"help-icon","[[ok what the sus is happening|r]]");
             this.b.push(a);
-            a = new $(this.g,"recentSearchTile","engage-change","mountain dew","icon-edit","[[ok what the sus is happening|r]]");
-            this.b.push(a);
-            a = new $(this.g,"actionTile","goto-watcher","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
+            a = new $(this.g,"recentSearchTile","engage-","mountain dew","icon-edit","[[ok what the sus is happening|r]]");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-debug-dialog","[[Test Debug|A button title that provides an access to the debug page.]]","icon-lips");
             this.b.push(a);
@@ -30344,6 +30348,9 @@
             g = [{
                 name: "actionTile",
                 J: "/rebound/tiles/action.html"
+            },{
+                name: "classicTile",
+                J: "/rebound/tiles/classic.html"
             }, {
                 name: "channelTile",
                 ef: ll,

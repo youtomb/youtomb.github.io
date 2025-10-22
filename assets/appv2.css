@@ -5498,3 +5498,14 @@ playback timings (ms):
   load_resource: 299.67
   PetaboxLoader3.resolve: 119.034
 */
+
+.teletile {
+	background-image: linear-gradient(90deg, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow);
+	color: black;
+	height: 24em;
+	list-style: none;
+	overflow: hidden;
+	position: absolute;
+	width: 24em
+}
+
