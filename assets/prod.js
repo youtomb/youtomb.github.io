@@ -1,4 +1,4 @@
-    (function() {
+(function() {
         var d, aa = aa || {}, h = this;
         function m(a) {
             return void 0 !== a
@@ -1127,6 +1127,7 @@
           , fc = "AE AR AU BE BR CA CL CO CZ DE EG ES FR GB HK HU ID IE IL IN IT JO JP KR MA MX MY NL NZ PE PH PL RU SA SE SG TW ZA".split(" ")
           , gc = {
             settings: "Sign In & Settings"
+            stuff: "Stuff & Things"
         }
           , jc = {
             help: "request-help-dialog"
@@ -27580,6 +27581,7 @@
                 b.I(c + "/rebound/dialogs/paid_scope.html", "<div>[[View and manage your rental and purchase history. Please note: This means your rental and purchase history may be displayed and accessible on this device.|This is a dialog subtitle that list a permission that the application is requesting.]]</div>");
                 b.I(c + "/rebound/dialogs/pairing.html", '<div class="pairing">  <div class="connection-instructions">    <div class="remote-pair-icon"/></div>    <div class="dial-upsell">      [[Connect your mobile device to the same WiFi network, open YouTube and tap the <div class="cast-icon">&nbsp;</div> icon.|        A message hinting the user about the possibility to use the automatically detected send-to-TV function of the YouTube mobile client to connect.]]    </div>    <div class="connection-steps">      [[<div class="step1">Go to</div>        <div class="pair-url">youtube.com/pair</div>|Tells user that there\'s a URL here to navigate to]]      [[<div class="step2">and enter</div>        <div class="pair-code">{{displayPairingCode}}</div>|Tells user this is the string to enter into the device]]    </div>    <div class="qr-code-wrapper">      <div class="qr-code">        <div class="scan">[[Or scan|Title above QR code telling a user that it is possible to sign into account by using QR-code scanner.]]</div>        <img class="qr-code-image" x-src="{{codeImageUrl}}" />      </div>    </div>    <div class="connected-list">      <div class="connected-header">[[Connected|Heading for a list of devices connected to the application.]]</div>      <ul class="$list devices" data-model="{{connectedDevices}}">        <li class="{{model.deviceClass}}">{{model.displayString}}</li>      </ul>    </div>  </div></div>');
                 b.I(c + "/rebound/dialogs/player_error.html", '<span class="player-error">{{model.errorMessage}}</span>');
+                b.I(c + "/rebound/dialogs/n_error.html", '<span class="player-error">What The Fuck? - {{model.errorMessage}}</span>');
                 b.I(c + "/rebound/dialogs/qr.html", '<div>  <div class="box">[[On your phone, tablet or laptop, go to: <a class="base-url">{{displayUrl}}</a>|Explanation on how to access help and feedback web pages.|119192476]]</div>  <div class="box qr-code-wrapper">[[Or scan: <br><img class="qr" x-src="{{imageUrl}}"/>|Explains alternative way of accessing help and feedback pages by scanning QR code.]]</div></div>');
                 b.I(c + "/rebound/dialogs/remote_reset.html", '<div>  <div class="connected-list">    <div>      <div class="connected-header">[[Paired Devices|Tooltip showing status of paired devices, connected to the application or not.]]</div>      <ul class="$list devices" data-model="{{devices}}">          <li class="{{model.deviceClass}}">{{model.displayString}}</li>      </ul>    </div>  </div>  <span class="reset-help">[[Selecting \'OK\' will disconnect all paired devices.|Tooltip displayed when a user is going to disconnect her mobile device from the application.]]</span></div>');
                 b.I(c + "/rebound/dialogs/scroll_pane.html", '<div>  <div class="scrolling-text"></div>  <div class="scrollbar">    <div class="handle"></div>  </div></div>');
@@ -28357,13 +28359,17 @@
         d = Xk.prototype;
         d.Ez = function() {
             this.b = [];
-            a = new $(this.g,"resetPairingTile","request-paid-scope-dialog",navigator.userAgent);
+            a = new $(this.g,"resetPairingTile","request-paid-scope-dialog","ass");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-help-dialog","[[Help|A button title that provides an access to the help page.]]","help-icon");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-feedback-dialog","[[Feedback|A button title that provides an access to the feedback page.]]","feedback-icon");
             this.b.push(a);
-            a = new $(this.g,"actionTile","update-background","[[r|hi]]","help-icon","[[r|r]]");
+            a = new $(this.g,"actionTile","pairing:changed",navigator.vendor,"help-icon","[[ok what the sus is happening|r]]");
+            this.b.push(a);
+            a = new $(this.g,"recentSearchTile","engage-change","mountain dew","icon-edit","[[ok what the sus is happening|r]]");
+            this.b.push(a);
+            a = new $(this.g,"actionTile","goto-watcher","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-debug-dialog","[[Test Debug|A button title that provides an access to the debug page.]]","icon-lips");
             this.b.push(a);
@@ -28399,8 +28405,6 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","toggle-loading","[[Toggle Loading|Button that does what the title says.]]","icon-lol");
             this.b.push(a);
-            a = new $(this.g,"actionTile","goto-watch","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
-            this.b.push(a);
             a = new $(this.g,"actionTile","request-flag-video-dialog","[[FLAG YOUR MOTHER|Button that does what the title says.]]", "icon-player-rew", "[[What The Heck|Description testing]]");
             this.b.push(a);
             a = new $(this.g,"actionTile","request-flag-options-dialog","[[flag yo mother 2|Button that does what the title says.]]", "icon-player-next", "[[What The Heck|Description testing]]");
@@ -28417,7 +28421,7 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","request-kenko-dialog","[[kenko|Button that does what the title says.]]", "icon-player-rew", "[[OH WHAT...|Description testing]]");
             this.b.push(a);
-            a = new $(this.g,"videoTile","request-debug-dialog","[[im gaming rn please debug this page|hi]]","icon-player-rew","[[Dr. JJ Jr.|r]]","test439439439439","493");
+            a = new $(this.g,"videoTile","request-debug-dialog","[[im gaming rn please debug this page|hi]]","icon-player-rew","[[Dr. JJ Jr.|r]]","test439439439439","493","4","roboto");
             this.b.push(a);
             if (this.h.cb) {
                 var a = new An(this.g,"toggleTile",this.W,"Show Video Info","[[Enable or disable video info.|Description for tile that toggles video info.]]")
@@ -28436,6 +28440,8 @@
             this.b.push(a),
             this.b.push(b));
             a = new $(this.g,"actionTile","request-tos-dialog","[[Terms of Service and Privacy|Title of menu item which shows links to terms of service and privacy documents on youtube.com]]");
+            this.b.push(a)
+            a = new $(this.g,"dvrClipTile","request-recent-search","[[dvr thing|what the fuck]]");
             this.b.push(a)
         }
         ;
@@ -30322,7 +30328,11 @@
                 name: "video-uploads",
                 constructor: Um,
                 J: "/rebound/dialogs/video_uploads.html"
-            }];
+            },{
+                name: "NerrorDialog",
+                constructor: N,
+                J: "/rebound/dialogs/n_error.html"
+        }];
             c = a.get("htmlPath");
             e = 0;
             for (f = g.length; e < f; ++e) {
@@ -30487,7 +30497,7 @@
                 opt_params: {
                     action_featured: 1,
                     client: "lb4",
-                    hl: ""
+                    hl: "giggity"
                 }
             }, {
                 constructor: Ok,
