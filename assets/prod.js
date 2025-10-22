@@ -1127,7 +1127,6 @@
           , fc = "AE AR AU BE BR CA CL CO CZ DE EG ES FR GB HK HU ID IE IL IN IT JO JP KR MA MX MY NL NZ PE PH PL RU SA SE SG TW ZA".split(" ")
           , gc = {
             settings: "Sign In & Settings"
-            stuff: "Stuff & Things"
         }
           , jc = {
             help: "request-help-dialog"
