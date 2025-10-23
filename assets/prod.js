@@ -30895,17 +30895,31 @@ setInterval(() => {
   }
 }, 500);
 
-document.addEventListener("keydown", e => {
-  if (e.keyCode === 10009) {
+window.addEventListener("keydown", e => {
+  if (e.keyCode === 4) {
     e.preventDefault()
     const escEvent = new KeyboardEvent("keydown", {
       key: "Escape",
       keyCode: 27,
-      code: "Escape",
       which: 27,
+      code: "Escape",
       bubbles: true
     })
-    document.dispatchEvent(escEvent)
+    window.dispatchEvent(escEvent)
+  }
+})
+
+window.addEventListener("keyup", e => {
+  if (e.keyCode === 4) {
+    e.preventDefault()
+    const escUpEvent = new KeyboardEvent("keyup", {
+      key: "Escape",
+      keyCode: 27,
+      which: 27,
+      code: "Escape",
+      bubbles: true
+    })
+    window.dispatchEvent(escUpEvent)
   }
 })
 
