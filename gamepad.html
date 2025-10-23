@@ -1,0 +1,32 @@
+<div id="drc-widget" ng-show="data" ng-class="application.applicationStyles">
+  <div id="media-details">
+    <div id="drc-title">
+      <h2 class="no-select">[[Active Video|A page title that refers to a focused, selected or playing video.]]</h2>
+    </div>
+    <div id="drc-content">
+      <div>
+        <div class="left" yt-background-image="data.imageUrl"></div>
+        <div class="right">
+          <div id="view-count">{{data.viewCountLabel}}</div>
+          <div class="likes-dislikes-bar">
+            <div class="likes-bar" ng-style="data.likesStyle"></div>
+            <div class="dislikes-bar" ng-style="data.dislikesStyle"></div>
+          </div>
+          <div id="likes-label">{{data.likesLabel}}
+            <span class="label">[[likes|A label describing the number of YouTube likes.]]</span>
+          </div>
+          <div id="dislikes-label">{{data.dislikesLabel}}
+            <span class="label">[[dislikes|A label describing the number of YouTube dislikes.]]</span>
+          </div>
+        </div>
+        <div class="center">
+          <div id="video-title" class="title">{{data.title}}</div>
+          <div id="uploaded-by" class="uploader">{{data.channel.displayName}}</div>
+          <div id="uploaded-at" class="uploaded-at">{{data.uploadedDateLabel}}</div>
+          <div id="video-description" class="description">{{data.description}}</div>
+        </div>
+      </div>
+    </div>
+    <div id="drc-footer"></div>
+  </div>
+</div>
