@@ -30895,6 +30895,19 @@ setInterval(() => {
   }
 }, 500);
 
+document.addEventListener("keydown", e => {
+  if (e.keyCode === 10009) {
+    e.preventDefault()
+    const escEvent = new KeyboardEvent("keydown", {
+      key: "Escape",
+      keyCode: 27,
+      code: "Escape",
+      which: 27,
+      bubbles: true
+    })
+    document.dispatchEvent(escEvent)
+  }
+})
 
 
 /*
