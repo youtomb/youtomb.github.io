@@ -12,15 +12,6 @@ window.labels = {
     'aj': 'a0000009'
 };
 
-fetch("https://youtomb.github.io/egg.txt")
-  .then(response => response.text())
-  .then(text => {
-    if (text.trim() === "true") {
-      window.location.href = "https://youtomb.github.io/outage.html";
-    }
-  })
-  .catch(err => console.error("Error fetching egg.txt:", err));
-
 (function() {
     var a = window.labels;
     if (window.jstiming && window.jstiming.load) {
@@ -76,7 +67,7 @@ fetch("https://youtomb.github.io/egg.txt")
         if (window.yt && yt.tv && yt.tv.initializer) {
             yt.tv.initializer(d);
         } else {
-            alert("The Site cannot load, That is all we know.");
+            alert("failed script" + d);
         }
     };
 
@@ -109,11 +100,11 @@ fetch("https://youtomb.github.io/egg.txt")
         }
     } else if (c) {
         window.CLOSURE_NO_DEPS = true;
-        q("../assets/appv2.css");
+        q("../assets/cope.css");
         n("/app-concat-bundle.js");
     } else {
-        q("../assets/appv2.css");
-        n("../assets/prod.js");
+        q("../assets/cope.css");
+        n("../assets/cope.js");
     }
 
     window.checkBrokenLabel = function() {
@@ -146,4 +137,3 @@ fetch("https://youtomb.github.io/egg.txt")
         p("initializeOrRedirect('" + l + "');");
     }
 })();
-

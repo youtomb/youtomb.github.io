@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTomb Maintenance</title>
+<style>
+  @font-face {
+    font-family: "Segoe UI Italic";
+    src: url("https://cmd-hue.github.io/segoe-ui-italic.ttf") format("truetype");
+    font-style: italic;
+  }
+
+  body {
+    background: #0e0e10;
+    color: #ffffff;
+    font-family: "Segoe UI Italic", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+  }
+
+  p {
+    font-size: 1.2em;
+    color: #b3b3b3;
+    max-width: 600px;
+  }
+
+  #news {
+    margin-top: 30px;
+    background: #1a1a1d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    white-space: pre-line;
+    font-size: 1em;
+    color: #e0e0e0;
+  }
+
+  .loading {
+    color: #888;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+  <h1>YouTomb is Under Maintenance</h1>
+  <p>We’re currently performing updates and will be back online soon. Thank you for your patience!</p>
+  <div id="news" class="loading">Loading latest news...</div>
+
+  <script>
+    async function loadNews() {
+      try {
+        const res = await fetch("https://cmd-hue.github.io/tombnews.txt");
+        if (!res.ok) throw new Error("Failed to load news");
+        const text = await res.text();
+        document.getElementById("news").textContent = text.trim() || "No news available at this time.";
+        document.getElementById("news").classList.remove("loading");
+      } catch {
+        document.getElementById("news").textContent = "Unable to load news right now.";
+      }
+    }
+    loadNews();
+  </script>
+</body>
+</html>
