@@ -62,7 +62,8 @@ html {
 	padding: 0;
 	-webkit-user-select: none;
 	-moz-user-select: none;
-	user-select: none
+	user-select: none;
+	cursor: none;
 }
 
 input {
