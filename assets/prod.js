@@ -18332,6 +18332,7 @@
             this.O(this.l, "engage-change", y(this.GH, this));
             this.O(this.l, "goto-watch", y(this.HH, this));
             this.O(this.l, "goto-old", y(this.NT, this));
+            this.O(this.l, "goto-2016", y(this.PS, this));
             this.O(this.l, "wharthing", y(this.oHt, this));
             this.O(this.l, "resize-complete", y(this.ht, this));
             this.O(this.l, "window-focus", y(this.FH, this));
@@ -18918,7 +18919,10 @@
             this.zb()
         }
         d.NT = function() {
-            location.replace("https://youtomb.github.io/old")
+            location.href = ("https://youtomb.github.io/old")
+        }
+        d.PS = function() {
+            location.href = ("https://youtomb2016.github.io/")
         }
         d.oHt = function() {
             console.log("done")
@@ -28378,6 +28382,8 @@
             a = new $(this.g,"resetPairingTile","request-paid-scope-dialog","ass");
             this.b.push(a);
             a = new $(this.g,"actionTile","goto-watch","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
+            this.b.push(a);
+            a = new $(this.g,"actionTile","goto-2016","[[2016 Version|Button that does what the title says.]]", "icon-guide-my-subs" "[[This lets you go to YouTomb2016|dialog fuck]");
             this.b.push(a);
             a = new $(this.g,"channelTile","wharthing","[[940|Button that does what the title says.]]", "icon-player-ff", "e", 2, "haha", "yes sez");
             this.b.push(a);
