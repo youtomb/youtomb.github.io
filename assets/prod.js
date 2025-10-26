@@ -28383,7 +28383,7 @@
             this.b.push(a);
             a = new $(this.g,"actionTile","goto-watch","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
             this.b.push(a);
-            a = new $(this.g,"actionTile","goto-2016","[[2016 Version|Button that does what the title says.]]", "icon-guide-my-subs" "[[This lets you go to YouTomb2016|dialog fuck]");
+            a = new $(this.g,"actionTile","goto-2016","[[2016 Version|Button that does what the title says.]]", "icon-guide-my-subs","[[This lets you go to YouTomb2016|dialog fuck]");
             this.b.push(a);
             a = new $(this.g,"channelTile","wharthing","[[940|Button that does what the title says.]]", "icon-player-ff", "e", 2, "haha", "yes sez");
             this.b.push(a);
