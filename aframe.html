@@ -1,19 +1,44 @@
 <html>
   <head>
+    <title>YouTomb on yo VR Headset</title>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-    <title>YouTomb on yo VR Headseat</title>
   </head>
-  <body>
-<a-scene embedded>
-    <a-entity
-      position="0 2 0"
-      htmlembed="src: https://youtomb.github.io; width: 1920; height: 1080;"
-      geometry="primitive: plane; width: 3; height: 2.25;"
-      material="shader: standard; side: double;"
-    ></a-entity>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded>
+      <a-assets>
+        <canvas id="pageCanvas" width="1920" height="1080"></canvas>
+      </a-assets>
 
-    <!-- Add other 3D elements here, e.g., a floor -->
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#4CC3DA"></a-plane>
-  </a-scene>
+      <a-plane
+        id="webPlane"
+        position="0 2 -3"
+        width="3"
+        height="1.6875"
+        material="shader: flat; src: #pageCanvas">
+      </a-plane>
+
+      <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#4CC3DA"></a-plane>
+    </a-scene>
+
+    <iframe
+      id="webFrame"
+      src="https://youtomb.github.io"
+      style="position:absolute; left:-9999px; width:1920px; height:1080px; border:none;">
+    </iframe>
+
+    <script>
+      const iframe = document.getElementById('webFrame');
+      const canvas = document.getElementById('pageCanvas');
+      const ctx = canvas.getContext('2d');
+
+      function updateCanvas() {
+        try {
+          ctx.drawImage(iframe.contentWindow.document.body, 0, 0, canvas.width, canvas.height);
+        } catch (e) {}
+        requestAnimationFrame(updateCanvas);
+      }
+
+      iframe.onload = () => updateCanvas();
+    </script>
   </body>
 </html>
