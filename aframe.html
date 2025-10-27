@@ -1,44 +1,36 @@
 <html>
   <head>
-    <title>YouTomb on yo VR Headset</title>
+    <title>YouTomb VR Display</title>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
   </head>
-  <body style="margin: 0; overflow: hidden;">
+  <body style="margin:0;overflow:hidden;">
     <a-scene embedded>
       <a-assets>
-        <canvas id="pageCanvas" width="1920" height="1080"></canvas>
+        <img id="webshot" crossorigin="anonymous"
+             src="https://api.microlink.io/?url=https%3A%2F%2Fyoutomb.github.io&screenshot=true&embed=screenshot.url">
+        <img id="skytex" crossorigin="anonymous"
+             src="https://youtomb2016.github.io/assets/default_bg.jpg">
       </a-assets>
+
+      <a-sky src="#skytex" rotation="0 -90 0"></a-sky>
 
       <a-plane
         id="webPlane"
         position="0 2 -3"
         width="3"
         height="1.6875"
-        material="shader: flat; src: #pageCanvas">
+        material="shader: flat; src: #webshot">
       </a-plane>
 
       <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#4CC3DA"></a-plane>
     </a-scene>
 
-    <iframe
-      id="webFrame"
-      src="https://youtomb.github.io"
-      style="position:absolute; left:-9999px; width:1920px; height:1080px; border:none;">
-    </iframe>
-
     <script>
-      const iframe = document.getElementById('webFrame');
-      const canvas = document.getElementById('pageCanvas');
-      const ctx = canvas.getContext('2d');
-
-      function updateCanvas() {
-        try {
-          ctx.drawImage(iframe.contentWindow.document.body, 0, 0, canvas.width, canvas.height);
-        } catch (e) {}
-        requestAnimationFrame(updateCanvas);
+      const img = document.getElementById('webshot');
+      function refreshScreenshot() {
+        img.src = "https://api.microlink.io/?url=https%3A%2F%2Fyoutomb.github.io&screenshot=true&embed=screenshot.url&cb=" + Date.now();
       }
-
-      iframe.onload = () => updateCanvas();
+      setInterval(refreshScreenshot, 10000);
     </script>
   </body>
 </html>
