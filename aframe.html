@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <title>YouTomb on yo VR Headseat</title>
+  </head>
+  <body>
+<a-scene embedded>
+    <a-entity
+      position="0 2 0"
+      htmlembed="src: https://youtomb.github.io; width: 1920; height: 1080;"
+      geometry="primitive: plane; width: 3; height: 2.25;"
+      material="shader: standard; side: double;"
+    ></a-entity>
+
+    <!-- Add other 3D elements here, e.g., a floor -->
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#4CC3DA"></a-plane>
+  </a-scene>
+  </body>
+</html>
