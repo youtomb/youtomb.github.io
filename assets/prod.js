@@ -30744,11 +30744,11 @@
                 constructor: Ih,
                 id: "browseService",
                 parser: "$browseParser",
-                path: "/browse"
+                path: "https://corsproxy.io/?https://gdata.vidtape.lol/console_browse?start-index=1&max-results=40&feed=videos_top_rated_today&racy=include&app=desktop&key=AIzaSyAd-YEOqZz9nXVzGtn3KWzYLbLaajhqIDA"
             }, {
                 constructor: Ih,
                 id: "browseSetsService",
-                path: "/browse",
+                path: "https://corsproxy.io/?https://gdata.vidtape.lol/console_browse?start-index=1&max-results=40&feed=videos_top_rated_today&racy=include&app=desktop&key=AIzaSyAd-YEOqZz9nXVzGtn3KWzYLbLaajhqIDA",
                 parser: "$identityParser",
                 opt_clientVersion: "5"
             }, {
