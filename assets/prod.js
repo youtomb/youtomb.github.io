@@ -3808,7 +3808,7 @@
         }
         ;
         d.zc = function(a, b, c, e, f, g) {
-            return this.vi("POST", a, b, c, e, f, g)
+            return this.vi("GET", a, b, c, e, f, g)
         }
         ;
         d.NZ = function(a, b, c, e, f) {
@@ -9434,7 +9434,7 @@
             var k = y(this.Fc, this, a, c, b);
             b = y(this.rL, this, c, e, b);
             this.im();
-            return "GET" === this.Yg() ? this.k.get(this.Qc(), a, k, b) : "JSONP" === this.Yg() ? this.k.Wh(this.Qc(), a, k, b) : "POST" == this.Yg() ? (a = g ? S(a) : a,
+            return "GET" === this.Yg() ? this.k.get(this.Qc(), a, k, b) : "JSONP" === this.Yg() ? this.k.Wh(this.Qc(), a, k, b) : "GET" == this.Yg() ? (a = g ? S(a) : a,
             this.k.zc(this.Qc(), {}, a, k, b, f)) : r
         }
         ;
@@ -9528,7 +9528,7 @@
         }
         ;
         d.Yg = function() {
-            return "POST"
+            return "GET"
         }
         ;
         d.load = function(a, b, c) {
@@ -13902,7 +13902,7 @@
             0 < this.Dj && (this.zh = new mg(y(this.Co, this, this.Ma),this.Dj));
             this.k.bd(this.Ma, "readystatechange", this.Kx);
             a = this.Cj ? Bb(this.Cj) : {};
-            this.qe ? (this.ne = "POST",
+            this.qe ? (this.ne = "GET",
             a["Content-Type"] = "application/x-www-form-urlencoded",
             this.Ma.send(this.vb, this.ne, this.qe, a)) : (this.ne = "GET",
             this.uo && !Hc && (a.Connection = "close"),
@@ -14533,7 +14533,7 @@
         C(Xj, hg);
         Xj.prototype.$ = null;
         var Yj = /^https?$/i
-          , Zj = ["POST", "PUT"]
+          , Zj = ["GET", "PUT"]
           , ak = [];
         d = Xj.prototype;
         d.NV = function() {
@@ -15119,7 +15119,7 @@
                 !1;
             if (1 == this.g || this.gd >= this.Xk())
                 return !1;
-            this.b.Y("Going to retry POST");
+            this.b.Y("Going to retry GET");
             this.lc = Rj(y(this.Xq, this, a), this.pq(this.gd));
             this.gd++;
             return !0
@@ -15290,7 +15290,7 @@
                         } catch (e) {
                             c = null
                         }
-                        t(c) && 3 == c.length ? this.yB(c) : (this.b.Y("Bad POST response data returned"),
+                        t(c) && 3 == c.length ? this.yB(c) : (this.b.Y("Bad GET response data returned"),
                         this.Lb(11))
                     } else
                         "y2f%" != b && (this.b.Y("Bad data returned - missing/invald magic cookie"),
@@ -16041,7 +16041,7 @@
             n.open(c, a, !0);
             g && (n.responseType = g);
             k && (n.withCredentials = !0);
-            g = "POST" == c;
+            g = "GET" == c;
             if (f = vk(a, f))
                 for (var q in f)
                     n.setRequestHeader(q, f[q]),
@@ -16081,7 +16081,7 @@
         function xk(a, b) {
             var c = fj("XSRF_FIELD_NAME"), e;
             b.headers && (e = b.headers["Content-Type"]);
-            return !b.TP && (!rk(a) || rk(a) == document.location.hostname) && "POST" == b.method && (!e || "application/x-www-form-urlencoded" == e) && !(b.Ud && b.Ud[c])
+            return !b.TP && (!rk(a) || rk(a) == document.location.hostname) && "GET" == b.method && (!e || "application/x-www-form-urlencoded" == e) && !(b.Ud && b.Ud[c])
         }
         function yk(a, b) {
             var c = b.format || "JSON";
@@ -16295,7 +16295,7 @@
                 ctx: c
             }), {
                 Ud: a,
-                method: "POST",
+                method: "GET",
                 format: "RAW",
                 Mc: function(a) {
                     e(a.responseText)
@@ -16313,7 +16313,7 @@
                     screen_id: this.b.Kb,
                     screen_name: b
                 },
-                method: "POST",
+                method: "GET",
                 format: "RAW",
                 Mc: y(e, this, !0),
                 onError: y(e, this, !1)
@@ -16328,7 +16328,7 @@
                     screen_id: this.b.Kb,
                     pairing_code: a
                 },
-                method: "POST"
+                method: "GET"
             })
         }
         ;
@@ -16346,7 +16346,7 @@
                 Ud: {
                     screen_ids: a
                 },
-                method: "POST",
+                method: "GET",
                 Mc: c,
                 onError: ka(b, !1)
             })
@@ -26121,7 +26121,7 @@
         }
         ;
         d.MC = function(a, b, c, e, f, g) {
-            return this.cj("POST", a, b, c, e, f, g)
+            return this.cj("GET", a, b, c, e, f, g)
         }
         ;
         d.Gr = function(a, b, c, e, f, g, k) {
@@ -27489,7 +27489,7 @@
                 try {
                     this.b = this.j(),
                     this.b.addRequestHandler("GET", "/", y(this.o, this)),
-                    this.b.addRequestHandler("POST", "/", y(this.k, this))
+                    this.b.addRequestHandler("GET", "/", y(this.k, this))
                 } catch (a) {
                     console.error("Steel Dial Server Creation exception: " + a)
                 }

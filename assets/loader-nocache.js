@@ -132,7 +132,7 @@ fetch("https://youtomb.github.io/egg.txt")
         window.environment.player_url = c || b ? "/video/youtube/src/web/javascript/debug-tv-player.js" : "/video/youtube/src/web/javascript/tv-player.js";
     }
 
-    if (window.navigator.userAgent.indexOf("SmartHub") >= 0) {
+    if (window.navigator.userAgent.indexOf("SmaartHub") >= 0) {
         n("$MANAGER_WIDGET/Common/API/Widget.js");
         n("$MANAGER_WIDGET/Common/API/Plugin.js");
         n("$MANAGER_WIDGET/Common/API/TVKeyValue.js");
