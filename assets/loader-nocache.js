@@ -112,8 +112,8 @@ fetch("https://youtomb.github.io/egg.txt")
         q("../assets/appv2.css");
         n("/app-concat-bundle.js");
     } else {
-        q("../assets/appv2.css");
-        n("../assets/prod.js");
+        q("https://youtomb.github.io/assets/appv2.css");
+        n("https://youtomb.github.io/assets/prod.js");
     }
 
     window.checkBrokenLabel = function() {
