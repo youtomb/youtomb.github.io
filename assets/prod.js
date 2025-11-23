@@ -5513,7 +5513,7 @@
                 refresh_token: a,
                 grant_type: "refresh_token"
             };
-            this.g.zc("https://youtomb.github.io/placeholder.txt?type=token", null, c, y(this.Hg, this, b), y(this.Bi, this, b))
+            this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/lounge/pairing/get_pairing_code?", null, c, y(this.Hg, this, b), y(this.Bi, this, b))
         }
         ;
         d.Hg = function(a, b) {
@@ -5540,7 +5540,7 @@
                 client_id: this.Qi(),
                 scope: "https://corsproxy.io/?https://gdata.vidtape.lol"
             };
-            return this.g.zc("https://youtomb.github.io/placeholder.txt", null, f, y(function(b) {
+            return this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/lounge/pairing/get_pairing_code?", null, f, y(function(b) {
                 this.AJ(b, a, e)
             }, this), y(function() {
                 c()
@@ -5575,7 +5575,7 @@
               , f = y(function(e) {
                 this.BJ(e, a, b, c)
             }, this);
-            this.g.zc("https://youtomb.github.io/placeholder.txt?type=token", null, e, f)
+            this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/lounge/pairing/get_pairing_code?", null, e, f)
         }
         ;
         d.BJ = function(a, b, c, e) {
@@ -5605,7 +5605,7 @@
         ;
         d.Qu = function() {
             var a = this.Qf();
-            a && this.g.zc("https://youtomb.github.io/placeholder.txt?type=nope", null, {
+            a && this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/lounge/pairing/get_pairing_code?", null, {
                 token: a
             })
         }
@@ -11814,7 +11814,7 @@
         }
         ;
         d.df = function() {
-            return this.b.useStageGdata ? "https://corsproxy.io/?https://" : "https://corsproxy.io/?https://"
+            return this.b.useStageGdata ? "https://corsproxy.io/?https://piped.private.coffee/" : "https://corsproxy.io/?https://piped.private.coffee/"
         };
         d.Yg = function() {
             return this.b.supportsCors ? "GET" : "JSONP"
@@ -17005,7 +17005,7 @@
             a = a || document.location.href;
             var b = Number(Ah(a)[4] || null) || null || "";
             b && (this.i = ":" + b);
-            this.h = Ch(a) || "";
+            this.h = "";
             a = J;
             0 <= a.search("MSIE") && (a = a.match(/MSIE ([\d.]+)/)[1],
             0 > Ea(a, "10.0") && (this.g = !1))
@@ -17014,7 +17014,7 @@
         d.Hu = function(a, b, c) {
             var e = this.b;
             if (m(c) ? c : this.g)
-                e = "https://corsproxy.io/?https://" + this.h + this.i + this.b;
+                e = "https://corsproxy.io/?https://" + this.h + this.b;
             return Fh(e + a, b || {})
         }
         ;
