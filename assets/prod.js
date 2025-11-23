@@ -5538,7 +5538,7 @@
             this.gm();
             var f = {
                 client_id: this.Qi(),
-                scope: "https://corsproxy.io/?https://gdata.youtube.com"
+                scope: "https://corsproxy.io/?https://gdata.vidtape.lol"
             };
             return this.g.zc("https://youtomb.github.io/placeholder.txt", null, f, y(function(b) {
                 this.AJ(b, a, e)
@@ -11814,9 +11814,8 @@
         }
         ;
         d.df = function() {
-            return this.b.useStageGdata ? "https://corsproxy.io/?https://stage.gdata.youtube.com/feeds/api" : "https://corsproxy.io/?https://gdata.youtube.com/feeds/api"
-        }
-        ;
+            return this.b.useStageGdata ? "https://corsproxy.io/?https://stage.gdata.youtube.com/feeds/api" : ""
+        };
         d.Yg = function() {
             return this.b.supportsCors ? "GET" : "JSONP"
         }
@@ -17228,7 +17227,7 @@
         }
         ;
         d.df = function() {
-            return this.pa.useStageGdata ? "https://corsproxy.io/?https://stage.gdata.youtube.com/feeds/api" : "https://corsproxy.io/?https://gdata.youtube.com/feeds/api"
+            return this.pa.useStageGdata ? "https://corsproxy.io/?https://stage.gdata.youtube.com/feeds/api" : "https://corsproxy.io/?https://gdata.vidtape.lol/feeds/api"
         }
         ;
         d.aM = function(a, b, c, e) {
@@ -22994,25 +22993,25 @@
             this.buttonCollection = new R;
             this.i = [];
             this.Cc = new P(this.h.N("[[Go home|Speech command for going back to the home screen.]]"),void 0,this.Dw,"labelButton","icon-home");
-            this.Zb = new P(this.h.N("[[skip backward|Voice command skip back to previous video.]]"),void 0,this.Gw,"labelButton","icon-player-prev");
-            this.Ia = new P(this.h.N("[[rewind|Voice command to jump the video backward.]]"),void 0,this.Hw,"labelButton","icon-player-rew");
+            this.Zb = new P(this.h.N("[[skip backward|Voice command skip back to previous video.]]"),void 1,this.Gw,"labelButton","icon-player-prev");
+            this.Ia = new P(this.h.N("[[rewind|Voice command to jump the video backward.]]"),void 1,this.Hw,"labelButton","icon-player-rew");
             this.Ia.rateLimit = 20;
             this.V = new fl(this.h.N("[[pause|Voice command to pause the video.]]"),this.h.N("[[play|Voice command to play the video]]"),"icon-player-play",this.Mw);
-            this.oa = new P(this.h.N("[[forward|Voice command to jump the video forward.]]"),void 0,this.Bw,"labelButton","icon-player-ff");
+            this.oa = new P(this.h.N("[[forward|Voice command to jump the video forward.]]"),void 1,this.Bw,"labelButton","icon-player-ff");
             this.oa.rateLimit = 20;
-            this.$a = new P(this.h.N("[[skip forward|Voice command to skip to the next video.]]"),void 0,this.Fw,"labelButton","icon-player-next");
-            this.K = new fl(this.h.N("[[captions|Voice command choose the state of closed captions.]]"),void 0,"icon-player-closedcaptions",this.zw);
+            this.$a = new P(this.h.N("[[skip forward|Voice command to skip to the next video.]]"),void 1,this.Fw,"labelButton","icon-player-next");
+            this.K = new fl(this.h.N("[[captions|Voice command choose the state of closed captions.]]"),void 1,"icon-player-closedcaptions",this.zw);
             a = this.h.N("[[more actions|Voice command to show the other set of actions.]]");
             b = new P("",void 0,void 0,"labelButton","spacer",!1);
             b.enabled = !1;
             this.xa = [new P(a,void 0,this.Jw,"labelButton","icon-player-more"), this.Cc, this.Zb, this.Ia, this.V, this.oa, this.$a, this.K, b];
             this.Db = Ka(this.xa, this.V);
             this.buttonCollection.aa(this.xa, this.Db);
-            this.ca = new fl(this.h.N("[[subscribe|Voice command to subscribe to the video's channel]]"),void 0,"icon-logo-lozenge",this.Kw);
-            this.p = new fl(this.h.N('[[like|Voice command to "like" the video.]]'),void 0,"icon-like",this.Ew);
-            this.l = new fl(this.h.N('[[dislike|Voice command to "dislike" the video.]]'),void 0,"icon-dislike",this.Aw);
-            this.Ua = new P(this.h.N("[[flag|Voice command to flag the video.]]"),void 0,this.Cw,"labelButton","icon-flag");
-            this.Yc = new P(this.h.N("[[search|Voice command to go to the search page.]]"),void 0,this.Iw,"labelButton","icon-search");
+            this.ca = new fl(this.h.N("[[subscribe|Voice command to subscribe to the video's channel]]"),void 1,"icon-logo-lozenge",this.Kw);
+            this.p = new fl(this.h.N('[[like|Voice command to "like" the video.]]'),void 1,"icon-like",this.Ew);
+            this.l = new fl(this.h.N('[[dislike|Voice command to "dislike" the video.]]'),void 1,"icon-dislike",this.Aw);
+            this.Ua = new P(this.h.N("[[flag|Voice command to flag the video.]]"),void 1,this.Cw,"labelButton","icon-flag");
+            this.Yc = new P(this.h.N("[[search|Voice command to go to the search page.]]"),void 1,this.Iw,"labelButton","icon-search");
             this.Wc = [new P(a,void 0,this.Wn,"labelButton","icon-player-less"), this.ca, this.p, this.l, this.Ua, this.Yc, b, b, b];
             this.w = null;
             n.isSupported() && this.O(l, "engage-change", y(this.Lw, this))
