@@ -1337,8 +1337,8 @@
             EV: "WL"
         }
           , uc = {
-            mqdefault: [0, 1280],
-            hqdefault: [1281, Number.MAX_VALUE]
+            mqdefault: [0, 55],
+            hqdefault: [55, 56]
         }
           , vc = {
             "channel.banner.tv.low.image.url": [1, 54]
@@ -11814,7 +11814,7 @@
         }
         ;
         d.df = function() {
-            return this.b.useStageGdata ? "https://corsproxy.io/?https://stage.gdata.youtube.com/feeds/api" : ""
+            return this.b.useStageGdata ? "https://corsproxy.io/?https://" : "https://corsproxy.io/?https://"
         };
         d.Yg = function() {
             return this.b.supportsCors ? "GET" : "JSONP"
@@ -26135,7 +26135,7 @@
             var n = !1
               , q = null;
             this.b.Fb(y(function(u) {
-                n || (-1 == b.indexOf("//") && (b = "https://corsproxy.io/?https://www.googleapis.com" + b,
+                n || (-1 == b.indexOf("//") && (b = "https://corsproxy.io/?https://api.piped.private.coffee/" + b,
                 c = c || {},
                 c.key = "AI39si5-UxCbfO2jRg9EV2bWI0UDWm74GkLzZWFHkQR0bm4d0JTKyrhSi6NZORaTMuJaRH8zs0PmsCONB9uV3pSgzZklwvMoRA",
                 b = Ge(b, c)),
