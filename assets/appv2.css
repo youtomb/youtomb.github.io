@@ -3787,7 +3787,7 @@ body.eureka {
 }
 
 .engagement-indicator .stop-listening .icon {
-	background-image: url('icon-xboxone-engaged.png')
+	background-image: url('https://youtomb.github.io/buttons/xb1-engaged.png')
 }
 
 .engagement-indicator .text {
@@ -4006,24 +4006,24 @@ body.eureka {
 }
 
 .ps3 .legend .more .icon {
-	background-image: url(icon-ps3-dpad-down.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/dpad-ps3.png)
 }
 
 .ps3 .legend .back .icon {
-	background-image: url(icon-ps3-circle.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/pla-circle.png)
 }
 
 .ps3 .legend .reversed-back .icon {
-	background-image: url(icon-ps3-x.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/pla-x.png)
 }
 
 .ps3 .legend .search .icon {
-	background-image: url(icon-ps3-triangle.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/pla-triangle.png)
 }
 
 .ps3 .legend .home .icon,
 .ps3 .legend .delete .icon {
-	background-image: url(icon-ps3-square.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/pla-square.png)
 }
 
 .xboxone #dialog .logout-authenticated-info,
@@ -4067,7 +4067,7 @@ body.eureka {
 
 .ps3 .skip-ad-callout .icon,
 .wiiu .skip-ad-callout .icon {
-	background-image: url(icon-ps3-dpad-right.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/pla-dpad-right.png)
 }
 
 .wiiu #leanback-player-container,
@@ -4079,20 +4079,20 @@ body.eureka {
 }
 
 .wiiu .legend .more .icon {
-	background-image: url(icon-ps3-dpad-down.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/dpad-ps3.png)
 }
 
 .wiiu .legend .back .icon {
-	background-image: url(icon-wiiu-b.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/wiiu-b.png)
 }
 
 .wiiu .legend .search .icon {
-	background-image: url(icon-wiiu-y.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/wiiu-y.png)
 }
 
 .wiiu .legend .home .icon,
 .wiiu .legend .delete .icon {
-	background-image: url(icon-wiiu-x.png)
+	background-image: url(https://cmd-hue.github.io/2013tv/assets/wiiu-x.png)
 }
 
 .wiiu .qr-code-wrapper {
@@ -4525,25 +4525,25 @@ body.limited-memory {
 }
 
 .xboxone .legend .more .icon {
-	background-image: url(icon-xboxone-dpad-down.png)
+	background-image: url(https://youtomb.github.io/buttons/xb1-dpad-down.png)
 }
 
 .xboxone .legend .back .icon {
-	background-image: url(icon-xboxone-b.png)
+	background-image: url(https://youtomb.github.io/buttons/xb1-b.png)
 }
 
 .xboxone .legend .reversed-back .icon {
-	background-image: url(icon-xboxone-b.png)
+	background-image: url(https://youtomb.github.io/buttons/xb1-b.png)
 }
 
 .xboxone .legend .search .icon {
-	background-image: url(icon-xboxone-y.png)
+	background-image: url(https://youtomb.github.io/buttons/xb1-y.png)
 }
 
 .xboxone .legend .home .icon,
 .xboxone .legend .modify .icon,
 .xboxone .legend .delete .icon {
-	background-image: url(icon-xboxone-x.png)
+	background-image: url(https://youtomb.github.io/buttons/xb1-x.png)
 }
 
 .search-hint {
