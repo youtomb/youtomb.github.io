@@ -1,5 +1,5 @@
 var webn = fetch("https://us.api.iheart.com/api/v3/live-meta/stream/1701/currentTrackMeta?defaultMetadata=true").then(response => response.json()).then(data => webnjson = data).catch(error => { return "Error fetching track info"; });
-try {var trackie = webnjson.title + " - " + webnjson.artist}.catch(error) {var trackie = "Track Unavailable - Artist Unavailable"}
+try {var trackie = webnjson.title + " - " + webnjson.artist} catch (error) {var trackie = "Track Unavailable - Artist Unavailable"}
 
 (function() {
         var d, aa = aa || {}, h = this;
