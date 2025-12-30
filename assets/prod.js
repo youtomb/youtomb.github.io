@@ -1,3 +1,6 @@
+var webn = fetch("https://us.api.iheart.com/api/v3/live-meta/stream/1701/currentTrackMeta?defaultMetadata=true").then(response => response.json()).then(data => webnjson = data).catch(error => { return "Error fetching track info"; });
+var trackie = webnjson.title + " - " + webnjson.artist
+
 (function() {
         var d, aa = aa || {}, h = this;
         function m(a) {
@@ -18332,7 +18335,7 @@
             this.O(this.l, "goto-watch", y(this.HH, this));
             this.O(this.l, "goto-old", y(this.NT, this));
             this.O(this.l, "goto-2016", y(this.PS, this));
-            this.O(this.l, "2013tv-start", y(this.PS, this));
+            this.O(this.l, "2013tv-start", y(this.TAC, this));
             this.O(this.l, "wharthing", y(this.oHt, this));
             this.O(this.l, "resize-complete", y(this.ht, this));
             this.O(this.l, "window-focus", y(this.FH, this));
@@ -28384,8 +28387,8 @@
             this.b = [];
             a = new $(this.g,"resetPairingTile","request-paid-scope-dialog","ass");
             this.b.push(a);
-            a = new $(this.g,"actionTile","2013tv-start","[[2016 Version|Button that does what the title says.]]", "icon-guide-my-subs","[[This lets you go to YouTomb2016|dialog fuck]");
-            this.b.push(a);
+            a = new $(this.g,"actionTile","2013tv-start","[[2013TV|Button that does what the title says.]]", "icon-guide-my-subs",trackie);
+            this.b.push(a); // ksksksksks
             a = new $(this.g,"actionTile","goto-watch","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
             this.b.push(a);
             a = new $(this.g,"actionTile","goto-2016","[[2016 Version|Button that does what the title says.]]", "icon-guide-my-subs","[[This lets you go to YouTomb2016|dialog fuck]");
