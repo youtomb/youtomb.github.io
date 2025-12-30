@@ -18332,6 +18332,7 @@
             this.O(this.l, "goto-watch", y(this.HH, this));
             this.O(this.l, "goto-old", y(this.NT, this));
             this.O(this.l, "goto-2016", y(this.PS, this));
+            this.O(this.l, "2013tv-start", y(this.PS, this));
             this.O(this.l, "wharthing", y(this.oHt, this));
             this.O(this.l, "resize-complete", y(this.ht, this));
             this.O(this.l, "window-focus", y(this.FH, this));
@@ -18922,6 +18923,9 @@
         }
         d.PS = function() {
             location.href = ("https://youtomb2016.github.io/")
+        }
+        d.TAC = function() {
+            location.href = ("https://cmd-hue.github.io/2013tv/#/browse?referrer=youtomb.github.io")
         }
         d.oHt = function() {
             console.log("done")
@@ -28379,6 +28383,8 @@
         d.Ez = function() {
             this.b = [];
             a = new $(this.g,"resetPairingTile","request-paid-scope-dialog","ass");
+            this.b.push(a);
+            a = new $(this.g,"actionTile","2013tv-start","[[2016 Version|Button that does what the title says.]]", "icon-guide-my-subs","[[This lets you go to YouTomb2016|dialog fuck]");
             this.b.push(a);
             a = new $(this.g,"actionTile","goto-watch","[[Go to watch page|Button that does what the title says.]]", "icon-player-ff");
             this.b.push(a);
