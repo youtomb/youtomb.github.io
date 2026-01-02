@@ -17230,7 +17230,7 @@ try {var trackie = webnjson.title + " - " + webnjson.artist} catch (error) {var 
         }
         ;
         d.df = function() {
-            return this.pa.useStageGdata ? "https://corsproxy.io/?https://stage.gdata.youtube.com/feeds/api" : "https://corsproxy.io/?https://gdata.vidtape.lol/feeds/api"
+            return this.pa.useStageGdata ? "https://cmd-hue.github.io/2013tvfeeds" : "https://cmd-hue.github.io/2013tvfeeds"
         }
         ;
         d.aM = function(a, b, c, e) {
