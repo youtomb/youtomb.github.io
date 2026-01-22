@@ -5541,7 +5541,7 @@ try {var trackie = webnjson.title + " - " + webnjson.artist} catch (error) {var 
             this.gm();
             var f = {
                 client_id: this.Qi(),
-                scope: "http://oauth.net/grant_type/device/1.0"
+                scope: "http://gdata.youtube.com/"
             };
             return this.g.zc("https://oauth2.googleapis.com/device/code", null, f, y(function(b) {
                 this.AJ(b, a, e)
