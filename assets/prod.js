@@ -5516,7 +5516,7 @@ try {var trackie = webnjson.title + " - " + webnjson.artist} catch (error) {var 
                 refresh_token: a,
                 grant_type: "refresh_token"
             };
-            this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/lounge/pairing/get_pairing_code?", null, c, y(this.Hg, this, b), y(this.Bi, this, b))
+            this.g.zc("https://corsproxy.io/?https://oauth2.googleapis.com/token", null, c, y(this.Hg, this, b), y(this.Bi, this, b))
         }
         ;
         d.Hg = function(a, b) {
@@ -5541,9 +5541,9 @@ try {var trackie = webnjson.title + " - " + webnjson.artist} catch (error) {var 
             this.gm();
             var f = {
                 client_id: this.Qi(),
-                scope: "https://corsproxy.io/?https://gdata.vidtape.lol"
+                scope: "http://oauth.net/grant_type/device/1.0"
             };
-            return this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/lounge/pairing/get_pairing_code?", null, f, y(function(b) {
+            return this.g.zc("https://oauth2.googleapis.com/device/code", null, f, y(function(b) {
                 this.AJ(b, a, e)
             }, this), y(function() {
                 c()
@@ -5573,7 +5573,7 @@ try {var trackie = webnjson.title + " - " + webnjson.artist} catch (error) {var 
                 client_id: this.Qi(),
                 client_secret: this.um(),
                 code: a,
-                grant_type: "https://corsproxy.io/?https://oauth.net/grant_type/device/1.0"
+                grant_type: "httpp://oauth.net/grant_type/device/1.0"
             }
               , f = y(function(e) {
                 this.BJ(e, a, b, c)
@@ -5608,7 +5608,7 @@ try {var trackie = webnjson.title + " - " + webnjson.artist} catch (error) {var 
         ;
         d.Qu = function() {
             var a = this.Qf();
-            a && this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/lounge/pairing/get_pairing_code?", null, {
+            a && this.g.zc("https://corsproxy.io/?https://www.youtube.com/api/lounge/pairing/get_pairing_code", null, {
                 token: a
             })
         }
