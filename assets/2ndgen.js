@@ -29595,7 +29595,7 @@ angular.element(document).find("head").append('<style type="text/css">@charset "
             e(f[g], ["name", "path", "csiService", "ytHttp", "environmentModel", "authService", "cacheService", "listType", "brandable", f[g].parser || "videoParser", "paramKey", "params", "locale", f[g].altConstructor || Ll]);
         f = [{
             name: "featuredService",
-            path: "/leanback_ajax",
+            path: "/featured_ajax",
             parser: "featuredParser",
             paramKey: null,
             params: {

@@ -70,7 +70,7 @@ ul {
 
 .logo-container {
     background-size: 100%;
-    background: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/logo.png) no-repeat;
+    background: url(https://youtomb.github.io/assets/logo.png) no-repeat;
     float: right;
     height: 41px;
     position: absolute;
@@ -123,13 +123,13 @@ ul {
 }
 
 body.eureka {
-    background: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/call-to-cast-devices.jpg) no-repeat right center;
+    background: url(https://youtomb.github.io/assets/call-to-cast-devices.jpg) no-repeat right center;
     background-size: 50%;
     background-color: #1c1a1a
 }
 
 .carousel-loading-indicator {
-    background: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/carousel-loading-indicator.gif);
+    background: url(https://youtomb.github.io/assets/carousel-loading-indicator.gif);
     background-size: 100%;
     border-radius: 1em;
     height: 11.5em;
@@ -874,7 +874,7 @@ body.eureka {
 .video-tile .video-thumb.preloaded {
     background: no-repeat center;
     background-size: auto;
-    background-image: url('/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-playbutton.png')
+    background-image: url('https://youtomb.github.io/assets/icon-playbutton.png')
 }
 
 .action-tile .content {
@@ -945,11 +945,11 @@ body.eureka {
 }
 
 .action-tile .icon.enabled {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-settings-checked.png)
+    background-image: url(https://youtomb.github.io/assets/icon-settings-checked.png)
 }
 
 .action-tile .icon.disabled {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-settings-unchecked.png)
+    background-image: url(https://youtomb.github.io/assets/icon-settings-unchecked.png)
 }
 
 .action-tile .sign-out-username {
@@ -978,7 +978,7 @@ body.eureka {
 }
 
 .action-tile .remote-reset-phone {
-    background: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/phone-portrait.png) no-repeat center;
+    background: url(https://youtomb.github.io/assets/phone-portrait.png) no-repeat center;
     background-size: contain;
     height: 14em;
     margin-top: .6em;
@@ -1030,15 +1030,15 @@ body.eureka {
 }
 
 .action-tile .sign-in-user-icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-default-avatar.png)
+    background-image: url(https://youtomb.github.io/assets/icon-default-avatar.png)
 }
 
 .action-tile .search-icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-search-tile.png)
+    background-image: url(https://youtomb.github.io/assets/icon-search-tile.png)
 }
 
 .action-tile .clear-search-icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-search-tile-clear.png)
+    background-image: url(https://youtomb.github.io/assets/icon-search-tile-clear.png)
 }
 
 .action-tile .search-tile .description {
@@ -1049,7 +1049,7 @@ body.eureka {
 }
 
 .action-tile .warning {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-warning.png)
+    background-image: url(https://youtomb.github.io/assets/icon-warning.png)
 }
 
 .action-tile .help-icon,.action-tile .feedback-icon {
@@ -1058,11 +1058,11 @@ body.eureka {
 }
 
 .action-tile .help-icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-help.png)
+    background-image: url(https://youtomb.github.io/assets/icon-help.png)
 }
 
 .action-tile .feedback-icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-feedback.png)
+    background-image: url(https://youtomb.github.io/assets/icon-feedback.png)
 }
 
 .recent-search-tile {
@@ -1196,7 +1196,7 @@ body.eureka {
 }
 
 .remote-pair-icon {
-    background: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/pairing-devices.png) no-repeat center;
+    background: url(https://youtomb.github.io/assets/pairing-devices.png) no-repeat center;
     background-size: contain
 }
 
@@ -1229,14 +1229,14 @@ body.eureka {
     background-size: 1em;
     background-position: left center;
     background-repeat: no-repeat;
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/phone_icon.png);
+    background-image: url(https://youtomb.github.io/assets/phone_icon.png);
     overflow: hidden;
     text-overflow: ellipsis;
     width: 11.5em
 }
 
 .remote-reset-dialog ul.devices li.connected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/phone_icon_connected.png);
+    background-image: url(https://youtomb.github.io/assets/phone_icon_connected.png);
     color: #f1f1f1
 }
 
@@ -1267,7 +1267,7 @@ body.eureka {
 
 #search-text-box {
     background-color: #f1f1f1;
-    background: transparent url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/bg-search-input.png) repeat-x;
+    background: transparent url(https://youtomb.github.io/assets/bg-search-input.png) repeat-x;
     font-size: 1.7em;
     height: 1.5em;
     line-height: 1.5em;
@@ -1383,14 +1383,14 @@ body.eureka {
     background-size: 80%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-globe.png)
+    background-image: url(https://youtomb.github.io/assets/icon-globe.png)
 }
 
 #search-keyboard .delete-icon {
     background-size: 80%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-delete.png)
+    background-image: url(https://youtomb.github.io/assets/icon-delete.png)
 }
 
 .letter-suggest {
@@ -1855,7 +1855,7 @@ body.eureka {
 }
 
 #progress-bar>div {
-    background: transparent url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/player-controls.png) no-repeat
+    background: transparent url(https://youtomb.github.io/assets/player-controls.png) no-repeat
 }
 
 #progress-bar .player-seek-active {
@@ -2098,51 +2098,51 @@ body.eureka {
 }
 
 #toast .remote-connected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/remote_connect.png)
+    background-image: url(https://youtomb.github.io/assets/remote_connect.png)
 }
 
 #toast .remote-disconnected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/remote_disconnect.png)
+    background-image: url(https://youtomb.github.io/assets/remote_disconnect.png)
 }
 
 #toast .android-phone-connected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-android-phone-connected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-android-phone-connected.png)
 }
 
 #toast .android-phone-disconnected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-android-phone-disconnected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-android-phone-disconnected.png)
 }
 
 #toast .android-tablet-connected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-android-tablet-connected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-android-tablet-connected.png)
 }
 
 #toast .android-tablet-disconnected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-android-tablet-disconnected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-android-tablet-disconnected.png)
 }
 
 #toast .ios-phone-connected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ios-phone-connected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ios-phone-connected.png)
 }
 
 #toast .ios-phone-disconnected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ios-phone-disconnected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ios-phone-disconnected.png)
 }
 
 #toast .ios-tablet-connected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ios-tablet-connected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ios-tablet-connected.png)
 }
 
 #toast .ios-tablet-disconnected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ios-tablet-disconnected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ios-tablet-disconnected.png)
 }
 
 #toast .laptop-connected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-laptop-connected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-laptop-connected.png)
 }
 
 #toast .laptop-disconnected {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-laptop-disconnected.png)
+    background-image: url(https://youtomb.github.io/assets/icon-laptop-disconnected.png)
 }
 
 #toast .toast-progress {
@@ -2156,19 +2156,19 @@ body.eureka {
 }
 
 #toast .volume-muted {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/volume_mute_pressed.png)
+    background-image: url(https://youtomb.github.io/assets/volume_mute_pressed.png)
 }
 
 #toast .volume-low {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/volume_0_pressed.png)
+    background-image: url(https://youtomb.github.io/assets/volume_0_pressed.png)
 }
 
 #toast .volume-mid {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/volume_1_pressed.png)
+    background-image: url(https://youtomb.github.io/assets/volume_1_pressed.png)
 }
 
 #toast .volume-high {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/volume_2_pressed.png)
+    background-image: url(https://youtomb.github.io/assets/volume_2_pressed.png)
 }
 
 #toast .volume-toast .toast-msg {
@@ -2263,12 +2263,12 @@ body.eureka {
 }
 
 #dialog.help .dialog-icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-help.png);
+    background-image: url(https://youtomb.github.io/assets/icon-help.png);
     background-size: 12em
 }
 
 #dialog.feedback .dialog-icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-feedback.png);
+    background-image: url(https://youtomb.github.io/assets/icon-feedback.png);
     background-size: 12em
 }
 
@@ -2508,7 +2508,7 @@ body.eureka {
 }
 
 .flag-example {
-    background: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/flag.png) no-repeat 0 0;
+    background: url(https://youtomb.github.io/assets/flag.png) no-repeat 0 0;
     background-size: contain;
     display: inline-block;
     height: 57%;
@@ -2623,7 +2623,7 @@ body.eureka {
 }
 
 #shiyojo .playstation-logo,#shiyojo .ps3-logo,#kenko .warning {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/logo-playstation.png);
+    background-image: url(https://youtomb.github.io/assets/logo-playstation.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -2637,12 +2637,12 @@ body.eureka {
 }
 
 #shiyojo .ps3-logo {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/logo-ps3.png);
+    background-image: url(https://youtomb.github.io/assets/logo-ps3.png);
     width: 2.7em
 }
 
 #kenko .warning {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-warning.png)
+    background-image: url(https://youtomb.github.io/assets/icon-warning.png)
 }
 
 .paid-channel-info {
@@ -2659,7 +2659,7 @@ body.eureka {
 }
 
 .status-dialog .icon {
-    background: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/pairing-promo-combo.png) center center no-repeat;
+    background: url(https://youtomb.github.io/assets/pairing-promo-combo.png) center center no-repeat;
     background-size: contain;
     display: inline-block;
     height: 11em;
@@ -2797,19 +2797,19 @@ body.eureka {
 }
 
 .desktop .legend .more .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-desktop-dpad-down.png)
+    background-image: url(https://youtomb.github.io/assets/icon-desktop-dpad-down.png)
 }
 
 .desktop .legend .back .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-desktop-esc.png)
+    background-image: url(https://youtomb.github.io/assets/icon-desktop-esc.png)
 }
 
 .desktop .legend .search .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-desktop-s.png)
+    background-image: url(https://youtomb.github.io/assets/icon-desktop-s.png)
 }
 
 .desktop .legend .home .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-desktop-g.png)
+    background-image: url(https://youtomb.github.io/assets/icon-desktop-g.png)
 }
 
 .desktop .legend .delete {
@@ -2817,7 +2817,7 @@ body.eureka {
 }
 
 .desktop .skip-ad-callout .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-desktop-dpad-right.png);
+    background-image: url(https://youtomb.github.io/assets/icon-desktop-dpad-right.png);
     width: 5.5em
 }
 
@@ -2840,23 +2840,23 @@ body.eureka {
 }
 
 .ps3 .legend .more .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ps3-dpad-down.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ps3-dpad-down.png)
 }
 
 .ps3 .legend .back .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ps3-circle.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ps3-circle.png)
 }
 
 .ps3 .legend .reversed-back .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ps3-x.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ps3-x.png)
 }
 
 .ps3 .legend .search .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ps3-triangle.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ps3-triangle.png)
 }
 
 .ps3 .legend .home .icon,.ps3 .legend .delete .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ps3-square.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ps3-square.png)
 }
 
 .ps3 #dialog .logout-authenticated-info {
@@ -2889,7 +2889,7 @@ body.eureka {
 }
 
 .ps3 .skip-ad-callout .icon,.wiiu .skip-ad-callout .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ps3-dpad-right.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ps3-dpad-right.png)
 }
 
 .wiiu #leanback-player-container,.wiiu #branding-container,.wiiu .title-card,.wiiu .advertisement-overlay,.wiiu .logo-container {
@@ -2897,19 +2897,19 @@ body.eureka {
 }
 
 .wiiu .legend .more .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-ps3-dpad-down.png)
+    background-image: url(https://youtomb.github.io/assets/icon-ps3-dpad-down.png)
 }
 
 .wiiu .legend .back .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-wiiu-b.png)
+    background-image: url(https://youtomb.github.io/assets/icon-wiiu-b.png)
 }
 
 .wiiu .legend .search .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-wiiu-y.png)
+    background-image: url(https://youtomb.github.io/assets/icon-wiiu-y.png)
 }
 
 .wiiu .legend .home .icon,.wiiu .legend .delete .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-wiiu-x.png)
+    background-image: url(https://youtomb.github.io/assets/icon-wiiu-x.png)
 }
 
 .wiiu .qr-code-wrapper {
@@ -2917,7 +2917,7 @@ body.eureka {
 }
 
 .wiiu .player-controls-widget {
-    background: transparent url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/player-background.png) 0 0 repeat-x;
+    background: transparent url(https://youtomb.github.io/assets/player-background.png) 0 0 repeat-x;
     background-size: cover;
     box-shadow: none
 }
@@ -2983,11 +2983,11 @@ body.eureka {
 }
 
 .tv .legend .more .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-tv-dpad-down.png)
+    background-image: url(https://youtomb.github.io/assets/icon-tv-dpad-down.png)
 }
 
 .tv .skip-ad-callout .icon,.lg .skip-ad-callout .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-tv-dpad-right.png)
+    background-image: url(https://youtomb.github.io/assets/icon-tv-dpad-right.png)
 }
 
 .lg .legend .back {
@@ -2995,23 +2995,23 @@ body.eureka {
 }
 
 .tv .legend .back .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-tv-back.png)
+    background-image: url(https://youtomb.github.io/assets/icon-tv-back.png)
 }
 
 .lg .legend .more .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-lgtv-dpad-more.png)!important
+    background-image: url(https://youtomb.github.io/assets/icon-lgtv-dpad-more.png)!important
 }
 
 .lg .legend .more:hover .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-lgtv-dpad-more-hover.png)!important
+    background-image: url(https://youtomb.github.io/assets/icon-lgtv-dpad-more-hover.png)!important
 }
 
 .lg .legend .back .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-lgtv-back-default.png)!important
+    background-image: url(https://youtomb.github.io/assets/icon-lgtv-back-default.png)!important
 }
 
 .lg .legend .back:hover .icon {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-lgtv-back-hover.png)!important
+    background-image: url(https://youtomb.github.io/assets/icon-lgtv-back-hover.png)!important
 }
 
 body.samsung {
@@ -3019,8 +3019,7 @@ body.samsung {
 }
 
 body.lg {
-    background-color: transparent!important;
-    background-image: url(https://web.archive.org/web/20131008034022im_/tv:/)!important
+    background-color: #2e2e2e !important
 }
 
 .limited-graphics .bg,.eureka .bg {
@@ -3103,7 +3102,7 @@ body.lg {
 }
 
 .limited-graphics .hide-background.video-tile .video-thumb {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/icon-playbutton.png)!important;
+    background-image: url(https://youtomb.github.io/assets/icon-playbutton.png)!important;
     background-repeat: no-repeat;
     opacity: 1
 }
@@ -3239,12 +3238,12 @@ body.lg {
 }
 
 .eureka #watch.play #eureka-player-controls {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/player-play.png);
+    background-image: url(https://youtomb.github.io/assets/player-play.png);
     -webkit-animation: hideAndGrowPlay linear 0.25s 0s 1 normal none
 }
 
 .eureka #watch.pause #eureka-player-controls {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/player-pause.png);
+    background-image: url(https://youtomb.github.io/assets/player-pause.png);
     -webkit-animation: showAndShrinkPause linear 0.25s 0s 1 normal none;
     opacity: .7
 }
@@ -3265,43 +3264,43 @@ body.lg {
 }
 
 .pointer #up-arrow {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/motion-control-up-button-default.png);
+    background-image: url(https://youtomb.github.io/assets/motion-control-up-button-default.png);
     top: 5%;
     left: 45%
 }
 
 .pointer #up-arrow:hover {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/motion-control-up-button-hover.png)
+    background-image: url(https://youtomb.github.io/assets/motion-control-up-button-hover.png)
 }
 
 .pointer #down-arrow {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/motion-control-down-button-default.png);
+    background-image: url(https://youtomb.github.io/assets/motion-control-down-button-default.png);
     bottom: 5%;
     left: 45%
 }
 
 .pointer #down-arrow:hover {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/motion-control-down-button-hover.png)
+    background-image: url(https://youtomb.github.io/assets/motion-control-down-button-hover.png)
 }
 
 .pointer #left-arrow {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/motion-control-left-button-default.png);
+    background-image: url(https://youtomb.github.io/assets/motion-control-left-button-default.png);
     top: 50%;
     left: 5%
 }
 
 .pointer #left-arrow:hover {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/motion-control-left-button-hover.png)
+    background-image: url(https://youtomb.github.io/assets/motion-control-left-button-hover.png)
 }
 
 .pointer #right-arrow {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/motion-control-right-button-default.png);
+    background-image: url(https://youtomb.github.io/assets/motion-control-right-button-default.png);
     top: 50%;
     right: 5%
 }
 
 .pointer #right-arrow:hover {
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/motion-control-right-button-hover.png)
+    background-image: url(https://youtomb.github.io/assets/motion-control-right-button-hover.png)
 }
 
 .pointer .search-mode #up-arrow,.pointer .search-mode #down-arrow {
@@ -3513,7 +3512,7 @@ body.lg {
 
 #call-to-cast.active {
     display: block;
-    background-image: url(/web/20131008034022im_/https://www.youtube.com/s/tv/html5/f4d170b4/img/call-to-cast-yt-logo.jpg);
+    background-image: url(https://youtomb.github.io/assets/call-to-cast-yt-logo.jpg);
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 13.5em;
