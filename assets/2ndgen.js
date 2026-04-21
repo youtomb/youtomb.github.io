@@ -10572,7 +10572,7 @@ angular.element(document).find("head").append('<style type="text/css">@charset "
             refresh_token: a,
             grant_type: "refresh_token"
         };
-        this.fb.post("/o/oauth2/token", null, c, w(this.Ei, this, b), w(this.Yl, this, b))
+        this.fb.post("https://accounts.google.com/token", null, c, w(this.Ei, this, b), w(this.Yl, this, b))
     }
     ;
     d.Ei = function(a, b) {
@@ -10596,7 +10596,7 @@ angular.element(document).find("head").append('<style type="text/css">@charset "
             client_id: this.wn(),
             scope: "http://gdata.youtube.com"
         };
-        this.fb.post("/o/oauth2/device/code", null, c, w(function(c) {
+        this.fb.post("https://accounts.google.com/device/code", null, c, w(function(c) {
             this.VU(c, a, b)
         }, this))
     }
@@ -10621,7 +10621,7 @@ angular.element(document).find("head").append('<style type="text/css">@charset "
           , f = w(function(e) {
             this.bV(e, a, b, c)
         }, this);
-        this.fb.post("/o/oauth2/token", null, e, f)
+        this.fb.post("https://accounts.google.com/token", null, e, f)
     }
     ;
     d.bV = function(a, b, c, e) {
@@ -10649,7 +10649,7 @@ angular.element(document).find("head").append('<style type="text/css">@charset "
     ;
     d.MD = function() {
         var a = this.gj();
-        a && this.fb.post("/o/oauth2/revoke", null, {
+        a && this.fb.post("https://accounts.google.com/revoke", null, {
             token: a
         })
     }
@@ -29595,7 +29595,7 @@ angular.element(document).find("head").append('<style type="text/css">@charset "
             e(f[g], ["name", "path", "csiService", "ytHttp", "environmentModel", "authService", "cacheService", "listType", "brandable", f[g].parser || "videoParser", "paramKey", "params", "locale", f[g].altConstructor || Ll]);
         f = [{
             name: "featuredService",
-            path: "/featured_ajax",
+            path: "https://hashpie.pages.dev/leanback_ajax",
             parser: "featuredParser",
             paramKey: null,
             params: {
